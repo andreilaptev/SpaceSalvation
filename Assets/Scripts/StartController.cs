@@ -14,7 +14,7 @@ public class StartController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Thread.Sleep(2000);
+        Thread.Sleep(1000); //Delay of splash screen for 1 sec
 
         Application.LoadLevel(1);
     }
