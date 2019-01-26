@@ -17,6 +17,15 @@ public class ShipController : MonoBehaviour
     private void Update()
     {
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Debug.Log("LLL");
+
+            //float horiz = Input.GetAxis("Horizontal");
+            //rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);
+        }
+
+
         // Listen for Space to jump
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -39,9 +48,11 @@ public class ShipController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float horiz = Input.GetAxis("Horizontal");
+        float horiz = Input.GetAxis("Horizontal");    
+
+
         //float vert = Input.GetAxis("Vertical"); // Not good - gravity pulls player down 
-        Debug.Log(horiz);
+        
         rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);
     }
 }

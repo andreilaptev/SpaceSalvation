@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 31486857}
   - component: {fileID: 31486856}
   - component: {fileID: 31486858}
+  - component: {fileID: 31486859}
   m_Layer: 0
   m_Name: AsteroidSprite (20)
   m_TagString: Untagged
@@ -213,6 +214,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &31486859
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31486855}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &61534764
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +241,7 @@ GameObject:
   - component: {fileID: 61534766}
   - component: {fileID: 61534765}
   - component: {fileID: 61534767}
+  - component: {fileID: 61534768}
   m_Layer: 0
   m_Name: AsteroidSprite (22)
   m_TagString: Untagged
@@ -314,6 +332,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &61534768
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61534764}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &118979584
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,6 +438,7 @@ GameObject:
   - component: {fileID: 159356613}
   - component: {fileID: 159356612}
   - component: {fileID: 159356614}
+  - component: {fileID: 159356615}
   m_Layer: 0
   m_Name: AsteroidSprite (21)
   m_TagString: Untagged
@@ -494,6 +529,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &159356615
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159356611}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &225798774
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +635,7 @@ GameObject:
   - component: {fileID: 244167019}
   - component: {fileID: 244167018}
   - component: {fileID: 244167020}
+  - component: {fileID: 244167021}
   m_Layer: 0
   m_Name: AsteroidSprite (11)
   m_TagString: Untagged
@@ -674,6 +726,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &244167021
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244167017}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &249569996
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,6 +808,7 @@ GameObject:
   - component: {fileID: 317353023}
   - component: {fileID: 317353022}
   - component: {fileID: 317353024}
+  - component: {fileID: 317353025}
   m_Layer: 0
   m_Name: AsteroidSprite (10)
   m_TagString: Untagged
@@ -830,6 +899,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &317353025
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317353021}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &349584280
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,6 +1005,7 @@ GameObject:
   - component: {fileID: 397970078}
   - component: {fileID: 397970077}
   - component: {fileID: 397970079}
+  - component: {fileID: 397970080}
   m_Layer: 0
   m_Name: AsteroidSprite (32)
   m_TagString: Untagged
@@ -1010,6 +1096,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &397970080
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397970076}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &401118227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,6 +1123,7 @@ GameObject:
   - component: {fileID: 401118229}
   - component: {fileID: 401118228}
   - component: {fileID: 401118230}
+  - component: {fileID: 401118231}
   m_Layer: 0
   m_Name: AsteroidSprite (37)
   m_TagString: Untagged
@@ -1111,6 +1214,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &401118231
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401118227}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &446610644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,6 +1241,7 @@ GameObject:
   - component: {fileID: 446610646}
   - component: {fileID: 446610645}
   - component: {fileID: 446610647}
+  - component: {fileID: 446610648}
   m_Layer: 0
   m_Name: AsteroidSprite (41)
   m_TagString: Untagged
@@ -1212,6 +1332,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &446610648
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446610644}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &461452837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,6 +1359,7 @@ GameObject:
   - component: {fileID: 461452839}
   - component: {fileID: 461452838}
   - component: {fileID: 461452840}
+  - component: {fileID: 461452841}
   m_Layer: 0
   m_Name: AsteroidSprite (29)
   m_TagString: Untagged
@@ -1313,6 +1450,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &461452841
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461452837}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &467890731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,6 +1477,7 @@ GameObject:
   - component: {fileID: 467890733}
   - component: {fileID: 467890732}
   - component: {fileID: 467890734}
+  - component: {fileID: 467890735}
   m_Layer: 0
   m_Name: AsteroidSprite (16)
   m_TagString: Untagged
@@ -1414,6 +1568,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &467890735
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467890731}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &508735857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,6 +1595,7 @@ GameObject:
   - component: {fileID: 508735859}
   - component: {fileID: 508735858}
   - component: {fileID: 508735860}
+  - component: {fileID: 508735861}
   m_Layer: 0
   m_Name: AsteroidSprite (14)
   m_TagString: Untagged
@@ -1515,6 +1686,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &508735861
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508735857}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &541384652
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,6 +1713,7 @@ GameObject:
   - component: {fileID: 541384654}
   - component: {fileID: 541384653}
   - component: {fileID: 541384655}
+  - component: {fileID: 541384656}
   m_Layer: 0
   m_Name: AsteroidSprite (12)
   m_TagString: Untagged
@@ -1616,6 +1804,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &541384656
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541384652}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &543833421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,6 +1831,7 @@ GameObject:
   - component: {fileID: 543833423}
   - component: {fileID: 543833422}
   - component: {fileID: 543833424}
+  - component: {fileID: 543833425}
   m_Layer: 0
   m_Name: AsteroidSprite (8)
   m_TagString: Untagged
@@ -1717,6 +1922,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &543833425
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543833421}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &579243982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,6 +2165,7 @@ GameObject:
   - component: {fileID: 597019494}
   - component: {fileID: 597019493}
   - component: {fileID: 597019495}
+  - component: {fileID: 597019496}
   m_Layer: 0
   m_Name: AsteroidSprite (43)
   m_TagString: Untagged
@@ -2034,6 +2256,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &597019496
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597019492}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &682248458
 GameObject:
   m_ObjectHideFlags: 0
@@ -2045,6 +2283,7 @@ GameObject:
   - component: {fileID: 682248460}
   - component: {fileID: 682248459}
   - component: {fileID: 682248461}
+  - component: {fileID: 682248462}
   m_Layer: 0
   m_Name: AsteroidSprite (30)
   m_TagString: Untagged
@@ -2135,6 +2374,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &682248462
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682248458}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &797469681
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,6 +2456,7 @@ GameObject:
   - component: {fileID: 811571616}
   - component: {fileID: 811571615}
   - component: {fileID: 811571617}
+  - component: {fileID: 811571618}
   m_Layer: 0
   m_Name: AsteroidSprite (33)
   m_TagString: Untagged
@@ -2291,6 +2547,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &811571618
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811571614}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &829045871
 GameObject:
   m_ObjectHideFlags: 0
@@ -2302,6 +2574,7 @@ GameObject:
   - component: {fileID: 829045873}
   - component: {fileID: 829045872}
   - component: {fileID: 829045874}
+  - component: {fileID: 829045875}
   m_Layer: 0
   m_Name: AsteroidSprite (5)
   m_TagString: Untagged
@@ -2392,6 +2665,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &829045875
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829045871}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &844892181
 GameObject:
   m_ObjectHideFlags: 0
@@ -2403,6 +2692,7 @@ GameObject:
   - component: {fileID: 844892183}
   - component: {fileID: 844892182}
   - component: {fileID: 844892184}
+  - component: {fileID: 844892185}
   m_Layer: 0
   m_Name: AsteroidSprite (36)
   m_TagString: Untagged
@@ -2493,6 +2783,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &844892185
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844892181}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &855278407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2504,6 +2810,7 @@ GameObject:
   - component: {fileID: 855278409}
   - component: {fileID: 855278408}
   - component: {fileID: 855278410}
+  - component: {fileID: 855278411}
   m_Layer: 0
   m_Name: AsteroidSprite (13)
   m_TagString: Untagged
@@ -2594,6 +2901,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &855278411
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855278407}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &886961824
 GameObject:
   m_ObjectHideFlags: 0
@@ -2605,6 +2928,7 @@ GameObject:
   - component: {fileID: 886961826}
   - component: {fileID: 886961825}
   - component: {fileID: 886961827}
+  - component: {fileID: 886961828}
   m_Layer: 0
   m_Name: AsteroidSprite (28)
   m_TagString: Untagged
@@ -2695,6 +3019,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &886961828
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886961824}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &891145118
 GameObject:
   m_ObjectHideFlags: 0
@@ -2706,6 +3046,7 @@ GameObject:
   - component: {fileID: 891145120}
   - component: {fileID: 891145119}
   - component: {fileID: 891145121}
+  - component: {fileID: 891145122}
   m_Layer: 0
   m_Name: AsteroidSprite (24)
   m_TagString: Untagged
@@ -2796,6 +3137,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &891145122
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891145118}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &960751980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2886,6 +3243,7 @@ GameObject:
   - component: {fileID: 964810197}
   - component: {fileID: 964810196}
   - component: {fileID: 964810198}
+  - component: {fileID: 964810199}
   m_Layer: 0
   m_Name: AsteroidSprite (34)
   m_TagString: Untagged
@@ -2976,6 +3334,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &964810199
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964810195}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &994259984
 GameObject:
   m_ObjectHideFlags: 0
@@ -3066,6 +3440,7 @@ GameObject:
   - component: {fileID: 997659439}
   - component: {fileID: 997659438}
   - component: {fileID: 997659440}
+  - component: {fileID: 997659441}
   m_Layer: 0
   m_Name: AsteroidSprite (44)
   m_TagString: Untagged
@@ -3156,6 +3531,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &997659441
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997659437}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1069318311
 GameObject:
   m_ObjectHideFlags: 0
@@ -3167,6 +3558,7 @@ GameObject:
   - component: {fileID: 1069318313}
   - component: {fileID: 1069318312}
   - component: {fileID: 1069318314}
+  - component: {fileID: 1069318315}
   m_Layer: 0
   m_Name: AsteroidSprite (35)
   m_TagString: Untagged
@@ -3257,6 +3649,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1069318315
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069318311}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1132669006
 GameObject:
   m_ObjectHideFlags: 0
@@ -3268,6 +3676,7 @@ GameObject:
   - component: {fileID: 1132669008}
   - component: {fileID: 1132669007}
   - component: {fileID: 1132669009}
+  - component: {fileID: 1132669010}
   m_Layer: 0
   m_Name: AsteroidSprite (38)
   m_TagString: Untagged
@@ -3358,6 +3767,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1132669010
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132669006}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1175414158
 GameObject:
   m_ObjectHideFlags: 0
@@ -3369,6 +3794,7 @@ GameObject:
   - component: {fileID: 1175414160}
   - component: {fileID: 1175414159}
   - component: {fileID: 1175414161}
+  - component: {fileID: 1175414162}
   m_Layer: 0
   m_Name: AsteroidSprite (9)
   m_TagString: Untagged
@@ -3459,6 +3885,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1175414162
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175414158}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1256391291
 GameObject:
   m_ObjectHideFlags: 0
@@ -3470,6 +3912,7 @@ GameObject:
   - component: {fileID: 1256391293}
   - component: {fileID: 1256391292}
   - component: {fileID: 1256391294}
+  - component: {fileID: 1256391295}
   m_Layer: 0
   m_Name: AsteroidSprite
   m_TagString: Untagged
@@ -3560,6 +4003,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1256391295
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256391291}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1261360216
 GameObject:
   m_ObjectHideFlags: 0
@@ -3571,6 +4030,7 @@ GameObject:
   - component: {fileID: 1261360218}
   - component: {fileID: 1261360217}
   - component: {fileID: 1261360219}
+  - component: {fileID: 1261360220}
   m_Layer: 0
   m_Name: AsteroidSprite (1)
   m_TagString: Untagged
@@ -3661,6 +4121,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1261360220
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261360216}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1272172790
 GameObject:
   m_ObjectHideFlags: 0
@@ -3673,6 +4149,7 @@ GameObject:
   - component: {fileID: 1272172791}
   - component: {fileID: 1272172793}
   - component: {fileID: 1272172794}
+  - component: {fileID: 1272172795}
   m_Layer: 0
   m_Name: ship
   m_TagString: Untagged
@@ -3714,9 +4191,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -1950848517
+  m_SortingLayer: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3220e6590046da74d9abb8e634f88f2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3736,7 +4213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272172790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -3.41, z: 0}
+  m_LocalPosition: {x: -0.34, y: -1.75, z: 0}
   m_LocalScale: {x: 0.20412318, y: 0.26290935, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3776,6 +4253,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &1272172795
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272172790}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 7.2, y: 7.13}
+  m_Direction: 1
 --- !u!1 &1275920190
 GameObject:
   m_ObjectHideFlags: 0
@@ -3787,6 +4280,7 @@ GameObject:
   - component: {fileID: 1275920192}
   - component: {fileID: 1275920191}
   - component: {fileID: 1275920193}
+  - component: {fileID: 1275920194}
   m_Layer: 0
   m_Name: AsteroidSprite (27)
   m_TagString: Untagged
@@ -3877,6 +4371,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1275920194
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275920190}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1312839855
 GameObject:
   m_ObjectHideFlags: 0
@@ -3888,6 +4398,7 @@ GameObject:
   - component: {fileID: 1312839857}
   - component: {fileID: 1312839856}
   - component: {fileID: 1312839858}
+  - component: {fileID: 1312839859}
   m_Layer: 0
   m_Name: AsteroidSprite (4)
   m_TagString: Untagged
@@ -3978,6 +4489,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1312839859
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312839855}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1385871047
 GameObject:
   m_ObjectHideFlags: 0
@@ -3989,6 +4516,7 @@ GameObject:
   - component: {fileID: 1385871049}
   - component: {fileID: 1385871048}
   - component: {fileID: 1385871050}
+  - component: {fileID: 1385871051}
   m_Layer: 0
   m_Name: AsteroidSprite (46)
   m_TagString: Untagged
@@ -4079,6 +4607,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1385871051
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385871047}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1455538100
 GameObject:
   m_ObjectHideFlags: 0
@@ -4090,6 +4634,7 @@ GameObject:
   - component: {fileID: 1455538102}
   - component: {fileID: 1455538101}
   - component: {fileID: 1455538103}
+  - component: {fileID: 1455538104}
   m_Layer: 0
   m_Name: AsteroidSprite (19)
   m_TagString: Untagged
@@ -4180,6 +4725,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1455538104
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455538100}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1550997322
 GameObject:
   m_ObjectHideFlags: 0
@@ -4191,6 +4752,7 @@ GameObject:
   - component: {fileID: 1550997324}
   - component: {fileID: 1550997323}
   - component: {fileID: 1550997325}
+  - component: {fileID: 1550997326}
   m_Layer: 0
   m_Name: AsteroidSprite (31)
   m_TagString: Untagged
@@ -4281,6 +4843,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1550997326
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550997322}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1625251127
 GameObject:
   m_ObjectHideFlags: 0
@@ -4450,6 +5028,7 @@ GameObject:
   - component: {fileID: 1629545336}
   - component: {fileID: 1629545335}
   - component: {fileID: 1629545337}
+  - component: {fileID: 1629545338}
   m_Layer: 0
   m_Name: AsteroidSprite (39)
   m_TagString: Untagged
@@ -4540,6 +5119,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1629545338
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629545334}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1673996134
 GameObject:
   m_ObjectHideFlags: 0
@@ -4630,6 +5225,7 @@ GameObject:
   - component: {fileID: 1695979084}
   - component: {fileID: 1695979083}
   - component: {fileID: 1695979085}
+  - component: {fileID: 1695979086}
   m_Layer: 0
   m_Name: AsteroidSprite (2)
   m_TagString: Untagged
@@ -4671,9 +5267,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: -1950848517
+  m_SortingLayer: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3f48f6a366566334fb93b6760ce7da56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4693,7 +5289,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695979082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1894906, y: 8.789265, z: 0}
+  m_LocalPosition: {x: 1.1894906, y: 10.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4718,8 +5314,24 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!58 &1695979086
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695979082}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1756232191
 GameObject:
   m_ObjectHideFlags: 0
@@ -4731,6 +5343,7 @@ GameObject:
   - component: {fileID: 1756232193}
   - component: {fileID: 1756232192}
   - component: {fileID: 1756232194}
+  - component: {fileID: 1756232195}
   m_Layer: 0
   m_Name: AsteroidSprite (17)
   m_TagString: Untagged
@@ -4821,6 +5434,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1756232195
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756232191}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1763149905
 GameObject:
   m_ObjectHideFlags: 0
@@ -4832,6 +5461,7 @@ GameObject:
   - component: {fileID: 1763149907}
   - component: {fileID: 1763149906}
   - component: {fileID: 1763149908}
+  - component: {fileID: 1763149909}
   m_Layer: 0
   m_Name: AsteroidSprite (23)
   m_TagString: Untagged
@@ -4922,6 +5552,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1763149909
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763149905}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1801773697
 GameObject:
   m_ObjectHideFlags: 0
@@ -5012,6 +5658,7 @@ GameObject:
   - component: {fileID: 1813650640}
   - component: {fileID: 1813650639}
   - component: {fileID: 1813650641}
+  - component: {fileID: 1813650642}
   m_Layer: 0
   m_Name: AsteroidSprite (7)
   m_TagString: Untagged
@@ -5102,6 +5749,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1813650642
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813650638}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1820109433
 GameObject:
   m_ObjectHideFlags: 0
@@ -5147,6 +5810,7 @@ GameObject:
   - component: {fileID: 1908397969}
   - component: {fileID: 1908397968}
   - component: {fileID: 1908397970}
+  - component: {fileID: 1908397971}
   m_Layer: 0
   m_Name: AsteroidSprite (26)
   m_TagString: Untagged
@@ -5237,6 +5901,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1908397971
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908397967}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1915849262
 GameObject:
   m_ObjectHideFlags: 0
@@ -5248,6 +5928,7 @@ GameObject:
   - component: {fileID: 1915849264}
   - component: {fileID: 1915849263}
   - component: {fileID: 1915849265}
+  - component: {fileID: 1915849266}
   m_Layer: 0
   m_Name: AsteroidSprite (25)
   m_TagString: Untagged
@@ -5338,6 +6019,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1915849266
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915849262}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1972428588
 GameObject:
   m_ObjectHideFlags: 0
@@ -5428,6 +6125,7 @@ GameObject:
   - component: {fileID: 1976304636}
   - component: {fileID: 1976304635}
   - component: {fileID: 1976304637}
+  - component: {fileID: 1976304638}
   m_Layer: 0
   m_Name: AsteroidSprite (40)
   m_TagString: Untagged
@@ -5518,6 +6216,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1976304638
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976304634}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &1982870018
 GameObject:
   m_ObjectHideFlags: 0
@@ -5529,6 +6243,7 @@ GameObject:
   - component: {fileID: 1982870020}
   - component: {fileID: 1982870019}
   - component: {fileID: 1982870021}
+  - component: {fileID: 1982870022}
   m_Layer: 0
   m_Name: AsteroidSprite (3)
   m_TagString: Untagged
@@ -5619,6 +6334,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1982870022
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982870018}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &2034762357
 GameObject:
   m_ObjectHideFlags: 0
@@ -5630,6 +6361,7 @@ GameObject:
   - component: {fileID: 2034762359}
   - component: {fileID: 2034762358}
   - component: {fileID: 2034762360}
+  - component: {fileID: 2034762361}
   m_Layer: 0
   m_Name: AsteroidSprite (15)
   m_TagString: Untagged
@@ -5720,6 +6452,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &2034762361
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034762357}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &2034950309
 GameObject:
   m_ObjectHideFlags: 0
@@ -5731,6 +6479,7 @@ GameObject:
   - component: {fileID: 2034950311}
   - component: {fileID: 2034950310}
   - component: {fileID: 2034950312}
+  - component: {fileID: 2034950313}
   m_Layer: 0
   m_Name: AsteroidSprite (42)
   m_TagString: Untagged
@@ -5821,6 +6570,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &2034950313
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034950309}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &2095166112
 GameObject:
   m_ObjectHideFlags: 0
@@ -5887,6 +6652,7 @@ GameObject:
   - component: {fileID: 2103258432}
   - component: {fileID: 2103258431}
   - component: {fileID: 2103258433}
+  - component: {fileID: 2103258434}
   m_Layer: 0
   m_Name: AsteroidSprite (6)
   m_TagString: Untagged
@@ -5977,6 +6743,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &2103258434
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103258430}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &2113094100
 GameObject:
   m_ObjectHideFlags: 0
@@ -6067,6 +6849,7 @@ GameObject:
   - component: {fileID: 2132776470}
   - component: {fileID: 2132776469}
   - component: {fileID: 2132776471}
+  - component: {fileID: 2132776472}
   m_Layer: 0
   m_Name: AsteroidSprite (18)
   m_TagString: Untagged
@@ -6157,6 +6940,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &2132776472
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132776468}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
 --- !u!1 &2146885456
 GameObject:
   m_ObjectHideFlags: 0
@@ -6168,6 +6967,7 @@ GameObject:
   - component: {fileID: 2146885458}
   - component: {fileID: 2146885457}
   - component: {fileID: 2146885459}
+  - component: {fileID: 2146885460}
   m_Layer: 0
   m_Name: AsteroidSprite (45)
   m_TagString: Untagged
@@ -6258,3 +7058,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &2146885460
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146885456}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.28
