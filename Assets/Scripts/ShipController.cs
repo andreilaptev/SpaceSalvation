@@ -58,6 +58,17 @@ public class ShipController : MonoBehaviour
         Debug.Log(xCoord);
         //float vert = Input.GetAxis("Vertical"); // Not good - gravity pulls player down 
 
+        if (xCoord < -5.5) 
+        {
+            Debug.Log("Left ");
+           // speed = 0;
+        };
+        if (xCoord > 5.5)
+        {
+            Debug.Log("Right");
+           // speed = 0;
+         };
+
         if (xCoord >-6 || xCoord < 6)
         {
             float horiz = Input.GetAxis("Horizontal");
