@@ -66,7 +66,7 @@ public class ShipController : MonoBehaviour
         if (xCoord > 5.5)
         {
             Debug.Log("Right");
-           // speed = 0;
+           //// speed = 0;
          };
 
         if (xCoord >-6 || xCoord < 6)
