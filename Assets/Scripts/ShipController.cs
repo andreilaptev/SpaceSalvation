@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class ShipController : MonoBehaviour
 {
-    public float speed = 7f;
+    public float initialSpeed = 7f;
     float xCoord;
     private Rigidbody2D rBody;
+
+    private float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -49,31 +51,47 @@ public class ShipController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
+     
         float horiz = Input.GetAxis("Horizontal");
-
-        //
+      
 
         xCoord = rBody.position.x;
-        Debug.Log(xCoord);
-        //float vert = Input.GetAxis("Vertical"); // Not good - gravity pulls player down 
 
-        if (xCoord < -5.5) 
-        {
-            Debug.Log("Left ");
-            speed = 0;
-        };
-        if (xCoord > 5.5)
-        {
-            Debug.Log("Right");
-            speed = 0;
-         };
+        speed = initialSpeed;
+         
 
-        if (xCoord >-6 || xCoord < 6)
+        if (xCoord < - 8) 
         {
             
+            if (horiz > 0)
+            {
+               
+                speed = initialSpeed;
+               
+            }else
+            {
+                speed = 0;
+            }          
+  
+        };
+
+        if (xCoord > 8)
+        {
+            if (horiz < 0)
+            {
+                speed = initialSpeed;
+              
+            }
+            else
+            {
+                speed = 0;
+            }
+        };
+
+        
+            
             rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);
-        }
+        
         
     }
 }
