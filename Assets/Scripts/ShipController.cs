@@ -11,7 +11,7 @@ public class ShipController : MonoBehaviour
     float xCoord;
     private Rigidbody2D rBody;
 
-    public int lives = 5;
+    public int lives;
 
     private float speed;
 
@@ -83,6 +83,7 @@ public class ShipController : MonoBehaviour
             }else
             {
                 lives -= 1;
+                Application.LoadLevel("Level1");
             }
             
         }
