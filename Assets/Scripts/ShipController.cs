@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public class ShipController : MonoBehaviour
     public float initialSpeed = 7f;
     float xCoord;
     private Rigidbody2D rBody;
+
+    public int lives = 5;
 
     private float speed;
 
@@ -73,10 +76,21 @@ public class ShipController : MonoBehaviour
     {
         if (other.tag == "Asteroid")
         {
-            Debug.Log("HIT");
+            //Debug.Log("HIT");
+            if (lives <= 0)
+            {
+                Die();
+            }else
+            {
+                lives -= 1;
+            }
+            
         }
         
     }
 
- 
+    private void Die()
+    {
+        Destroy(this.gameObject);
+    }
 }
