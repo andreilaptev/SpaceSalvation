@@ -89,7 +89,12 @@ public class ShipController : MonoBehaviour
             }
             
         }
-        
+
+        if (other.tag == "EndOfLevel1")
+        {
+            Application.LoadLevel("Level1_Post_Title");
+        }
+
     }
 
     private void Die()
