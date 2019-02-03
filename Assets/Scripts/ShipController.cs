@@ -10,6 +10,7 @@ public class ShipController : MonoBehaviour
     public float initialSpeed = 7f;
     float xCoord;
     private Rigidbody2D rBody;
+    public int score;
 
     public int lives = 3;
 
@@ -92,9 +93,16 @@ public class ShipController : MonoBehaviour
 
         if (other.tag == "EndOfLevel1")
         {
+            score += 500;
             Application.LoadLevel("Level1_Post_Title");
+
         }
 
+        if (other.tag == "Star")
+        {
+            score += 100;
+           //star star = other.GetComponent<star>;
+        }
     }
 
     private void Die()

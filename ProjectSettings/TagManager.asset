@@ -8,6 +8,7 @@ TagManager:
   - Asteroid
   - Ship
   - EndOfLevel1
+  - Star
   layers:
   - Default
   - TransparentFX
