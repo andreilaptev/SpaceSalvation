@@ -77,6 +77,7 @@ public class ShipController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        // Hitting an Asteroid - death
         if (other.tag == "Asteroid")
         {
             //Debug.Log("HIT");
@@ -92,7 +93,8 @@ public class ShipController : MonoBehaviour
             }
             
         }
-
+        
+        // Hitting End of level - redirects to next level
         if (other.tag == "EndOfLevel1")
         {
             score += 500;
@@ -100,6 +102,7 @@ public class ShipController : MonoBehaviour
 
         }
 
+        // Hitting a Star - ading 100 points
         if (other.tag == "Star")
         {
             score += 100;
