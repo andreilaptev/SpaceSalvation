@@ -16,6 +16,8 @@ public class ShipController : MonoBehaviour
 
     private float speed;
 
+    private GameObject starTrigger;
+
     Collider2D coll = new Collider2D();
 
 
@@ -101,7 +103,11 @@ public class ShipController : MonoBehaviour
         if (other.tag == "Star")
         {
             score += 100;
-           //star star = other.GetComponent<star>;
+            starTrigger = other.gameObject;
+
+            Debug.Log(starTrigger);
+
+            starTrigger.GetComponent<StarController>().shown = false; 
         }
     }
 
