@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Web;
 
 public class ShipController : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class ShipController : MonoBehaviour
     public float initialSpeed = 7f;
     float xCoord;
     private Rigidbody2D rBody;
+    public static int levelScore;
     public int score;
+    
 
     public int lives = 3;
 
@@ -98,6 +101,7 @@ public class ShipController : MonoBehaviour
         if (other.tag == "EndOfLevel1")
         {
             score += 500;
+            levelScore = score;
             Application.LoadLevel("Level1_Post_Title");
 
         }

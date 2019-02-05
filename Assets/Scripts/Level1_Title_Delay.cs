@@ -2,17 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
+using UnityEngine.UI;
 
 public class Level1_Title_Delay : MonoBehaviour
 {
+    public int score;
+    //private GameObject scoreText;
+    private Text text;
     // Start is called before the first frame update
     void Start()
     {
-       
+        score = ShipController.levelScore;
+        Debug.Log(score);
+
+        
     }
 
     void Update()
     {
+        //text = scoreText.GetComponent<Text>();
+        text.text = "Your Current Score : " + score;
 
         if (Input.GetMouseButtonDown(0))
         {
