@@ -9,6 +9,7 @@ TagManager:
   - Ship
   - EndOfLevel1
   - Star
+  - BlueBeam
   layers:
   - Default
   - TransparentFX
