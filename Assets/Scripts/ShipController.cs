@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System.Web;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class ShipController : MonoBehaviour
@@ -13,9 +9,11 @@ public class ShipController : MonoBehaviour
     float xCoord;
     private Rigidbody2D rBody;
     public static int levelScore;
+    public static int totalLives;
+
 
     public int score;
-    public int lives;
+    private int lives;
 
     public Text scoreText;
     public Text livesText;
@@ -34,12 +32,12 @@ public class ShipController : MonoBehaviour
         rBody = GetComponent<Rigidbody2D>();
         score = 0;
         ShowScore();
-        
+        ShowLives();
 
 
-    }
+    }   
 
-  
+
 
     // Update is called once per frame
     void FixedUpdate()
@@ -47,21 +45,31 @@ public class ShipController : MonoBehaviour
      
         ////////////////////////////////
         /// Ship's Movement
-        float horiz = Input.GetAxis("Horizontal");      
+        float horiz = Input.GetAxis("Horizontal");
 
-        xCoord = rBody.position.x;
+        if (horiz < 0) RotateLeft();
+           else if (horiz > 0) RotateRight();
+             else RotateStraight();
+
+
+            xCoord = rBody.position.x;
 
         speed = initialSpeed;         
 
-        // Checking Out Of Bounds
+        // Checking Off Bounds
         if (xCoord < - 8) 
         {            
             if (horiz > 0)
             {               
-                speed = initialSpeed;               
+                speed = initialSpeed;
+
+                RotateRight();
+
             }else
             {
                 speed = 0;
+
+                RotateStraight();
             }        
         };
 
@@ -69,15 +77,21 @@ public class ShipController : MonoBehaviour
         {
             if (horiz < 0)
             {
-                speed = initialSpeed;              
+                speed = initialSpeed;
+
+                RotateLeft();
             }
             else
             {
                 speed = 0;
+
+                RotateStraight();
             }
         };        
             
-            rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);
+            rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);       
+
+            
         ////////////////////////////////
         /// END OF Ship's Movement
         /// 
@@ -135,5 +149,25 @@ public class ShipController : MonoBehaviour
     {
         scoreText.text = "Score : " + score.ToString();
         Debug.Log(scoreText.text);
+    }
+
+     void ShowLives()
+    {
+        livesText.text = "Lives : " + lives.ToString();
+    }
+
+    void RotateRight()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, -20);
+    }
+
+    void RotateLeft()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, 20);
+    }
+
+    void RotateStraight()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 }

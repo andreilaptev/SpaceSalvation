@@ -3075,7 +3075,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140, y: -120}
+  m_AnchoredPosition: {x: 400, y: -200}
   m_SizeDelta: {x: 106.34, y: 31.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1049492316
@@ -3111,7 +3111,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: lives
 --- !u!222 &1049492317
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3636,7 +3636,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialSpeed: 10
   score: 0
-  lives: 3
   scoreText: {fileID: 1415758489}
   livesText: {fileID: 1049492316}
 --- !u!50 &1272172794
@@ -4646,7 +4645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: -120}
+  m_AnchoredPosition: {x: -300, y: -200}
   m_SizeDelta: {x: 125, y: 31.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1415758489
@@ -4682,7 +4681,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: test
 --- !u!222 &1415758490
 CanvasRenderer:
   m_ObjectHideFlags: 0
