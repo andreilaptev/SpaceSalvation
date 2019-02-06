@@ -13,7 +13,8 @@ public class ShipController : MonoBehaviour
 
 
     public int score;
-    public int lives;    
+    public int lives;
+    public int extraLiveBonus = 0;
 
     public Text scoreText;
     public Text livesText;
@@ -114,9 +115,9 @@ public class ShipController : MonoBehaviour
             }else
             {
                 LevelsLivesCounter.currentLivesNumber -= 1;
-                Debug.Log(LevelsLivesCounter.currentLivesNumber);
+               
                 Application.LoadLevel("Level1");
-               // Application.LoadLevel("Start");
+              
             }
             
         }
@@ -124,8 +125,21 @@ public class ShipController : MonoBehaviour
         // Hitting End of level - redirects to next level
         if (other.tag == "EndOfLevel1")
         {
-            score += 500;
+            score += 200;
+
+            extraLiveBonus += 200;
+
+            if (extraLiveBonus >= 1000)
+            {
+                lives += 1;
+                extraLiveBonus = 0;
+                ShowScore();
+            }
+
             levelScore = score;
+
+            LevelsLivesCounter.currentLivesNumber = lives;
+
             Application.LoadLevel("Level1_Post_Title");
 
         }
@@ -134,6 +148,16 @@ public class ShipController : MonoBehaviour
         if (other.tag == "Star")
         {
             score += 100;
+            extraLiveBonus += 100;
+
+            if (extraLiveBonus >= 1000)
+            {
+                lives += 1;
+                extraLiveBonus = 0;
+                ShowLives();
+            }
+
+
             ShowScore();
             starTrigger = other.gameObject;
 
@@ -146,6 +170,8 @@ public class ShipController : MonoBehaviour
     private void Die()
     {
         Destroy(this.gameObject);
+
+        LevelsLivesCounter.currentLivesNumber = 3;
 
         Application.LoadLevel("Die");
     }

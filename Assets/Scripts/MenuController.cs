@@ -17,9 +17,10 @@ public class MenuController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-#pragma warning disable CS0618 // Type or member is obsolete
+            Debug.Log(LevelsLivesCounter.currentLivesNumber);
+ 
             Application.LoadLevel(nextPage);
-#pragma warning restore CS0618 // Type or member is obsolete
+ 
 
         }
     }

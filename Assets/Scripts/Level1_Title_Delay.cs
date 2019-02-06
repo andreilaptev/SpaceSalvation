@@ -7,16 +7,23 @@ using UnityEngine.UI;
 public class Level1_Title_Delay : MonoBehaviour
 {
     public int score;
-    //private GameObject scoreText;
-    public Text text;
+    public int lives;
+
+
+    public Text scoreText;
+    public Text livesText;
+
     // Start is called before the first frame update
     void Start()
     {
         score = ShipController.levelScore;
         Debug.Log(score);
 
-        if (score != 0 || score!= null)
-            text.text = "Your Current Score : " + score.ToString();
+        lives = LevelsLivesCounter.currentLivesNumber;
+        Debug.Log(lives);
+
+        scoreText.text = "Your Current Score : " + score.ToString();
+        livesText.text = "Lives Available : " + lives.ToString();
 
     }
 
