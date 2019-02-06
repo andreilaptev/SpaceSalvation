@@ -13,7 +13,7 @@ public class ShipController : MonoBehaviour
 
 
     public int score;
-    private int lives;
+    public int lives;    
 
     public Text scoreText;
     public Text livesText;
@@ -31,13 +31,16 @@ public class ShipController : MonoBehaviour
     {
         rBody = GetComponent<Rigidbody2D>();
         score = 0;
+        lives = LevelsLivesCounter.currentLivesNumber;
+
+        if (lives < 1) Die();
+
         ShowScore();
         ShowLives();
 
+        Debug.Log(LevelsLivesCounter.currentLivesNumber);
 
     }   
-
-
 
     // Update is called once per frame
     void FixedUpdate()
@@ -105,13 +108,13 @@ public class ShipController : MonoBehaviour
         if (other.tag == "Asteroid")
         {
             //Debug.Log("HIT");
-            if (lives <= 0)
+            if (lives < 1)
             {
                 Die();
             }else
             {
-                lives -= 1;
-                //Debug.Log("HIT");
+                LevelsLivesCounter.currentLivesNumber -= 1;
+                Debug.Log(LevelsLivesCounter.currentLivesNumber);
                 Application.LoadLevel("Level1");
                // Application.LoadLevel("Start");
             }
@@ -143,6 +146,8 @@ public class ShipController : MonoBehaviour
     private void Die()
     {
         Destroy(this.gameObject);
+
+        Application.LoadLevel("Die");
     }
 
     void ShowScore()

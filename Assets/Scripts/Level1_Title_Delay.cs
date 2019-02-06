@@ -14,7 +14,9 @@ public class Level1_Title_Delay : MonoBehaviour
     {
         score = ShipController.levelScore;
         Debug.Log(score);
-        text.text = "Your Current Score : " + score.ToString();
+
+        if (score != 0 || score!= null)
+            text.text = "Your Current Score : " + score.ToString();
 
     }
 
