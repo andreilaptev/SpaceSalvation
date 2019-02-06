@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Web;
+using UnityEngine.UI;
 
 public class ShipController : MonoBehaviour
 {
@@ -12,10 +13,12 @@ public class ShipController : MonoBehaviour
     float xCoord;
     private Rigidbody2D rBody;
     public static int levelScore;
-    public int score;
-    
 
-    public int lives = 3;
+    public int score;
+    public int lives;
+
+    public Text scoreText;
+    public Text livesText;
 
     private float speed;
 
@@ -29,7 +32,11 @@ public class ShipController : MonoBehaviour
     void Start()
     {
         rBody = GetComponent<Rigidbody2D>();
+        score = 0;
+        ShowScore();
         
+
+
     }
 
   
@@ -90,7 +97,7 @@ public class ShipController : MonoBehaviour
             }else
             {
                 lives -= 1;
-                Debug.Log("HIT");
+                //Debug.Log("HIT");
                 Application.LoadLevel("Level1");
                // Application.LoadLevel("Start");
             }
@@ -110,9 +117,10 @@ public class ShipController : MonoBehaviour
         if (other.tag == "Star")
         {
             score += 100;
+            ShowScore();
             starTrigger = other.gameObject;
 
-            Debug.Log(starTrigger);
+           // Debug.Log(starTrigger);
 
             starTrigger.GetComponent<StarController>().shown = false; 
         }
@@ -121,5 +129,11 @@ public class ShipController : MonoBehaviour
     private void Die()
     {
         Destroy(this.gameObject);
+    }
+
+    void ShowScore()
+    {
+        scoreText.text = "Score : " + score.ToString();
+        Debug.Log(scoreText.text);
     }
 }
