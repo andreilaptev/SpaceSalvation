@@ -16,6 +16,6 @@ public class StartController : MonoBehaviour
     {
         Thread.Sleep(1500); //Delay of splash screen for 1 sec
 
-        Application.LoadLevel(1);
+        Application.LoadLevel(0);
     }
 }
