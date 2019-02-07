@@ -430,7 +430,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Andrei L
+  m_Text: 'Keshok Sivalingam
 
 
     Walt Disney
@@ -438,13 +438,13 @@ MonoBehaviour:
     Tim Burton
 
 
-    Victor D
+    Victor Dallarosa Teixeira
 
 
-    Keshok S
+    Andrei Laptev
 
 
-    ETC'
+'
 --- !u!222 &1598392326
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -530,13 +530,14 @@ MonoBehaviour:
 
 
 
-    Game Designers
+    Game Designer
 
 
-    Game Programmers
+
+    Game Programmer
 
 
-    ETC'
+'
 --- !u!222 &1861055264
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -593,7 +594,7 @@ VideoPlayer:
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
   m_RenderMode: 0
-  m_AspectRatio: 2
+  m_AspectRatio: 0
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
@@ -607,7 +608,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 0
+  m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
 --- !u!1 &2132100197
