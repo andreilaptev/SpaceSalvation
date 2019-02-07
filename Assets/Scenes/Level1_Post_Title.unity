@@ -182,7 +182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Congrats, man! \n\nYou just passed through Kuiper Belt\n\n\n"
+  m_Text: "Congrats, man! \n\nYou just passed through extremely dangerous Kuiper Belt!\n\n\n"
 --- !u!222 &45248900
 CanvasRenderer:
   m_ObjectHideFlags: 0
