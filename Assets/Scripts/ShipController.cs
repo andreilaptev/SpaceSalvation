@@ -51,8 +51,8 @@ public class ShipController : MonoBehaviour
         /// Ship's Movement
         float horiz = Input.GetAxis("Horizontal");
 
-        if (horiz < 0) RotateLeft();
-           else if (horiz > 0) RotateRight();
+        if (horiz < 0) RotateLeft(horiz);
+           else if (horiz > 0) RotateRight(horiz);
              else RotateStraight();
 
 
@@ -67,7 +67,7 @@ public class ShipController : MonoBehaviour
             {               
                 speed = initialSpeed;
 
-                RotateRight();
+                RotateRight(horiz);
 
             }else
             {
@@ -83,7 +83,7 @@ public class ShipController : MonoBehaviour
             {
                 speed = initialSpeed;
 
-                RotateLeft();
+                RotateLeft(horiz);
             }
             else
             {
@@ -187,14 +187,18 @@ public class ShipController : MonoBehaviour
         livesText.text = "Lives : " + lives.ToString();
     }
 
-    void RotateRight()
+    void RotateRight(float horiz)
     {
-        transform.rotation = Quaternion.Euler(0, 0, -20);
+        var rot = 40 * horiz;
+         
+        transform.rotation = Quaternion.Euler(0, 0, -rot);
     }
 
-    void RotateLeft()
+    void RotateLeft(float horiz)
     {
-        transform.rotation = Quaternion.Euler(0, 0, 20);
+        var rot = 40 * horiz;
+        
+        transform.rotation = Quaternion.Euler(0, 0, -rot);
     }
 
     void RotateStraight()
