@@ -21,6 +21,7 @@ public class Level2ShipController : MonoBehaviour
     public Text livesText;
 
     private float speed;
+    private float verticalDirection;
 
     private GameObject starTrigger;
 
@@ -62,12 +63,15 @@ public class Level2ShipController : MonoBehaviour
         
         Debug.Log(vert);
 
-        //if (horiz < 0) RotateLeft(horiz);
-        //else if (horiz > 0) RotateRight(horiz);
-        //else RotateStraight();
+        if (horiz < 0) RotateLeft(horiz);
+            else if (horiz > 0) RotateRight(horiz);
+               // else RotateStraight();
 
 
         xCoord = rBody.position.x;
+
+        if (vert > 0) verticalDirection = vert * speed;
+            else verticalDirection = rBody.velocity.y;
 
         speed = initialSpeed;
 
@@ -105,7 +109,9 @@ public class Level2ShipController : MonoBehaviour
         //    }
         //};
 
-        rBody.velocity = new Vector2(horiz * speed, vert * speed); //rBody.velocity.y
+
+
+        rBody.velocity = new Vector2(horiz * speed, verticalDirection); //
 
 
         ////////////////////////////////
