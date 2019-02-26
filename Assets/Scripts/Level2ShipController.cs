@@ -9,7 +9,8 @@ public class Level2ShipController : MonoBehaviour
     // VARIABLES
     public float initialSpeed = 7f;
     float xCoord;
-    private Rigidbody2D rBody;
+    //private Rigidbody2D rBody;
+    private Rigidbody2D rigidBody;
     public static int levelScore;
     public static int totalLives;
 
@@ -27,7 +28,10 @@ public class Level2ShipController : MonoBehaviour
     private float verticalDirection; // doesn't allow to fly back
     private int rotateLeft; // used to rotate ship to the left over z-axis
     private int rotateRight;
-    
+
+    private float clockwise = 1000.0f;
+    private float counterClockwise = -5.0f;
+
 
     // used to rotate ship to the right over z-axis
 
@@ -41,7 +45,8 @@ public class Level2ShipController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rBody = GetComponent<Rigidbody2D>();
+        //rBody = GetComponent<Rigidbody2D>();
+        rigidBody = GetComponent<Rigidbody2D>();
         score = 0;
         lives = LevelsLivesCounter.currentLivesNumber;
         rotateLeft = 0;
@@ -58,33 +63,61 @@ public class Level2ShipController : MonoBehaviour
 
     void Update()
     {
-      
-    }
+        //if (Input.GetKey(KeyCode.W))
+        //{
+        //    transform.position += Vector3.forward * Time.deltaTime *speed;
+        //}        
+        //else if (Input.GetKey(KeyCode.A))
+        //{
+        //    //rigidBody.position  = rigidBody.position + (Vector3.left * Time.deltaTime * speed);
+        //}
+        //else if (Input.GetKey(KeyCode.D))
+        //{
+        //   // rbody.position += Vector3.right * Time.deltaTime * speed;
+        //}
+
+        //if (Input.GetKey(KeyCode.E))
+        //{
+        //    transform.Rotate(0, Time.deltaTime * clockwise, 0);
+        //}
+        //else if (Input.GetKey(KeyCode.Q))
+        //{
+        //    transform.Rotate(0, Time.deltaTime * counterClockwise, 0);
+        //}
+    
+}
 
 
     // Update is called once per frame
     void FixedUpdate()
     {
-
+      
         ////////////////////////////////
         /// Ship's Movement
         float horiz = Input.GetAxis("Horizontal");
 
-        float vert = Input.GetAxis("Vertical");
-        
-        Debug.Log(vert);
+        float vert = Input.GetAxis("Vertical");       
+      
 
         if (horiz < 0) RotateLeft(horiz);
             else if (horiz > 0) RotateRight(horiz);
-               // else RotateStraight();
+        // else RotateStraight();
 
+        
+        
 
-        xCoord = rBody.position.x;
+        xCoord = rigidBody.position.x;
 
-        if (vert > 0) verticalDirection = vert * speed;
-            else verticalDirection = rBody.velocity.y;
+        //if (vert > 0) verticalDirection = vert * speed;
+        //    else verticalDirection = rigidBody.velocity.y;
 
         speed = initialSpeed;
+
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            Debug.Log("Up");
+            rigidBody.velocity = transform.forward * speed; ;
+        }
 
         // Checking Off Bounds
         //if (xCoord < -8)
@@ -122,7 +155,7 @@ public class Level2ShipController : MonoBehaviour
 
 
 
-        rBody.velocity = new Vector2(horiz * speed, verticalDirection); //
+        //rBody.velocity = new Vector2(horiz * speed, verticalDirection); //
 
 
         ////////////////////////////////
@@ -131,26 +164,17 @@ public class Level2ShipController : MonoBehaviour
 
         /// Ship's rotation
         /// 
-        
+
 
         if (Input.GetKey(KeyCode.Z)) // Listens to my space bar key being pressed
-        {
-            
-
-            Debug.Log("Left");
-           
-            
+        {       
             RotateLeftPermanent();
 
         }
         if (Input.GetKey(KeyCode.X)) // Listens to my space bar key being pressed
         {
-            Debug.Log("Pressed");
-
-           
-
             RotateRightPermanent();
-           // print("Right");
+           
 
         }
         /// END OF Ship's rotation
@@ -266,13 +290,17 @@ public class Level2ShipController : MonoBehaviour
 
     private void RotateLeftPermanent()
     {
-        rotateLeft = rotateLeft + rotationAngle;
-        transform.rotation = Quaternion.Euler(0, 0, rotateLeft);
+        Debug.Log(transform.rotation.x);
+        //rotateLeft = rotateLeft + rotationAngle;
+        //transform.rotation = Quaternion.Euler(0, 0, rotateLeft);
+        transform.Rotate(new Vector3(0, 0, 1) * Time.deltaTime * 200, Space.World);
     }
 
     private void RotateRightPermanent()
     {
-        rotateRight = rotateRight - rotationAngle;
-        transform.rotation = Quaternion.Euler(0, 0, rotateRight);
+        Debug.Log(transform.rotation.x);
+        //rotateRight = rotateRight - rotationAngle;
+        //transform.rotation = Quaternion.Euler(0, 0, rotateRight);
+        transform.Rotate(new Vector3(0, 0, -1) * Time.deltaTime * 200, Space.World);
     }
 }
