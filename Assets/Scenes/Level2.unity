@@ -213,9 +213,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1174592447}
   - component: {fileID: 1174592446}
-  - component: {fileID: 1174592448}
   - component: {fileID: 1174592450}
   - component: {fileID: 1174592449}
+  - component: {fileID: 1174592448}
   m_Layer: 8
   m_Name: Level2-ship
   m_TagString: Untagged

@@ -58,10 +58,9 @@ public class Level2ShipController : MonoBehaviour
         /// Ship's Movement
         float horiz = Input.GetAxis("Horizontal");
 
-        //float vert = Input.GetAxis("Vertical");
-
-        Debug.Log("Horiz " + horiz);
-        //Debug.Log(vert);
+        float vert = Input.GetAxis("Vertical");
+        
+        Debug.Log(vert);
 
         //if (horiz < 0) RotateLeft(horiz);
         //else if (horiz > 0) RotateRight(horiz);
@@ -106,7 +105,7 @@ public class Level2ShipController : MonoBehaviour
         //    }
         //};
 
-        rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);
+        rBody.velocity = new Vector2(horiz * speed, vert * speed); //rBody.velocity.y
 
 
         ////////////////////////////////
@@ -115,7 +114,7 @@ public class Level2ShipController : MonoBehaviour
 
         /// Ship's rotation
         /// 
-        if (Input.GetKeyDown(KeyCode.Z)) // Listens to my space bar key being pressed
+        if (Input.GetKeyDown("space")) // Listens to my space bar key being pressed
         {
 
             Debug.Log("Left");
@@ -127,7 +126,7 @@ public class Level2ShipController : MonoBehaviour
         {
             //rBody.AddForce(new Vector2(0, jumpForce));
             RotateRight(horiz);
-            Debug.Log("Right");
+            print("Right");
 
         }
         /// END OF Ship's rotation
