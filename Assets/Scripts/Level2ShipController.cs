@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,8 @@ public class Level2ShipController : MonoBehaviour
     public static int levelScore;
     public static int totalLives;
 
+    public int rotationAngle;
+
 
     public int score;
     public int lives;
@@ -21,7 +24,13 @@ public class Level2ShipController : MonoBehaviour
     public Text livesText;
 
     private float speed;
-    private float verticalDirection;
+    private float verticalDirection; // doesn't allow to fly back
+    private int rotateLeft; // used to rotate ship to the left over z-axis
+    private int rotateRight;
+    
+
+    // used to rotate ship to the right over z-axis
+
 
     private GameObject starTrigger;
 
@@ -35,6 +44,8 @@ public class Level2ShipController : MonoBehaviour
         rBody = GetComponent<Rigidbody2D>();
         score = 0;
         lives = LevelsLivesCounter.currentLivesNumber;
+        rotateLeft = 0;
+        rotateRight = 360;
 
         if (lives < 1) Die();
 
@@ -120,25 +131,34 @@ public class Level2ShipController : MonoBehaviour
 
         /// Ship's rotation
         /// 
-        if (Input.GetKeyDown("space")) // Listens to my space bar key being pressed
+        
+
+        if (Input.GetKey(KeyCode.Z)) // Listens to my space bar key being pressed
         {
+            
 
             Debug.Log("Left");
-            //rBody.AddForce(new Vector2(0, jumpForce));
-            RotateLeft(horiz);
+           
+            
+            RotateLeftPermanent();
 
         }
-        if (Input.GetKeyDown(KeyCode.W)) // Listens to my space bar key being pressed
+        if (Input.GetKey(KeyCode.X)) // Listens to my space bar key being pressed
         {
-            //rBody.AddForce(new Vector2(0, jumpForce));
-            RotateRight(horiz);
-            print("Right");
+            Debug.Log("Pressed");
+
+           
+
+            RotateRightPermanent();
+           // print("Right");
 
         }
         /// END OF Ship's rotation
         /// 
 
     }
+
+  
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -242,5 +262,17 @@ public class Level2ShipController : MonoBehaviour
     void RotateStraight()
     {
         transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
+    private void RotateLeftPermanent()
+    {
+        rotateLeft = rotateLeft + rotationAngle;
+        transform.rotation = Quaternion.Euler(0, 0, rotateLeft);
+    }
+
+    private void RotateRightPermanent()
+    {
+        rotateRight = rotateRight - rotationAngle;
+        transform.rotation = Quaternion.Euler(0, 0, rotateRight);
     }
 }

@@ -300,6 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialSpeed: 7
+  rotationAngle: 5
   score: 0
   lives: 0
   extraLiveBonus: 0
