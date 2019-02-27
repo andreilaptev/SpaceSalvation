@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Level2ShipController : MonoBehaviour
 {
     // VARIABLES
-    public float initialSpeed = 7f;
+    public float initialSpeed = 4f;
     float xCoord;
     //private Rigidbody2D rBody;
     private Rigidbody rigidBody;
@@ -23,6 +23,15 @@ public class Level2ShipController : MonoBehaviour
 
     public Text scoreText;
     public Text livesText;
+
+    // Shooting variables
+    public GameObject laserSpawnpointLeft;
+    public GameObject laserSpawnpointRight;
+    public float waitTime;
+    public GameObject beam;
+
+    public GameObject bullet;
+    public Rigidbody2D bullet1;
 
     private float speed;
     private float verticalDirection; // doesn't allow to fly back
@@ -57,11 +66,7 @@ public class Level2ShipController : MonoBehaviour
         ShowScore();
         ShowLives();
 
-        Debug.Log(LevelsLivesCounter.currentLivesNumber);
-
-
-
-
+        //Debug.Log(LevelsLivesCounter.currentLivesNumber);
     }
 
     void Update()
@@ -86,7 +91,7 @@ public class Level2ShipController : MonoBehaviour
 
         faceMouse();
 
-        transform.Translate(0, speed * Time.deltaTime, 0);
+       transform.Translate(0, speed * Time.deltaTime, 0); // Temporarely
 
 
         // Checking Off Bounds
@@ -153,11 +158,17 @@ public class Level2ShipController : MonoBehaviour
         //    /// END OF Ship's rotation
         /// 
 
+        //Shooting
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Debug.Log("shoot");
+            Shoot();
+        }
     }
+     
 
-
-
-        void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         // Hitting an Asteroid - death
         if (other.tag == "Asteroid")
@@ -276,9 +287,24 @@ public class Level2ShipController : MonoBehaviour
 
         transform.up = direction;
 
-        Debug.Log(mousePosition.x);
-        Debug.Log(mousePosition.y);
+        //Debug.Log(mousePosition.x);
+        //Debug.Log(mousePosition.y);
+    }
+
+    void Shoot()
+    {
+
+        Rigidbody2D bulletInstance;
 
 
+        //Instantiate(beam.transform, laserSpawnpointLeft.transform.position, Quaternion.identity);
+        //Instantiate(beam.transform, laserSpawnpointRight.transform.position, Quaternion.identity);
+        bulletInstance = Instantiate(bullet1, laserSpawnpointLeft.transform.position, Quaternion.identity) as Rigidbody2D;
+
+        bulletInstance.AddForce(laserSpawnpointLeft.transform.up * 500);
+
+        bulletInstance = Instantiate(bullet1, laserSpawnpointRight.transform.position, Quaternion.identity) as Rigidbody2D;
+
+        bulletInstance.AddForce(laserSpawnpointRight.transform.up * 500);
     }
 }

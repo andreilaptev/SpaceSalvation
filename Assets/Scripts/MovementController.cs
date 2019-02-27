@@ -23,9 +23,11 @@ public class MovementController : MonoBehaviour
         //    transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 7f * Time.deltaTime);
         //}
 
-        faceMouse();
+        
 
         transform.Translate(0, speed*Time.deltaTime, 0);
+
+        faceMouse();
 
         //if (Input.GetKey(KeyCode.UpArrow))
         //{
@@ -46,9 +48,15 @@ public class MovementController : MonoBehaviour
 
         transform.up = direction;
 
-        Debug.Log(mousePosition.x);
-        Debug.Log(mousePosition.y);
-       
+        if (mousePosition.x == transform.position.x && mousePosition.y == transform.position.y)
+        {
+            Debug.Log("Met");
+        }
+
+        
+        //Debug.Log("Mouse " + mousePosition);
+        //Debug.Log("Ship " + transform.position);
+
 
     }
 }
