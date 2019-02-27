@@ -82,7 +82,11 @@ public class Level2ShipController : MonoBehaviour
 
         //xCoord = rigidBody.position.x;
 
-        //speed = initialSpeed;
+        speed = initialSpeed;
+
+        faceMouse();
+
+        transform.Translate(0, speed * Time.deltaTime, 0);
 
 
         // Checking Off Bounds
@@ -131,25 +135,25 @@ public class Level2ShipController : MonoBehaviour
         /// Ship's rotation
         /// 
 
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            Debug.Log("Up");
-            rigidBody.velocity = transform.forward * speed;
-            //transform.Translate(Vector3.forward * Time.deltaTime, Space.World);
-        }
-        else if (Input.GetKey(KeyCode.LeftArrow)) // Listens to my space bar key being pressed
-        {
-            RotateLeftPermanent();
+        //if (Input.GetKey(KeyCode.UpArrow))
+        //{
+        //    Debug.Log("Up");
+        //    rigidBody.velocity = transform.forward * speed;
+        //    //transform.Translate(Vector3.forward * speed*Time.deltaTime, Space.World);
+        //}
+        //else if (Input.GetKey(KeyCode.LeftArrow)) // Listens to my space bar key being pressed
+        //{
+        //    RotateLeftPermanent();
 
-        }
-         else if (Input.GetKey(KeyCode.RightArrow)) // Listens to my space bar key being pressed
-        {
-            RotateRightPermanent();
-         }
-            /// END OF Ship's rotation
-            /// 
+        //}
+        // else if (Input.GetKey(KeyCode.RightArrow)) // Listens to my space bar key being pressed
+        //{
+        //    RotateRightPermanent();
+        // }
+        //    /// END OF Ship's rotation
+        /// 
 
-        }
+    }
 
 
 
@@ -238,27 +242,43 @@ public class Level2ShipController : MonoBehaviour
        // livesText.text = "Lives : " + lives.ToString();
     }
 
-    void RotateRight(float horiz)
+    //void RotateRight(float horiz)
+    //{
+    //    var rot = 40 * horiz;
+
+    //    transform.rotation = Quaternion.Euler(0, 0, -rot);
+    //}
+
+
+    //private void RotateLeftPermanent()
+    //{
+    //    Debug.Log(transform.rotation.x);
+    //    //rotateLeft = rotateLeft + rotationAngle;
+    //    //transform.rotation = Quaternion.Euler(0, 0, rotateLeft);
+    //    transform.Rotate(new Vector3(0, 0, 1) * Time.deltaTime * 200, Space.World);
+    //}
+
+    //private void RotateRightPermanent()
+    //{
+    //    Debug.Log(transform.rotation.x);
+    //    //rotateRight = rotateRight - rotationAngle;
+    //    //transform.rotation = Quaternion.Euler(0, 0, rotateRight);
+    //    transform.Rotate(new Vector3(0, 0, -1) * Time.deltaTime * 200, Space.World);
+    //}
+
+    void faceMouse()
     {
-        var rot = 40 * horiz;
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        transform.rotation = Quaternion.Euler(0, 0, -rot);
-    }
+        Vector2 direction = new Vector2(mousePosition.x - transform.position.x,
+            mousePosition.y - transform.position.y);
+
+        transform.up = direction;
+
+        Debug.Log(mousePosition.x);
+        Debug.Log(mousePosition.y);
 
 
-    private void RotateLeftPermanent()
-    {
-        Debug.Log(transform.rotation.x);
-        //rotateLeft = rotateLeft + rotationAngle;
-        //transform.rotation = Quaternion.Euler(0, 0, rotateLeft);
-        transform.Rotate(new Vector3(0, 0, 1) * Time.deltaTime * 200, Space.World);
-    }
-
-    private void RotateRightPermanent()
-    {
-        Debug.Log(transform.rotation.x);
-        //rotateRight = rotateRight - rotationAngle;
-        //transform.rotation = Quaternion.Euler(0, 0, rotateRight);
-        transform.Rotate(new Vector3(0, 0, -1) * Time.deltaTime * 200, Space.World);
     }
 }
