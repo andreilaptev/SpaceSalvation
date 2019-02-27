@@ -6,6 +6,7 @@ public class bullet : MonoBehaviour
 {
     public float speed;
     private Rigidbody2D rBody;
+    private float maxDistance;
 
     void Start()
     {
@@ -15,6 +16,11 @@ public class bullet : MonoBehaviour
     void FixedUpdate()
     {
         //transform.Translate(Vector3.forward * Time.deltaTime * speed);
-        rBody.AddForce(transform.forward * speed * Time.fixedDeltaTime, ForceMode2D.Impulse);
+       // rBody.AddForce(transform.forward * speed * Time.fixedDeltaTime, ForceMode2D.Impulse);
+
+
+        maxDistance += 1 * Time.deltaTime;
+
+        if (maxDistance > 2) Destroy(this.gameObject);
     }
 }

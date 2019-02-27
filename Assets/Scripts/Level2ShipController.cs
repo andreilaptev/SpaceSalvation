@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Level2ShipController : MonoBehaviour
 {
     // VARIABLES
-    public float initialSpeed = 4f;
+    public float initialSpeed = 2f;
     float xCoord;
     //private Rigidbody2D rBody;
     private Rigidbody rigidBody;
@@ -32,6 +32,8 @@ public class Level2ShipController : MonoBehaviour
 
     public GameObject bullet;
     public Rigidbody2D bullet1;
+
+   
 
     private float speed;
     private float verticalDirection; // doesn't allow to fly back
@@ -77,8 +79,9 @@ public class Level2ShipController : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
-    {
-      
+    {     
+
+
         ////////////////////////////////
         ///// Ship's Movement
         //float horiz = Input.GetAxis("Horizontal");
@@ -160,11 +163,13 @@ public class Level2ShipController : MonoBehaviour
 
         //Shooting
 
-        if (Input.GetMouseButtonDown(0))
+        //if (Input.GetMouseButtonDown(0)) // shooting with left mouse button
+        if (Input.GetKeyDown(KeyCode.Space)) // shooting with space button
         {
             //Debug.Log("shoot");
-            Shoot();
+            ShootLeft();
         }
+
     }
      
 
@@ -291,7 +296,7 @@ public class Level2ShipController : MonoBehaviour
         //Debug.Log(mousePosition.y);
     }
 
-    void Shoot()
+    void ShootLeft()
     {
 
         Rigidbody2D bulletInstance;
@@ -306,5 +311,6 @@ public class Level2ShipController : MonoBehaviour
         bulletInstance = Instantiate(bullet1, laserSpawnpointRight.transform.position, Quaternion.identity) as Rigidbody2D;
 
         bulletInstance.AddForce(laserSpawnpointRight.transform.up * 500);
+
     }
 }
