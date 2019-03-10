@@ -164,8 +164,8 @@ public class Level2ShipController : MonoBehaviour
         //Shooting
 
         //if (Input.GetMouseButtonDown(0)) // shooting with left mouse button
-        //if (Input.GetKeyDown(KeyCode.Space)) // shooting with space button
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Space)) // shooting with space button
+        //if (Input.GetKeyDown(KeyCode.Z))
         {
             //Debug.Log("shoot");
             ShootLeft();
