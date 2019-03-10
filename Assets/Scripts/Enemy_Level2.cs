@@ -8,6 +8,7 @@ public class Enemy_Level2 : MonoBehaviour
     public GameObject player;
     public GameObject bulletSpawnpointLeft;
     public GameObject bulletSpawnpointRight;
+    public float bulletSpeed;
 
     public Rigidbody2D bullet;
 
@@ -68,11 +69,11 @@ public class Enemy_Level2 : MonoBehaviour
 
         bulletInstance = Instantiate(bullet, bulletSpawnpointLeft.transform.position, Quaternion.identity) as Rigidbody2D;
 
-        bulletInstance.AddForce(bulletSpawnpointLeft.transform.up * 500);
+        bulletInstance.AddForce(bulletSpawnpointLeft.transform.up * bulletSpeed);
 
         bulletInstance = Instantiate(bullet, bulletSpawnpointRight.transform.position, Quaternion.identity) as Rigidbody2D;
 
-        bulletInstance.AddForce(bulletSpawnpointRight.transform.up * 300);
+        bulletInstance.AddForce(bulletSpawnpointRight.transform.up * bulletSpeed);
 
 
 

@@ -198,7 +198,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bulletSpawnpointLeft
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1737005142}
     - target: {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
       propertyPath: bulletSpawnpointRight
@@ -213,7 +213,7 @@ PrefabInstance:
     - target: {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
       propertyPath: waitTime
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4080743432455459495, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
@@ -834,6 +834,12 @@ Transform:
   m_Father: {fileID: 1810564953}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1737005142 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3407350745619956792, guid: 7b012b4b61790e847932636c84885c11,
+    type: 3}
+  m_PrefabInstance: {fileID: 10477463}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1810564950
 GameObject:
   m_ObjectHideFlags: 0
