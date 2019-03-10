@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Level2ShipController : MonoBehaviour
 {
@@ -179,11 +180,20 @@ public class Level2ShipController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-       
 
 
-        if (other.gameObject.tag == "EnemyBullet")
-            health -= 10;
+
+        if (health <= 0)
+        {
+            Die();     
+
+        }
+        else
+        {
+            health -= 20;
+
+            Debug.Log(health);
+        }
 
         Debug.Log(health);
 
@@ -200,28 +210,7 @@ public class Level2ShipController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        
-        if (other.tag == "EnemyBullet")
-        {
-            Debug.Log("HIT");
-            if (health <= 0)
-            {
-                Die();
-            }
-            else
-            {
-
-                health -= 10;
-
-                Debug.Log(health);
-                //LevelsLivesCounter.currentLivesNumber -= 1;
-
-                //Application.LoadLevel("Level1");
-
-            }
-
-        }
-
+       
         // Hitting End of level - redirects to next level
         if (other.tag == "EndOfLevel1")
         {
@@ -275,7 +264,7 @@ public class Level2ShipController : MonoBehaviour
 
         LevelsLivesCounter.currentLivesNumber = 3;
 
-        Application.LoadLevel("Die");
+        SceneManager.LoadScene("Die");
     }
 
     void ShowScore()
