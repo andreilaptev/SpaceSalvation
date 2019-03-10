@@ -29,12 +29,14 @@ public class Level2ShipController : MonoBehaviour
 
     // Shooting variables
     public GameObject laserSpawnpointLeft;
-    public GameObject laserSpawnpointRight;
+   // public GameObject laserSpawnpointRight;
     public float waitTime;
     public GameObject beam;
 
     public GameObject bullet;
     public Rigidbody2D bullet1;
+
+    public float bulletSpeed;
 
    
 
@@ -180,22 +182,19 @@ public class Level2ShipController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-
-
-
         if (health <= 0)
         {
-            Die();     
+           Die();     
 
         }
         else
         {
-            health -= 20;
+            health -= 10;
 
-            Debug.Log(health);
+           // Debug.Log(health);
         }
 
-        Debug.Log(health);
+        //Debug.Log(health);
 
         if (other.gameObject.tag == "Star")
         {
@@ -326,11 +325,11 @@ public class Level2ShipController : MonoBehaviour
         //Instantiate(beam.transform, laserSpawnpointRight.transform.position, Quaternion.identity);
         bulletInstance = Instantiate(bullet1, laserSpawnpointLeft.transform.position, Quaternion.identity) as Rigidbody2D;
 
-        bulletInstance.AddForce(laserSpawnpointLeft.transform.up * 500);
+        bulletInstance.AddForce(laserSpawnpointLeft.transform.up * bulletSpeed);
 
-        bulletInstance = Instantiate(bullet1, laserSpawnpointRight.transform.position, Quaternion.identity) as Rigidbody2D;
+        //bulletInstance = Instantiate(bullet1, laserSpawnpointRight.transform.position, Quaternion.identity) as Rigidbody2D;
 
-        bulletInstance.AddForce(laserSpawnpointRight.transform.up * 500);
+        //bulletInstance.AddForce(laserSpawnpointRight.transform.up * 500);
 
     }
 }

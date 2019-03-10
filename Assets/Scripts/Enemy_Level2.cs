@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy_Level2 : MonoBehaviour
 {
@@ -17,10 +18,13 @@ public class Enemy_Level2 : MonoBehaviour
     private float currentTime;
     private bool shot;
 
+    private int hitsToDie;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        hitsToDie = 5;
     }
 
     // Update is called once per frame
@@ -31,13 +35,25 @@ public class Enemy_Level2 : MonoBehaviour
         
     }
 
+
     void OnCollisionEnter2D(Collision2D other) 
     {
         //Debug.Log("AAA");
 
 
         if (other.gameObject.tag == "PlayerBullet")
-            Debug.Log("AAA");
+        {
+            if (hitsToDie < 5)
+                hitsToDie -= 1;
+            else
+                Die();
+
+            Debug.Log("Enemy dead");
+
+            SceneManager.LoadScene("Level2");
+
+        }
+            
 
     }
 
@@ -87,5 +103,11 @@ public class Enemy_Level2 : MonoBehaviour
 
         //Debug.Log("shot");
 
+    }
+
+
+    private void Die()
+    {
+        Destroy(this.gameObject);        
     }
 }
