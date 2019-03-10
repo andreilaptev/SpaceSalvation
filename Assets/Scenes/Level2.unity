@@ -208,7 +208,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bullet
       value: 
-      objectReference: {fileID: 4929045791721342248, guid: cfeec135cb391b54ead1815ce9652805,
+      objectReference: {fileID: 1224053962202576988, guid: 8a0ea879c0190134bbd415694a087852,
         type: 3}
     - target: {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 1467740737}
   - component: {fileID: 1467740736}
   m_Layer: 0
-  m_Name: ComplexNiceBadger-size_restricted
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
