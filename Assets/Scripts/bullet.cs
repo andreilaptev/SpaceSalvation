@@ -1,10 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
     public float speed;
+
+    public bool shown = true;
+
     private Rigidbody2D rBody;
     private float maxDistance;
 
@@ -22,5 +26,15 @@ public class bullet : MonoBehaviour
         maxDistance += 1 * Time.deltaTime;
 
         if (maxDistance > 2) Destroy(this.gameObject);
+
+        if (!shown)
+            RemoveThisObject();
+    }
+
+    private void RemoveThisObject()
+    {
+        Destroy(this.gameObject);
     }
 }
+
+

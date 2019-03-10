@@ -188,7 +188,13 @@ public class Level2ShipController : MonoBehaviour
         Debug.Log(health);
 
         if (other.gameObject.tag == "Star")
-            Debug.Log("star");
+        {
+
+            score += 100;
+            starTrigger = other.gameObject;
+            starTrigger.GetComponent<StarController>().shown = false;
+        }
+            
 
     }
 
