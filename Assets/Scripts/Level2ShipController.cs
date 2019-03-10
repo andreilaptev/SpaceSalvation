@@ -16,6 +16,8 @@ public class Level2ShipController : MonoBehaviour
 
     public int rotationAngle;
 
+    public int health = 100;
+
 
     public int score;
     public int lives;
@@ -141,7 +143,7 @@ public class Level2ShipController : MonoBehaviour
         /// 
 
         /// Ship's rotation
-        /// 
+        
 
         //if (Input.GetKey(KeyCode.UpArrow))
         //{
@@ -172,23 +174,43 @@ public class Level2ShipController : MonoBehaviour
         }
 
     }
-     
+
+
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+       
+
+
+        if (other.gameObject.tag == "EnemyBullet")
+            health -= 10;
+
+        Debug.Log(health);
+
+        if (other.gameObject.tag == "Star")
+            Debug.Log("star");
+
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Hitting an Asteroid - death
-        if (other.tag == "Asteroid")
+        
+        if (other.tag == "EnemyBullet")
         {
-            //Debug.Log("HIT");
-            if (lives < 1)
+            Debug.Log("HIT");
+            if (health <= 0)
             {
                 Die();
             }
             else
             {
-                LevelsLivesCounter.currentLivesNumber -= 1;
 
-                Application.LoadLevel("Level1");
+                health -= 10;
+
+                Debug.Log(health);
+                //LevelsLivesCounter.currentLivesNumber -= 1;
+
+                //Application.LoadLevel("Level1");
 
             }
 
@@ -219,6 +241,8 @@ public class Level2ShipController : MonoBehaviour
         // Hitting a Star - ading 100 points
         if (other.tag == "Star")
         {
+            Debug.Log("star");
+
             score += 100;
             extraLiveBonus += 100;
 

@@ -31,6 +31,16 @@ public class Enemy_Level2 : MonoBehaviour
         
     }
 
+    void OnCollisionEnter2D(Collision2D other) 
+    {
+        //Debug.Log("AAA");
+
+
+        if (other.gameObject.tag == "PlayerBullet")
+            Debug.Log("AAA");
+
+    }
+
     private void targetPlayer()
     {
 
@@ -75,7 +85,7 @@ public class Enemy_Level2 : MonoBehaviour
 
         bulletInstance.AddForce(bulletSpawnpointRight.transform.up * bulletSpeed);
 
-
+        //Debug.Log("shot");
 
     }
 }

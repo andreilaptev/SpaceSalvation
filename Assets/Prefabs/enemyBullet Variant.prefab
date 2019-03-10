@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!58 &4548240580492025823
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7460152483293871954}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.55
 --- !u!1001 &6096690407218953588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11,6 +27,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: enemyBullet Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682821583961555494, guid: cfeec135cb391b54ead1815ce9652805,
+        type: 3}
+      propertyPath: m_TagString
+      value: EnemyBullet
       objectReference: {fileID: 0}
     - target: {fileID: 8192388659447777564, guid: cfeec135cb391b54ead1815ce9652805,
         type: 3}
@@ -99,3 +120,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfeec135cb391b54ead1815ce9652805, type: 3}
+--- !u!1 &7460152483293871954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3682821583961555494, guid: cfeec135cb391b54ead1815ce9652805,
+    type: 3}
+  m_PrefabInstance: {fileID: 6096690407218953588}
+  m_PrefabAsset: {fileID: 0}
