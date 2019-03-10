@@ -6,6 +6,15 @@ using UnityEngine;
 public class Enemy_Level2 : MonoBehaviour
 {
     public GameObject player;
+    public GameObject bulletSpawnpointLeft;
+    public GameObject bulletSpawnpointRight;
+
+    public Rigidbody2D bullet;
+
+    public float waitTime;
+
+    private float currentTime;
+    private bool shot;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +32,8 @@ public class Enemy_Level2 : MonoBehaviour
 
     private void targetPlayer()
     {
+
+        // TARGETING
         //Var1
         //this.transform.LookAt(player.transform);
 
@@ -36,5 +47,34 @@ public class Enemy_Level2 : MonoBehaviour
         Vector3 relative = transform.InverseTransformPoint(player.transform.position);
         angle = Mathf.Atan2(relative.x, relative.y) * Mathf.Rad2Deg;
         transform.Rotate(0, 0, -angle);
+
+
+        // SHOOTING
+        if (currentTime == 0)
+            Shoot();
+
+        if (shot && currentTime < waitTime)
+            currentTime += 1 * Time.deltaTime;
+
+        if (currentTime >= waitTime)
+            currentTime = 0;
+    }
+
+    private void Shoot()
+    {
+        shot = true;
+
+        Rigidbody2D bulletInstance;
+
+        bulletInstance = Instantiate(bullet, bulletSpawnpointLeft.transform.position, Quaternion.identity) as Rigidbody2D;
+
+        bulletInstance.AddForce(bulletSpawnpointLeft.transform.up * 500);
+
+        bulletInstance = Instantiate(bullet, bulletSpawnpointRight.transform.position, Quaternion.identity) as Rigidbody2D;
+
+        bulletInstance.AddForce(bulletSpawnpointRight.transform.up * 300);
+
+
+
     }
 }
