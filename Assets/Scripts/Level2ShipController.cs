@@ -214,16 +214,16 @@ public class Level2ShipController : MonoBehaviour
             starTrigger.GetComponent<StarController>().shown = false;
         }
 
-        if (other.gameObject.tag == "Health")
-        {
-            health += 10;
+        //if (other.gameObject.tag == "Health")
+        //{
+        //    health += 10;
 
-            healthTrigger = other.gameObject;
-            healthTrigger.GetComponent<Health>().shown = false;
+        //    healthTrigger = other.gameObject;
+        //    healthTrigger.GetComponent<Health>().shown = false;
 
-            Debug.Log(health);
+        //    Debug.Log(health);
 
-        }
+        //}
 
     }
 

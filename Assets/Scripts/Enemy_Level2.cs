@@ -48,8 +48,8 @@ public class Enemy_Level2 : MonoBehaviour
             if (hits < hitsToDie)
             {
                 hits += 1;
-
                 Debug.Log(hits);
+
             }
            
             else
