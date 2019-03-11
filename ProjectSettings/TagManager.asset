@@ -12,6 +12,7 @@ TagManager:
   - BlueBeam
   - EnemyBullet
   - PlayerBullet
+  - Health
   layers:
   - Default
   - TransparentFX
