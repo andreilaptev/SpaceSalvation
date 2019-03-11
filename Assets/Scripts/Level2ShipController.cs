@@ -206,7 +206,7 @@ public class Level2ShipController : MonoBehaviour
             {
                 health -= 10;
 
-                Debug.Log(health);
+                //Debug.Log(health);
             }
         }
        
@@ -262,10 +262,11 @@ public class Level2ShipController : MonoBehaviour
         // Hitting a Star - ading 100 points
         if (other.tag == "Star")
         {
-            Debug.Log("star");
+            //Debug.Log("star");
 
             score += 100;
             extraLiveBonus += 100;
+            Debug.Log("Score " + score);
 
             if (extraLiveBonus >= 1000)
             {
@@ -295,13 +296,13 @@ public class Level2ShipController : MonoBehaviour
 
     void ShowScore()
     {
-        //scoreText.text = "Score : " + score.ToString();
-        //Debug.Log(scoreText.text);
+        scoreText.text = "Score : " + score.ToString();
+        Debug.Log("Score " +  scoreText.text);
     }
 
     void ShowLives()
     {
-       // livesText.text = "Lives : " + lives.ToString();
+        livesText.text = "Lives : " + lives.ToString();
     }
 
     //void RotateRight(float horiz)
@@ -359,4 +360,6 @@ public class Level2ShipController : MonoBehaviour
         //bulletInstance.AddForce(laserSpawnpointRight.transform.up * 500);
 
     }
+
+
 }
