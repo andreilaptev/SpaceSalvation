@@ -14,25 +14,27 @@ public class Enemy_Level2 : MonoBehaviour
     public Rigidbody2D bullet;
 
     public float waitTime;
+    public int hitsToDie;
 
     private float currentTime;
     private bool shot;
+    private int hits;
 
-    private int hitsToDie;
+   
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        hitsToDie = 5;
+        hits = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (gameObject != null)
+            targetPlayer();
 
-        targetPlayer();
-        
     }
 
 
@@ -43,14 +45,22 @@ public class Enemy_Level2 : MonoBehaviour
 
         if (other.gameObject.tag == "PlayerBullet")
         {
-            if (hitsToDie < 5)
-                hitsToDie -= 1;
+            if (hits < hitsToDie)
+            {
+                hits += 1;
+
+                Debug.Log(hits);
+            }
+           
             else
+            {
                 Die();
 
-            Debug.Log("Enemy dead");
+                Debug.Log("Enemy dead");
 
-            SceneManager.LoadScene("Level2");
+                SceneManager.LoadScene("Level2");
+            }
+
 
         }
             
@@ -108,6 +118,7 @@ public class Enemy_Level2 : MonoBehaviour
 
     private void Die()
     {
-        Destroy(this.gameObject);        
+        
+        Destroy(gameObject);        
     }
 }

@@ -31,6 +31,12 @@ public class bullet : MonoBehaviour
             RemoveThisObject();
     }
 
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Enemy")
+            RemoveThisObject();
+    }
+
     private void RemoveThisObject()
     {
         Destroy(this.gameObject);

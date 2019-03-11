@@ -223,7 +223,12 @@ PrefabInstance:
     - target: {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
       propertyPath: bulletSpeed
-      value: 400
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11,
+        type: 3}
+      propertyPath: hitsToDie
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4080743432455459495, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
@@ -385,6 +390,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4080743431115369052, guid: 7b012b4b61790e847932636c84885c11,
+        type: 3}
+      propertyPath: m_UsedByComposite
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b012b4b61790e847932636c84885c11, type: 3}
 --- !u!1 &1039578397
@@ -493,7 +503,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169809787}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.882353, y: -0.91180325, z: -9.791923}
+  m_LocalPosition: {x: -0.73, y: 3.79, z: -9.791923}
   m_LocalScale: {x: 0.24117647, y: 0.24630626, z: 1}
   m_Children: []
   m_Father: {fileID: 1174592447}
@@ -653,7 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ff77917aefee14983dc721997de109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialSpeed: 3
+  initialSpeed: 5
   rotationAngle: 5
   health: 100
   score: 0
@@ -662,11 +672,11 @@ MonoBehaviour:
   scoreText: {fileID: 0}
   livesText: {fileID: 0}
   laserSpawnpointLeft: {fileID: 1169809787}
-  laserSpawnpointRight: {fileID: 2127758043}
   waitTime: 0
   beam: {fileID: 0}
   bullet: {fileID: 3682821583961555494, guid: cfeec135cb391b54ead1815ce9652805, type: 3}
   bullet1: {fileID: 4929045791721342248, guid: cfeec135cb391b54ead1815ce9652805, type: 3}
+  bulletSpeed: 100
 --- !u!50 &1174592449
 Rigidbody2D:
   serializedVersion: 4

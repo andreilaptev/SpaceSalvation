@@ -17,7 +17,7 @@ public class Level2ShipController : MonoBehaviour
 
     public int rotationAngle;
 
-    public int health = 100;
+    public int health;
 
 
     public int score;
@@ -67,6 +67,8 @@ public class Level2ShipController : MonoBehaviour
         lives = LevelsLivesCounter.currentLivesNumber;
         rotateLeft = 0;
         rotateRight = 360;
+
+        health = 100;
 
         if (lives < 1) Die();
 
@@ -191,7 +193,7 @@ public class Level2ShipController : MonoBehaviour
         {
             health -= 10;
 
-           // Debug.Log(health);
+           Debug.Log(health);
         }
 
         //Debug.Log(health);
