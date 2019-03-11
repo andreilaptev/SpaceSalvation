@@ -93,7 +93,7 @@ Animation:
   m_GameObject: {fileID: 6469785932644067626}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: 43746e69f90b3d748ae67cd055fc7392, type: 2}
   m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1

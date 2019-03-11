@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Player") //(!shown)
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "EnemyBullet" || other.gameObject.tag == "Enemy") //(!shown)
         {
 
             Debug.Log("remove health");
