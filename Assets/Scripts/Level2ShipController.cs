@@ -17,7 +17,7 @@ public class Level2ShipController : MonoBehaviour
 
     public int rotationAngle;
 
-    public int health;
+    public int health = 100;
 
 
     public int score;
@@ -68,7 +68,7 @@ public class Level2ShipController : MonoBehaviour
         rotateLeft = 0;
         rotateRight = 360;
 
-        health = 100;
+       // health = 100;
 
         if (lives < 1) Die();
 
@@ -184,17 +184,24 @@ public class Level2ShipController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (health <= 0)
-        {
-           //Die();     
+        //Debug.Log(health);
 
-        }
-        else
+        if (other.gameObject.tag == "EnemyBullet")
         {
-            health -= 10;
+            if (health <= 0)
+            {
+                Die();
+                SceneManager.LoadScene("Die_Level2");
 
-           Debug.Log(health);
+            }
+            else
+            {
+                health -= 10;
+
+                Debug.Log(health);
+            }
         }
+       
 
         //Debug.Log(health);
 

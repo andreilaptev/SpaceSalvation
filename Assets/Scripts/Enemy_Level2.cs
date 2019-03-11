@@ -32,7 +32,7 @@ public class Enemy_Level2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject != null)
+        if (player != null)
             targetPlayer();
 
     }
@@ -58,7 +58,7 @@ public class Enemy_Level2 : MonoBehaviour
 
                 Debug.Log("Enemy dead");
 
-                SceneManager.LoadScene("Level2");
+                SceneManager.LoadScene("Level2_Post_Title");
             }
 
 
@@ -80,10 +80,13 @@ public class Enemy_Level2 : MonoBehaviour
         //Var3
 
         float angle = 0;
-
-        Vector3 relative = transform.InverseTransformPoint(player.transform.position);
-        angle = Mathf.Atan2(relative.x, relative.y) * Mathf.Rad2Deg;
-        transform.Rotate(0, 0, -angle);
+        if (player != null)
+        {
+            Vector3 relative = transform.InverseTransformPoint(player.transform.position);
+            angle = Mathf.Atan2(relative.x, relative.y) * Mathf.Rad2Deg;
+            transform.Rotate(0, 0, -angle);
+        }
+        
 
 
         // SHOOTING

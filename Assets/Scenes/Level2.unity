@@ -228,7 +228,7 @@ PrefabInstance:
     - target: {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
       propertyPath: hitsToDie
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4080743432455459495, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
@@ -769,7 +769,7 @@ MonoBehaviour:
   beam: {fileID: 0}
   bullet: {fileID: 3682821583961555494, guid: cfeec135cb391b54ead1815ce9652805, type: 3}
   bullet1: {fileID: 4929045791721342248, guid: cfeec135cb391b54ead1815ce9652805, type: 3}
-  bulletSpeed: 100
+  bulletSpeed: 200
 --- !u!50 &1174592449
 Rigidbody2D:
   serializedVersion: 4
