@@ -186,7 +186,7 @@ public class Level2ShipController : MonoBehaviour
     {
         if (health <= 0)
         {
-           Die();     
+           //Die();     
 
         }
         else
