@@ -16,6 +16,14 @@ public class StarController : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D (Collision2D other)
+    {
+        if (other.gameObject.tag == "EnemyBullet" || other.gameObject.tag == "Enemy")
+        {
+            RemoveStar();
+        }
+    }
+
     public void RemoveStar()
     {
         Destroy(this.gameObject);
