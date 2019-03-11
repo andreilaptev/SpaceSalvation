@@ -56,7 +56,7 @@ public class Enemy_Level2 : MonoBehaviour
             {
                 Die();
 
-                Debug.Log("Enemy dead");
+                //Debug.Log("Enemy dead");
 
                 SceneManager.LoadScene("Level2_Post_Title");
             }

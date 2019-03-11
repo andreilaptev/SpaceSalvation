@@ -53,6 +53,7 @@ public class Level2ShipController : MonoBehaviour
 
 
     private GameObject starTrigger;
+    private GameObject healthTrigger;
 
     Collider2D coll = new Collider2D();
 
@@ -216,6 +217,10 @@ public class Level2ShipController : MonoBehaviour
         if (other.gameObject.tag == "Health")
         {
             health += 10;
+
+            healthTrigger = other.gameObject;
+            healthTrigger.GetComponent<Health>().shown = false;
+
             Debug.Log(health);
 
         }

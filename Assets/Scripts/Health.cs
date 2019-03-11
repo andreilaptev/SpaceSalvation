@@ -8,14 +8,17 @@ public class Health : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {       
         void OnCollisionEnter2D(Collision2D other)
         {
-            if (!shown)
+            if (other.gameObject.tag == "Player") //(!shown)
             {
+
+                Debug.Log("remove health");
                 RemoveHealth();
             }
-        }
+        }   
+        
         
     }
 
