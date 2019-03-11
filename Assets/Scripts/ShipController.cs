@@ -39,7 +39,7 @@ public class ShipController : MonoBehaviour
         ShowScore();
         ShowLives();
 
-        Debug.Log(LevelsLivesCounter.currentLivesNumber);
+       // Debug.Log(LevelsLivesCounter.currentLivesNumber);
 
     }   
 
