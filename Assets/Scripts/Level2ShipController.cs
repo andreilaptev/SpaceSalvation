@@ -191,8 +191,15 @@ public class Level2ShipController : MonoBehaviour
         {
             if (health <= 0)
             {
-                Die();
-                SceneManager.LoadScene("Die_Level2");
+                if (lives <=0 )
+                     Die();
+                else
+                {
+                    LevelsLivesCounter.currentLivesNumber -= 1;
+
+                    SceneManager.LoadScene("Level2");
+
+                }
 
             }
             else
@@ -283,7 +290,7 @@ public class Level2ShipController : MonoBehaviour
 
         LevelsLivesCounter.currentLivesNumber = 3;
 
-        SceneManager.LoadScene("Die");
+        SceneManager.LoadScene("Die_Level2");
     }
 
     void ShowScore()
