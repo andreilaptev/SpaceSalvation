@@ -206,6 +206,7 @@ Transform:
   m_Children:
   - {fileID: 969423539}
   - {fileID: 1612459570}
+  - {fileID: 464117692}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 95}
@@ -225,9 +226,11 @@ MonoBehaviour:
   bulletSpawnpointLeft: {fileID: 1612459569}
   bulletSpawnpointRight: {fileID: 969423538}
   bulletSpeed: 200
+  bombPoint: {fileID: 464117691}
   bullet: {fileID: 1224053962202576988, guid: 8a0ea879c0190134bbd415694a087852, type: 3}
+  bomb: {fileID: 5648285944174962044, guid: 18660a22164529042a9a3a64f9a6ecea, type: 3}
   waitTime: 1
-  hitsToDie: 5
+  hitsToDie: 3
 --- !u!95 &374650567
 Animator:
   serializedVersion: 3
@@ -363,6 +366,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423596304}
   m_CullTransparentMesh: 0
+--- !u!1 &464117691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 464117692}
+  m_Layer: 0
+  m_Name: BombPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &464117692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464117691}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.36, y: -0.53, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 374650565}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &969423538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,9 +1127,11 @@ MonoBehaviour:
   bulletSpawnpointLeft: {fileID: 297921162}
   bulletSpawnpointRight: {fileID: 78219250}
   bulletSpeed: 200
+  bombPoint: {fileID: 1580092970}
   bullet: {fileID: 1224053962202576988, guid: 8a0ea879c0190134bbd415694a087852, type: 3}
+  bomb: {fileID: 5648285944174962044, guid: 18660a22164529042a9a3a64f9a6ecea, type: 3}
   waitTime: 1
-  hitsToDie: 5
+  hitsToDie: 3
 --- !u!70 &1390580082
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1113,6 +1148,12 @@ CapsuleCollider2D:
   m_Offset: {x: 0.013017323, y: -0.16662398}
   m_Size: {x: 3.0146956, y: 3.4967568}
   m_Direction: 0
+--- !u!4 &1390580085 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1735977511683918312, guid: b0477e01d72cbe14a9d5dc812b37a4d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1986994772}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1467740735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,6 +1232,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1580092970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1580092971}
+  m_Layer: 8
+  m_Name: BombPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1580092971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580092970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.14, y: -0.56, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1390580085}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1612459569
 GameObject:
@@ -1394,6 +1465,7 @@ GameObject:
   - component: {fileID: 1810564953}
   - component: {fileID: 1810564952}
   - component: {fileID: 1810564951}
+  - component: {fileID: 1810564954}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1465,6 +1537,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1810564954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810564950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6027a728ab53a4abda2289bda120de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1986994772
 PrefabInstance:
   m_ObjectHideFlags: 0

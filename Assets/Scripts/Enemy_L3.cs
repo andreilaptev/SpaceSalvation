@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
@@ -12,8 +11,10 @@ public class Enemy_L3 : MonoBehaviour
     public GameObject bulletSpawnpointLeft;
     public GameObject bulletSpawnpointRight;
     public float bulletSpeed;
+    public GameObject bombPoint;
 
     public Rigidbody2D bullet;
+    public Rigidbody2D bomb;
 
     public float waitTime;
     public int hitsToDie;
@@ -21,6 +22,8 @@ public class Enemy_L3 : MonoBehaviour
     private float currentTime;
     private bool shot;
     private int hits;
+
+    private int numberOfDeadEnemies = 0;
 
 
 
@@ -37,13 +40,14 @@ public class Enemy_L3 : MonoBehaviour
         if (player != null)
             targetPlayer();
 
+   
+            
     }
 
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        //Debug.Log("AAA");
-
+    
 
         if (other.gameObject.tag == "PlayerBullet")
         {
@@ -51,16 +55,17 @@ public class Enemy_L3 : MonoBehaviour
             {
                 hits += 1;
 
-
+                
             }
 
             else
             {
+                 // Here comes the Main Enemy
+
                 Die();
 
-                //Debug.Log("Enemy dead");
+               
 
-                SceneManager.LoadScene("Level2_Post_Title");
             }
 
 
@@ -123,7 +128,12 @@ public class Enemy_L3 : MonoBehaviour
 
     private void Die()
     {
-
         Destroy(gameObject);
+
+        Rigidbody2D bombInstance;
+
+        bombInstance = Instantiate(bomb, bombPoint.transform.position, Quaternion.identity) as Rigidbody2D;
+        //  SceneManager.LoadScene("Level2_Post_Title");
+
     }
 }
