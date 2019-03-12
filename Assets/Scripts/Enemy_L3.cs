@@ -130,6 +130,11 @@ public class Enemy_L3 : MonoBehaviour
     {
         Destroy(gameObject);
 
+        LevelsLivesCounter.NumberOfDeadEnemies += 1;
+
+        Debug.Log(LevelsLivesCounter.NumberOfDeadEnemies);
+
+        // Droppung a bomb
         Rigidbody2D bombInstance;
 
         bombInstance = Instantiate(bomb, bombPoint.transform.position, Quaternion.identity) as Rigidbody2D;
