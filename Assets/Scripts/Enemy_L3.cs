@@ -136,6 +136,9 @@ public class Enemy_L3 : MonoBehaviour
         if (LevelsLivesCounter.NumberOfDeadEnemies == 2)
             Debug.Log("All dead");
 
+        //BossController.ShowBoss();
+
+
         // Droppung a bomb
         Rigidbody2D bombInstance;
 
