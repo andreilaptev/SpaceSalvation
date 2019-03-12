@@ -191,15 +191,15 @@ public class Level2ShipController : MonoBehaviour
         {
             if (health <= 0)
             {
-                if (lives <=0 )
-                     Die();
-                else
-                {
-                    LevelsLivesCounter.currentLivesNumber -= 1;
+                //if (lives <=0 )
+                //     Die();
+                //else
+                //{
+                //    LevelsLivesCounter.currentLivesNumber -= 1;
 
-                    SceneManager.LoadScene("Level2");
+                //    SceneManager.LoadScene("Level2");
 
-                }
+                //}
 
             }
             else

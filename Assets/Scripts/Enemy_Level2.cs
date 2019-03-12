@@ -89,7 +89,7 @@ public class Enemy_Level2 : MonoBehaviour
         
 
 
-        // SHOOTING
+        // SHOOTING DELAY
         if (currentTime == 0)
             Shoot();
 

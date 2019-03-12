@@ -1,21 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!111 &1800855669
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735977511683918228}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 16d02dff57c449f489ed15a4666859df, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 16d02dff57c449f489ed15a4666859df, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1001 &2357309906440119243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4080743431115369055, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Enemy 2
       objectReference: {fileID: 0}
     - target: {fileID: 4080743431115369055, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
@@ -301,12 +285,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b012b4b61790e847932636c84885c11, type: 3}
---- !u!1 &1735977511683918228 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4080743431115369055, guid: 7b012b4b61790e847932636c84885c11,
-    type: 3}
-  m_PrefabInstance: {fileID: 2357309906440119243}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1735977510388894994 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4080743431835709145, guid: 7b012b4b61790e847932636c84885c11,
