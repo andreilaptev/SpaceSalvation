@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 4877751172341132942}
   - component: {fileID: 4877751172341132943}
   - component: {fileID: 4877751172341132936}
-  - component: {fileID: 4877751172341132937}
+  - component: {fileID: 1306614243}
+  - component: {fileID: 1306614242}
   m_Layer: 0
   m_Name: JEROM_boss
   m_TagString: Untagged
@@ -252,7 +253,23 @@ PolygonCollider2D:
       - {x: 1.78, y: 0.7}
       - {x: 2.8, y: 0.7}
       - {x: 2.8, y: 1.04}
---- !u!95 &4877751172341132937
+--- !u!111 &1306614243
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4877751172341132938}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 31f577ad9e5fc854faabc3ae125f64df, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 31f577ad9e5fc854faabc3ae125f64df, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &1306614242
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -262,7 +279,7 @@ Animator:
   m_GameObject: {fileID: 4877751172341132938}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e7ef3bb57cda236418113cb8fc01c3e5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 259c81ea99bdff04180b2e727b2db2f9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

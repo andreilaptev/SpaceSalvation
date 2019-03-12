@@ -227,8 +227,10 @@ MonoBehaviour:
   bulletSpawnpointRight: {fileID: 969423538}
   bulletSpeed: 200
   bombPoint: {fileID: 464117691}
+  bossPoint: {fileID: 1820782253}
   bullet: {fileID: 1224053962202576988, guid: 8a0ea879c0190134bbd415694a087852, type: 3}
   bomb: {fileID: 5648285944174962044, guid: 18660a22164529042a9a3a64f9a6ecea, type: 3}
+  boss: {fileID: 4877751172341132943, guid: 508557ca6078ef940b0e06fab16ac91a, type: 3}
   waitTime: 1
   hitsToDie: 3
 --- !u!95 &374650567
@@ -395,6 +397,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 374650565}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &672226355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 672226357}
+  - component: {fileID: 672226356}
+  m_Layer: 0
+  m_Name: Boss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &672226356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672226355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55143298d093df34f986db8ea6a397c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &672226357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672226355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.12593517, y: 2.914049, z: 0.0837401}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1820782254}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &969423538
 GameObject:
@@ -1103,8 +1149,10 @@ MonoBehaviour:
   bulletSpawnpointRight: {fileID: 78219250}
   bulletSpeed: 200
   bombPoint: {fileID: 1580092970}
+  bossPoint: {fileID: 1820782253}
   bullet: {fileID: 1224053962202576988, guid: 8a0ea879c0190134bbd415694a087852, type: 3}
   bomb: {fileID: 5648285944174962044, guid: 18660a22164529042a9a3a64f9a6ecea, type: 3}
+  boss: {fileID: 4877751172341132943, guid: 508557ca6078ef940b0e06fab16ac91a, type: 3}
   waitTime: 1
   hitsToDie: 3
 --- !u!70 &1390580082
@@ -1547,12 +1595,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820782253}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 3.13, z: -0.036022626}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.10593517, y: 0.2159512, z: -0.119762726}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 672226357}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1986994772
 PrefabInstance:

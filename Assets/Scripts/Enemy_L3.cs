@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,9 +13,11 @@ public class Enemy_L3 : MonoBehaviour
     public GameObject bulletSpawnpointRight;
     public float bulletSpeed;
     public GameObject bombPoint;
+    public GameObject bossPoint;
 
     public Rigidbody2D bullet;
     public Rigidbody2D bomb;
+    public Rigidbody2D boss;
 
     public float waitTime;
     public int hitsToDie;
@@ -134,9 +137,12 @@ public class Enemy_L3 : MonoBehaviour
         Debug.Log(LevelsLivesCounter.NumberOfDeadEnemies);
 
         if (LevelsLivesCounter.NumberOfDeadEnemies == 2)
+        {
             Debug.Log("All dead");
 
-        //BossController.ShowBoss();
+            ShowBoss();
+        }
+            
 
 
         // Droppung a bomb
@@ -145,5 +151,15 @@ public class Enemy_L3 : MonoBehaviour
         bombInstance = Instantiate(bomb, bombPoint.transform.position, Quaternion.identity) as Rigidbody2D;
         //  SceneManager.LoadScene("Level2_Post_Title");
 
+    }
+
+
+
+    private void ShowBoss()
+    {
+
+        Rigidbody2D bossInstance;
+
+        bossInstance = Instantiate(boss, bossPoint.transform.position, Quaternion.identity);
     }
 }

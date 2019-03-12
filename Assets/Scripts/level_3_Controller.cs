@@ -27,4 +27,11 @@ public class level_3_Controller : MonoBehaviour
         //    Debug.Log("No enemies");
 
     }
+
+    public static void ShowBoss()
+    {
+        //bPoint = bossPoint;
+
+
+    }
 }
