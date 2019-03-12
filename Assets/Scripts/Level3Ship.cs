@@ -38,6 +38,7 @@ public class Level3Ship : MonoBehaviour
     public Rigidbody2D bomb;
 
     public float bulletSpeed;
+    public float bombSpeed;
 
 
 
@@ -184,11 +185,17 @@ public class Level3Ship : MonoBehaviour
             ShootLeft();
         }
 
-        if (Input.GetKeyDown(KeyCode.V)) // shooting with V button
-        
+        if (Input.GetKeyDown(KeyCode.V)) // shooting with V button        
         {
-            if (nuclearWeapons != 0)
+            Debug.Log(nuclearWeapons);
+
+            if (nuclearWeapons > 0)
+            {
                 CastBomb();
+                nuclearWeapons -= 1;
+            }
+                
+           
         }
 
     }
@@ -385,6 +392,6 @@ public class Level3Ship : MonoBehaviour
 
         bombInstance = Instantiate(bomb, laserSpawnpointLeft.transform.position, Quaternion.identity) as Rigidbody2D;
 
-        bombInstance.AddForce(laserSpawnpointLeft.transform.up * bulletSpeed);
+        bombInstance.AddForce(laserSpawnpointLeft.transform.up * bombSpeed);
     }
 }

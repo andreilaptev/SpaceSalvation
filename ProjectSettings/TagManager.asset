@@ -13,6 +13,7 @@ TagManager:
   - EnemyBullet
   - PlayerBullet
   - Health
+  - Nuclear
   layers:
   - Default
   - TransparentFX

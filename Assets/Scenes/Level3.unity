@@ -932,8 +932,9 @@ MonoBehaviour:
   beam: {fileID: 0}
   bullet: {fileID: 0}
   bullet1: {fileID: 4929045791721342248, guid: cfeec135cb391b54ead1815ce9652805, type: 3}
-  bomb: {fileID: 5648285944174962044, guid: 18660a22164529042a9a3a64f9a6ecea, type: 3}
+  bomb: {fileID: 1224053962202576988, guid: 32435a3a4c14505448233ca12b06a27e, type: 3}
   bulletSpeed: 200
+  bombSpeed: 50
 --- !u!1 &1244490590
 GameObject:
   m_ObjectHideFlags: 0
