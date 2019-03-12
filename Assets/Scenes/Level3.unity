@@ -118,6 +118,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1986994772}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &297921162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1737005142, guid: b0477e01d72cbe14a9d5dc812b37a4d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1986994772}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &374650563
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +255,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 200
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -1061,23 +1067,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1390580079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d061122ceca7bde4194fd61d48922e4a, type: 3}
+  m_Script: {fileID: 11500000, guid: 859a0a1e81683b84f8dcf55337d3d070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialSpeed: 7
-  rotationAngle: 5
-  health: 100
-  score: 0
-  lives: 0
-  extraLiveBonus: 0
-  scoreText: {fileID: 423596306}
-  livesText: {fileID: 1244490592}
-  laserSpawnpointLeft: {fileID: 1169809787}
-  waitTime: 0
-  beam: {fileID: 0}
-  bullet: {fileID: 0}
-  bullet1: {fileID: 4929045791721342248, guid: cfeec135cb391b54ead1815ce9652805, type: 3}
+  player: {fileID: 0}
+  bulletSpawnpointLeft: {fileID: 297921162}
+  bulletSpawnpointRight: {fileID: 78219250}
   bulletSpeed: 200
+  bullet: {fileID: 1224053962202576988, guid: 8a0ea879c0190134bbd415694a087852, type: 3}
+  waitTime: 1
+  hitsToDie: 5
 --- !u!70 &1390580082
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
