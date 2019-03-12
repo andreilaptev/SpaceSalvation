@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Level2ShipController : MonoBehaviour
+public class Level3Ship : MonoBehaviour
 {
     // VARIABLES
     public float initialSpeed = 2f;
@@ -29,7 +28,7 @@ public class Level2ShipController : MonoBehaviour
 
     // Shooting variables
     public GameObject laserSpawnpointLeft;
-   // public GameObject laserSpawnpointRight;
+    // public GameObject laserSpawnpointRight;
     public float waitTime;
     public GameObject beam;
 
@@ -38,7 +37,7 @@ public class Level2ShipController : MonoBehaviour
 
     public float bulletSpeed;
 
-   
+
 
     private float speed;
     private float verticalDirection; // doesn't allow to fly back
@@ -69,7 +68,7 @@ public class Level2ShipController : MonoBehaviour
         rotateLeft = 0;
         rotateRight = 360;
 
-       // health = 100;
+        // health = 100;
 
         if (lives < 1) Die();
 
@@ -87,7 +86,7 @@ public class Level2ShipController : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
-    {     
+    {
 
 
         ////////////////////////////////
@@ -102,7 +101,7 @@ public class Level2ShipController : MonoBehaviour
 
         faceMouse();
 
-       transform.Translate(0, speed * Time.deltaTime, 0); // Temporarely
+        transform.Translate(0, speed * Time.deltaTime, 0); // Temporarely
 
 
         // Checking Off Bounds
@@ -149,7 +148,7 @@ public class Level2ShipController : MonoBehaviour
         /// 
 
         /// Ship's rotation
-        
+
 
         //if (Input.GetKey(KeyCode.UpArrow))
         //{
@@ -209,7 +208,7 @@ public class Level2ShipController : MonoBehaviour
                 //Debug.Log(health);
             }
         }
-       
+
 
         //Debug.Log(health);
 
@@ -236,7 +235,7 @@ public class Level2ShipController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-       
+
         // Hitting End of level - redirects to next level
         if (other.tag == "EndOfLevel1")
         {
@@ -297,7 +296,7 @@ public class Level2ShipController : MonoBehaviour
     void ShowScore()
     {
         scoreText.text = "Score : " + score.ToString();
-        Debug.Log("Score " +  scoreText.text);
+        Debug.Log("Score " + scoreText.text);
     }
 
     void ShowLives()
@@ -360,6 +359,4 @@ public class Level2ShipController : MonoBehaviour
         //bulletInstance.AddForce(laserSpawnpointRight.transform.up * 500);
 
     }
-
-
 }
