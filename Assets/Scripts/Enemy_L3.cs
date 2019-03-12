@@ -138,7 +138,7 @@ public class Enemy_L3 : MonoBehaviour
 
         if (LevelsLivesCounter.NumberOfDeadEnemies == 2)
         {
-            Debug.Log("All dead");
+            //Debug.Log("All dead");
 
             ShowBoss();
         }
