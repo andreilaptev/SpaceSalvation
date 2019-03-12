@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Level3Ship : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class Level3Ship : MonoBehaviour
 
     public GameObject bullet;
     public Rigidbody2D bullet1;
+    public Rigidbody2D bomb;
 
     public float bulletSpeed;
 
@@ -46,6 +48,8 @@ public class Level3Ship : MonoBehaviour
 
     private float clockwise = 1000.0f;
     private float counterClockwise = -5.0f;
+
+    private int nuclearWeapons;
 
 
     // used to rotate ship to the right over z-axis
@@ -67,6 +71,8 @@ public class Level3Ship : MonoBehaviour
         lives = LevelsLivesCounter.currentLivesNumber;
         rotateLeft = 0;
         rotateRight = 360;
+
+        nuclearWeapons = 0;
 
         // health = 100;
 
@@ -178,9 +184,16 @@ public class Level3Ship : MonoBehaviour
             ShootLeft();
         }
 
+        if (Input.GetKeyDown(KeyCode.V)) // shooting with V button
+        
+        {
+            if (nuclearWeapons != 0)
+                CastBomb();
+        }
+
     }
 
-
+    
 
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -218,6 +231,12 @@ public class Level3Ship : MonoBehaviour
             score += 100;
             starTrigger = other.gameObject;
             starTrigger.GetComponent<StarController>().shown = false;
+        }
+
+        if (other.gameObject.tag == "Nuclear")
+        {
+
+            nuclearWeapons += 1;
         }
 
         //if (other.gameObject.tag == "Health")
@@ -358,5 +377,14 @@ public class Level3Ship : MonoBehaviour
 
         //bulletInstance.AddForce(laserSpawnpointRight.transform.up * 500);
 
+    }
+
+    private void CastBomb()
+    {
+        Rigidbody2D bombInstance;
+
+        bombInstance = Instantiate(bomb, laserSpawnpointLeft.transform.position, Quaternion.identity) as Rigidbody2D;
+
+        bombInstance.AddForce(laserSpawnpointLeft.transform.up * bulletSpeed);
     }
 }
