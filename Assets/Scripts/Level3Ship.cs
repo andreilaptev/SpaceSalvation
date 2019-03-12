@@ -75,6 +75,8 @@ public class Level3Ship : MonoBehaviour
 
         nuclearWeapons = 0;
 
+        speed = initialSpeed;
+
         // health = 100;
 
         if (lives < 1) Die();
@@ -95,16 +97,17 @@ public class Level3Ship : MonoBehaviour
     void FixedUpdate()
     {
 
-
         ////////////////////////////////
         ///// Ship's Movement
-        //float horiz = Input.GetAxis("Horizontal");
+        float horiz = Input.GetAxis("Horizontal");
 
-        //float vert = Input.GetAxis("Vertical");           
+        float vert = Input.GetAxis("Vertical");
 
-        //xCoord = rigidBody.position.x;
+        xCoord = transform.position.x;
 
-        speed = initialSpeed;
+       // Debug.Log(xCoord);
+
+       
 
         faceMouse();
 
@@ -112,38 +115,15 @@ public class Level3Ship : MonoBehaviour
 
 
         // Checking Off Bounds
-        //if (xCoord < -8)
-        //{
-        //    if (horiz > 0)
-        //    {
-        //        speed = initialSpeed;
-
-        //        RotateRight(horiz);
-
-        //    }
-        //    else
-        //    {
-        //        speed = 0;
-
-        //        RotateStraight();
-        //    }
-        //};
+        //if (xCoord < -8)                 
+        //    speed = 0;
+        //    else        
+        //        speed = initialSpeed;    
 
         //if (xCoord > 8)
-        //{
-        //    if (horiz < 0)
-        //    {
+        //      speed = 0;  
+        //    else           
         //        speed = initialSpeed;
-
-        //        RotateLeft(horiz);
-        //    }
-        //    else
-        //    {
-        //        speed = 0;
-
-        //        RotateStraight();
-        //    }
-        //};
 
 
 
@@ -153,27 +133,7 @@ public class Level3Ship : MonoBehaviour
         ////////////////////////////////
         /// END OF Ship's Movement
         /// 
-
-        /// Ship's rotation
-
-
-        //if (Input.GetKey(KeyCode.UpArrow))
-        //{
-        //    Debug.Log("Up");
-        //    rigidBody.velocity = transform.forward * speed;
-        //    //transform.Translate(Vector3.forward * speed*Time.deltaTime, Space.World);
-        //}
-        //else if (Input.GetKey(KeyCode.LeftArrow)) // Listens to my space bar key being pressed
-        //{
-        //    RotateLeftPermanent();
-
-        //}
-        // else if (Input.GetKey(KeyCode.RightArrow)) // Listens to my space bar key being pressed
-        //{
-        //    RotateRightPermanent();
-        // }
-        //    /// END OF Ship's rotation
-        /// 
+   
 
         //Shooting
 
@@ -186,9 +146,7 @@ public class Level3Ship : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.V)) // shooting with V button        
-        {
-            Debug.Log(nuclearWeapons);
-
+        {           
             if (nuclearWeapons > 0)
             {
                 CastBomb();
@@ -330,29 +288,6 @@ public class Level3Ship : MonoBehaviour
         livesText.text = "Lives : " + lives.ToString();
     }
 
-    //void RotateRight(float horiz)
-    //{
-    //    var rot = 40 * horiz;
-
-    //    transform.rotation = Quaternion.Euler(0, 0, -rot);
-    //}
-
-
-    //private void RotateLeftPermanent()
-    //{
-    //    Debug.Log(transform.rotation.x);
-    //    //rotateLeft = rotateLeft + rotationAngle;
-    //    //transform.rotation = Quaternion.Euler(0, 0, rotateLeft);
-    //    transform.Rotate(new Vector3(0, 0, 1) * Time.deltaTime * 200, Space.World);
-    //}
-
-    //private void RotateRightPermanent()
-    //{
-    //    Debug.Log(transform.rotation.x);
-    //    //rotateRight = rotateRight - rotationAngle;
-    //    //transform.rotation = Quaternion.Euler(0, 0, rotateRight);
-    //    transform.Rotate(new Vector3(0, 0, -1) * Time.deltaTime * 200, Space.World);
-    //}
 
     void faceMouse()
     {
@@ -370,12 +305,8 @@ public class Level3Ship : MonoBehaviour
 
     void ShootLeft()
     {
-
         Rigidbody2D bulletInstance;
 
-
-        //Instantiate(beam.transform, laserSpawnpointLeft.transform.position, Quaternion.identity);
-        //Instantiate(beam.transform, laserSpawnpointRight.transform.position, Quaternion.identity);
         bulletInstance = Instantiate(bullet1, laserSpawnpointLeft.transform.position, Quaternion.identity) as Rigidbody2D;
 
         bulletInstance.AddForce(laserSpawnpointLeft.transform.up * bulletSpeed);
