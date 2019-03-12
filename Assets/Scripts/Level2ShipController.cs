@@ -334,8 +334,8 @@ public class Level2ShipController : MonoBehaviour
         Vector3 mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        Vector2 direction = new Vector2(mousePosition.x - transform.position.x,
-            mousePosition.y - transform.position.y);
+        Vector2 direction = new Vector2(mousePosition.x - transform.position.x + 0.1f,
+            mousePosition.y - transform.position.y + 0.1f);
 
         transform.up = direction;
 
