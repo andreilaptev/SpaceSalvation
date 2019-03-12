@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 374650567}
   - component: {fileID: 374650569}
   - component: {fileID: 374650568}
+  - component: {fileID: 374650566}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -208,6 +209,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 95}
+--- !u!114 &374650566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374650563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859a0a1e81683b84f8dcf55337d3d070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  bulletSpawnpointLeft: {fileID: 1612459569}
+  bulletSpawnpointRight: {fileID: 969423538}
+  bulletSpeed: 200
+  bullet: {fileID: 1224053962202576988, guid: 8a0ea879c0190134bbd415694a087852, type: 3}
+  waitTime: 1
+  hitsToDie: 5
 --- !u!95 &374650567
 Animator:
   serializedVersion: 3
