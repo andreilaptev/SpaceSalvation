@@ -38,9 +38,7 @@ public class Enemy_L3 : MonoBehaviour
     void Update()
     {
         if (player != null)
-            targetPlayer();
-
-   
+            targetPlayer();     
             
     }
 
@@ -130,9 +128,13 @@ public class Enemy_L3 : MonoBehaviour
     {
         Destroy(gameObject);
 
+        // Incrementing number of dead enemies 
         LevelsLivesCounter.NumberOfDeadEnemies += 1;
 
         Debug.Log(LevelsLivesCounter.NumberOfDeadEnemies);
+
+        if (LevelsLivesCounter.NumberOfDeadEnemies == 2)
+            Debug.Log("All dead");
 
         // Droppung a bomb
         Rigidbody2D bombInstance;
