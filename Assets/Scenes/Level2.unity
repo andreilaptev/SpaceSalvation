@@ -395,7 +395,8 @@ PrefabInstance:
       propertyPath: m_UsedByComposite
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4080743431115369052, guid: 7b012b4b61790e847932636c84885c11, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b012b4b61790e847932636c84885c11, type: 3}
 --- !u!4 &29673508 stripped
 Transform:
@@ -2270,6 +2271,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 10477463}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &1800855665
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800855663}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 3.4300015, y: 3.8300023}
+  m_Direction: 0
 --- !u!111 &1800855669
 Animation:
   m_ObjectHideFlags: 0

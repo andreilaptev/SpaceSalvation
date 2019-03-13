@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "EnemyBullet" || other.gameObject.tag == "Enemy") //(!shown)
         {
 
-            Debug.Log("remove health");
+            //Debug.Log("remove health");
             RemoveHealth();
         }
     }

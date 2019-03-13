@@ -427,6 +427,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55143298d093df34f986db8ea6a397c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropPoint1: {fileID: 0}
+  dropPoint2: {fileID: 0}
+  dropPoint3: {fileID: 0}
+  dropPoint4: {fileID: 0}
+  dropPoint5: {fileID: 0}
+  dropPoint6: {fileID: 0}
+  nucleaDropPoint1: {fileID: 0}
+  nucleaDropPoint2: {fileID: 0}
+  bomb: {fileID: 0}
+  nuclearBomb: {fileID: 0}
 --- !u!4 &672226357
 Transform:
   m_ObjectHideFlags: 0

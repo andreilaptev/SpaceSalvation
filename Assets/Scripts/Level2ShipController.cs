@@ -191,22 +191,22 @@ public class Level2ShipController : MonoBehaviour
         {
             if (health <= 0)
             {
-                //if (lives <=0 )
-                //     Die();
-                //else
-                //{
-                //    LevelsLivesCounter.currentLivesNumber -= 1;
+                if (lives <=0 )
+                     Die();
+                else
+                {
+                    LevelsLivesCounter.currentLivesNumber -= 1;
 
-                //    SceneManager.LoadScene("Level2");
+                    SceneManager.LoadScene("Level2");
 
-                //}
+                }
 
             }
             else
             {
                 health -= 5;
 
-                //Debug.Log(health);
+                Debug.Log(health);
             }
         }
        
@@ -334,8 +334,8 @@ public class Level2ShipController : MonoBehaviour
         Vector3 mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        Vector2 direction = new Vector2(mousePosition.x - transform.position.x + 0.1f,
-            mousePosition.y - transform.position.y + 0.1f);
+        Vector2 direction = new Vector2(mousePosition.x - transform.position.x,
+            mousePosition.y - transform.position.y);
 
         transform.up = direction;
 
