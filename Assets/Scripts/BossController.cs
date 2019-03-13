@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,6 +18,11 @@ public class BossController : MonoBehaviour
     public Rigidbody2D bomb;
     public Rigidbody2D nuclearBomb;
 
+    private int health = 100;
+
+    public float waitTime;
+    private float currentTime;
+    private bool shot;
 
     void Start()
     {
@@ -25,6 +31,46 @@ public class BossController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+
+        if (health <= 0)
+            Die();
+
+
+        // SHOOTING DELAY
+        if (currentTime == 0)
+            DropBombs();
+
+        if (shot && currentTime < waitTime)
+            currentTime += 1 * Time.deltaTime;
+
+        if (currentTime >= waitTime)
+            currentTime = 0;
+        
+
+
+      
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+    }
+
+    void OnCiollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "PlayerNuclearBullet")
+        {
+            health -= 25;
+        }
+
+        if (other.gameObject.tag == "PlayerBullet")
+        {
+            health -= 5;
+        }
+    }
+
+    private void DropBombs()
     {
         Rigidbody2D bombInstance;
         Rigidbody2D nuclearBombInstance;
@@ -39,6 +85,4 @@ public class BossController : MonoBehaviour
         nuclearBombInstance = Instantiate(bomb, nucleaDropPoint1.transform.position, Quaternion.identity);
         nuclearBombInstance = Instantiate(bomb, nucleaDropPoint2.transform.position, Quaternion.identity);
     }
-
-    
 }

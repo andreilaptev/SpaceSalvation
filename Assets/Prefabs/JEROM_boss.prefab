@@ -410,6 +410,7 @@ MonoBehaviour:
   bomb: {fileID: 6800502720933625834, guid: e043c35f87adbc54eaffcc24e2dc6f6d, type: 3}
   nuclearBomb: {fileID: 1725254281833901894, guid: 15ec749cb975fe345a1383067552fc28,
     type: 3}
+  waitTime: 3
 --- !u!1 &5592395421731232522
 GameObject:
   m_ObjectHideFlags: 0

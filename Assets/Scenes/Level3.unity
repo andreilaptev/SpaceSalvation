@@ -437,6 +437,7 @@ MonoBehaviour:
   nucleaDropPoint2: {fileID: 0}
   bomb: {fileID: 0}
   nuclearBomb: {fileID: 0}
+  waitTime: 0
 --- !u!4 &672226357
 Transform:
   m_ObjectHideFlags: 0
