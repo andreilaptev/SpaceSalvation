@@ -21,12 +21,12 @@ public class BossController : MonoBehaviour
     private int health = 100;
 
     public float waitTime;
-    private float currentTime;
+    private float currentTime = 0;
     private bool shot;
 
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
@@ -39,7 +39,7 @@ public class BossController : MonoBehaviour
 
         // SHOOTING DELAY
         if (currentTime == 0)
-            DropBombs();
+           DropBombs();
 
         if (shot && currentTime < waitTime)
             currentTime += 1 * Time.deltaTime;
@@ -72,6 +72,8 @@ public class BossController : MonoBehaviour
 
     private void DropBombs()
     {
+        shot = true;
+
         Rigidbody2D bombInstance;
         Rigidbody2D nuclearBombInstance;
 
