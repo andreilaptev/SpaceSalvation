@@ -18,12 +18,26 @@ public class BossController : MonoBehaviour
     public Rigidbody2D nuclearBomb;
 
 
-
+    void Start()
+    {
+       
+    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Rigidbody2D bombInstance;
+        Rigidbody2D nuclearBombInstance;
+
+        bombInstance = Instantiate(bomb, dropPoint1.transform.position, Quaternion.identity);
+        bombInstance = Instantiate(bomb, dropPoint2.transform.position, Quaternion.identity);
+        bombInstance = Instantiate(bomb, dropPoint3.transform.position, Quaternion.identity);
+        bombInstance = Instantiate(bomb, dropPoint4.transform.position, Quaternion.identity);
+        bombInstance = Instantiate(bomb, dropPoint5.transform.position, Quaternion.identity);
+        bombInstance = Instantiate(bomb, dropPoint6.transform.position, Quaternion.identity);
+
+        nuclearBombInstance = Instantiate(bomb, nucleaDropPoint1.transform.position, Quaternion.identity);
+        nuclearBombInstance = Instantiate(bomb, nucleaDropPoint2.transform.position, Quaternion.identity);
     }
 
     
