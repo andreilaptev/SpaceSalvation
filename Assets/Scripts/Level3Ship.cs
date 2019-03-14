@@ -266,6 +266,14 @@ public class Level3Ship : MonoBehaviour
 
             starTrigger.GetComponent<StarController>().shown = false;
         }
+
+        if (other.gameObject.tag == "Nuclear")
+        {
+
+            nuclearWeapons += 1;
+
+            Destroy(other.gameObject);
+        }
     }
 
     private void Die()
