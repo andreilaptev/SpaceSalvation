@@ -39,6 +39,7 @@ public class Level3Ship : MonoBehaviour
 
     public float bulletSpeed;
     public float bombSpeed;
+    public bool atCursor;
 
 
 
@@ -51,6 +52,7 @@ public class Level3Ship : MonoBehaviour
     private float counterClockwise = -5.0f;
 
     private int nuclearWeapons;
+    
 
 
     // used to rotate ship to the right over z-axis
@@ -59,7 +61,11 @@ public class Level3Ship : MonoBehaviour
     private GameObject starTrigger;
     private GameObject healthTrigger;
 
+    
+
     Collider2D coll = new Collider2D();
+    private object CircleCollider2D;
+
 
 
     // METHODS
@@ -84,15 +90,15 @@ public class Level3Ship : MonoBehaviour
         ShowScore();
         ShowLives();
 
+        atCursor = false;
+       
+
         //Debug.Log(LevelsLivesCounter.currentLivesNumber);
-    }
 
-    void Update()
-    {
 
     }
 
-
+ 
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -109,8 +115,9 @@ public class Level3Ship : MonoBehaviour
 
        
 
-        faceMouse();
+        faceMouse();        
 
+        if (!atCursor)
         transform.Translate(0, speed * Time.deltaTime, 0); // Temporarely
 
 
@@ -133,7 +140,7 @@ public class Level3Ship : MonoBehaviour
         ////////////////////////////////
         /// END OF Ship's Movement
         /// 
-   
+
 
         //Shooting
 
@@ -274,6 +281,14 @@ public class Level3Ship : MonoBehaviour
 
             Destroy(other.gameObject);
         }
+        
+    }
+
+    void OnTriggerEnter (Collider other)
+    {
+       
+            Debug.Log("Entered");
+        
     }
 
     private void Die()
@@ -302,10 +317,10 @@ public class Level3Ship : MonoBehaviour
         Vector3 mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        Vector2 direction = new Vector2(mousePosition.x - transform.position.x + 0.1f,
-            mousePosition.y - transform.position.y + 0.1f);
+        Vector2 direction = new Vector2(mousePosition.x - transform.position.x,
+            mousePosition.y - transform.position.y);
 
-        transform.up = direction;
+        transform.up = direction;    
 
         //Debug.Log(mousePosition.x);
         //Debug.Log(mousePosition.y);

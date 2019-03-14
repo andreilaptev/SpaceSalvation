@@ -37,7 +37,7 @@ public class Level2ShipController : MonoBehaviour
     public Rigidbody2D bullet1;
 
     public float bulletSpeed;
-
+    public bool atCursor;
    
 
     private float speed;
@@ -76,6 +76,8 @@ public class Level2ShipController : MonoBehaviour
         ShowScore();
         ShowLives();
 
+        atCursor = false;
+
         //Debug.Log(LevelsLivesCounter.currentLivesNumber);
     }
 
@@ -102,6 +104,7 @@ public class Level2ShipController : MonoBehaviour
 
         faceMouse();
 
+        if (!atCursor)
        transform.Translate(0, speed * Time.deltaTime, 0); // Temporarely
 
 
