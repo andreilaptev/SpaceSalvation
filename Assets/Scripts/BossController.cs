@@ -64,11 +64,13 @@ public class BossController : MonoBehaviour
         if (other.gameObject.tag == "PlayerNuclearBullet")
         {
             health -= 25;
+            Destroy(other.gameObject);
         }
 
         if (other.gameObject.tag == "PlayerBullet")
         {
             health -= 5;
+            Destroy(other.gameObject);
         }
     }
 
@@ -86,7 +88,7 @@ public class BossController : MonoBehaviour
         bombInstance = Instantiate(bomb, dropPoint5.transform.position, Quaternion.identity);
         bombInstance = Instantiate(bomb, dropPoint6.transform.position, Quaternion.identity);
 
-        nuclearBombInstance = Instantiate(bomb, nucleaDropPoint1.transform.position, Quaternion.identity);
-        nuclearBombInstance = Instantiate(bomb, nucleaDropPoint2.transform.position, Quaternion.identity);
+        nuclearBombInstance = Instantiate(nuclearBomb, nucleaDropPoint1.transform.position, Quaternion.identity);
+        nuclearBombInstance = Instantiate(nuclearBomb, nucleaDropPoint2.transform.position, Quaternion.identity);
     }
 }

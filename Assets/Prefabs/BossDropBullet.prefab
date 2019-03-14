@@ -7,15 +7,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1224053962202576988, guid: 8a0ea879c0190134bbd415694a087852,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7460152483293871954, guid: 8a0ea879c0190134bbd415694a087852,
         type: 3}
       propertyPath: m_Name
       value: BossDropBullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 1224053962202576988, guid: 8a0ea879c0190134bbd415694a087852,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2678231702127768680, guid: 8a0ea879c0190134bbd415694a087852,
         type: 3}

@@ -7,15 +7,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5648285944174962044, guid: 18660a22164529042a9a3a64f9a6ecea,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5648285944174962042, guid: 18660a22164529042a9a3a64f9a6ecea,
         type: 3}
       propertyPath: m_Name
       value: BossNuclear
-      objectReference: {fileID: 0}
-    - target: {fileID: 5648285944174962044, guid: 18660a22164529042a9a3a64f9a6ecea,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5648285944174962046, guid: 18660a22164529042a9a3a64f9a6ecea,
         type: 3}
@@ -71,6 +71,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648285944174962046, guid: 18660a22164529042a9a3a64f9a6ecea,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.07823777
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648285944174962046, guid: 18660a22164529042a9a3a64f9a6ecea,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.07823777
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648285944174962046, guid: 18660a22164529042a9a3a64f9a6ecea,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.07823777
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18660a22164529042a9a3a64f9a6ecea, type: 3}
