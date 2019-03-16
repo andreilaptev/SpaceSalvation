@@ -249,6 +249,29 @@ public class Level3Ship : MonoBehaviour
 
         }
 
+        if (other.gameObject.tag == "EnemyBullet")
+        {
+            if (health <= 0)
+            {
+                //if (lives <=0 )
+                //     Die();
+                //else
+                //{
+                //    LevelsLivesCounter.currentLivesNumber -= 1;
+
+                //    SceneManager.LoadScene("Level2");
+
+                //}
+
+            }
+            else
+            {
+                health -= 1;
+
+                Debug.Log(health);
+            }
+        }
+
         // Hitting a Star - ading 100 points
         if (other.tag == "Star")
         {
@@ -273,6 +296,8 @@ public class Level3Ship : MonoBehaviour
 
             starTrigger.GetComponent<StarController>().shown = false;
         }
+
+
 
         if (other.gameObject.tag == "Nuclear")
         {

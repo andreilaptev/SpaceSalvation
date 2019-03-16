@@ -37,8 +37,9 @@ public class Cursor : MonoBehaviour
             //Debug.Log("Entered");
             ship = other.gameObject;
 
-            if (currentScene == "Level2")
-                ship.GetComponent<Level2ShipController>().atCursor = true;
+            if (currentScene == "Level2")     
+                ship.GetComponent<Level2ShipController>().atCursor = true;            
+               
             else
                 ship.GetComponent<Level3Ship>().atCursor = true;
             
