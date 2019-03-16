@@ -8,6 +8,7 @@ public class Level1_Title_Delay : MonoBehaviour
 {
     public int score;
     public int lives;
+    public int sceneToGo;
 
 
     public Text scoreText;
@@ -35,7 +36,7 @@ public class Level1_Title_Delay : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("Pressed");
-            Application.LoadLevel(0);
+            Application.LoadLevel(sceneToGo);
         }
 
         //Debug.Log("1 run");

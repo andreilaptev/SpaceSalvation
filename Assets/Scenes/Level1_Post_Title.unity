@@ -442,6 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   lives: 0
+  sceneToGo: 5
   scoreText: {fileID: 1207383963}
   livesText: {fileID: 981958911}
 --- !u!222 &957275680
