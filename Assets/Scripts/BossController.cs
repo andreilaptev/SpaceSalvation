@@ -18,7 +18,7 @@ public class BossController : MonoBehaviour
     public Rigidbody2D bomb;
     public Rigidbody2D nuclearBomb;
 
-    private int health = 100;
+    public int health;
 
     public float waitTime;
     private float currentTime = 0;
@@ -59,7 +59,7 @@ public class BossController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void OnCiollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "PlayerNuclearBullet")
         {
