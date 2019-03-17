@@ -235,6 +235,17 @@ PrefabInstance:
       propertyPath: hitsToDie
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11,
+        type: 3}
+      propertyPath: enemy2
+      value: 
+      objectReference: {fileID: 3978153681812337832, guid: b8fa700a2fc9cb94785b61f4180269f8,
+        type: 3}
+    - target: {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11,
+        type: 3}
+      propertyPath: enemy2Point
+      value: 
+      objectReference: {fileID: 498092065}
     - target: {fileID: 4080743431835709149, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -725,6 +736,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &498092065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498092066}
+  m_Layer: 0
+  m_Name: Enemy2Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &498092066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498092065}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.01, y: -6.2, z: -1.9726562}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &509483560
 PrefabInstance:

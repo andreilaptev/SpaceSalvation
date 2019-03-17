@@ -188,7 +188,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 200
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -387,6 +387,8 @@ MonoBehaviour:
   bulletSpawnpointRight: {fileID: 2102749664}
   bulletSpeed: 200
   bullet: {fileID: 1224053962202576988, guid: 8a0ea879c0190134bbd415694a087852, type: 3}
+  enemy2: {fileID: 0}
+  enemy2Point: {fileID: 0}
   waitTime: 1
   hitsToDie: 5
 --- !u!111 &1800855669

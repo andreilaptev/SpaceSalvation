@@ -61,11 +61,8 @@ public class Enemy_L3 : MonoBehaviour
 
             else
             {
-                 // Here comes the Main Enemy
-
+                // Here comes the Main Enemy
                 Die();
-
-               
 
             }
 
@@ -74,6 +71,8 @@ public class Enemy_L3 : MonoBehaviour
 
 
     }
+
+  
 
     private void targetPlayer()
     {

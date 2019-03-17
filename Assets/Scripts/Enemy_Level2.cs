@@ -13,6 +13,9 @@ public class Enemy_Level2 : MonoBehaviour
 
     public Rigidbody2D bullet;
 
+    public GameObject enemy2;
+    public GameObject enemy2Point;
+
     public float waitTime;
     public int hitsToDie;
 
@@ -54,17 +57,24 @@ public class Enemy_Level2 : MonoBehaviour
            
             else
             {
-                Die();
+                //Die();
+                Destroy(gameObject);
+                ShowEnemy2();
 
                 //Debug.Log("Enemy dead");
 
-                SceneManager.LoadScene("Level2_Post_Title");
+                //SceneManager.LoadScene("Level2_Post_Title");
             }
 
 
         }
             
 
+    }
+
+    private void ShowEnemy2()
+    {
+        Instantiate(enemy2, enemy2Point.transform.position, Quaternion.identity);
     }
 
     private void targetPlayer()
