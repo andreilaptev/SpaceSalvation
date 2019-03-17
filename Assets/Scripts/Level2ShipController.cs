@@ -301,6 +301,8 @@ public class Level2ShipController : MonoBehaviour
         {
             //Debug.Log("star");
 
+            Destroy(other.gameObject);
+
             score += 100;
             extraLiveBonus += 100;
             Debug.Log("Score " + score);

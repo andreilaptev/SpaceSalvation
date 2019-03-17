@@ -16,16 +16,16 @@ public class BackgroundScrolling : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Constant background moving
-        GetComponent<Renderer>().material.mainTextureOffset =
-           new Vector2(Time.time * scrollSpeeed, 0);
+        ////Constant background moving
+        //GetComponent<Renderer>().material.mainTextureOffset =
+        //   new Vector2(Time.time * scrollSpeeed, 0);
 
 
     }
 
     void MoveBG()
     {
-        GetComponent<Renderer>().material.mainTextureOffset =
-               new Vector2(GetComponent<Renderer>().material.mainTextureOffset.x + scrollSpeeed, 0);
+        //GetComponent<Renderer>().material.mainTextureOffset =
+        //       new Vector2(GetComponent<Renderer>().material.mainTextureOffset.x + scrollSpeeed, 0);
     }
 }
