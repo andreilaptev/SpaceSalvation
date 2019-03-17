@@ -10,7 +10,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -46,6 +46,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: EnemyBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929045791721342248, guid: cfeec135cb391b54ead1815ce9652805,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8192388659447777564, guid: cfeec135cb391b54ead1815ce9652805,
         type: 3}
@@ -131,11 +136,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.14159843
-      objectReference: {fileID: 0}
-    - target: {fileID: 4929045791721342248, guid: cfeec135cb391b54ead1815ce9652805,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 633988825154343766, guid: cfeec135cb391b54ead1815ce9652805, type: 3}

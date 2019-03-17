@@ -66,6 +66,9 @@ public class Level2ShipController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
         score = 0;
         lives = LevelsLivesCounter.currentLivesNumber;
+
+        Debug.Log("Lives" + lives);
+
         rotateLeft = 0;
         rotateRight = 360;
 
@@ -190,28 +193,28 @@ public class Level2ShipController : MonoBehaviour
     {
         //Debug.Log(health);
 
-        if (other.gameObject.tag == "EnemyBullet")
-        {
-            if (health <= 0)
-            {
-                if (lives <=0 )
-                     Die();
-                else
-                {
-                    LevelsLivesCounter.currentLivesNumber -= 1;
+        //if (other.gameObject.tag == "EnemyBullet")
+        //{
+        //    if (health <= 0)
+        //    {
+        //        if (lives <=0 )
+        //             Die();
+        //        else
+        //        {
+        //           //lives -= 1;
 
-                    SceneManager.LoadScene("Level2");
+        //            SceneManager.LoadScene("Level2");
 
-                }
+        //        }
 
-            }
-            else
-            {
-                health -= 5;
+        //    }
+        //    else
+        //    {
+        //        health -= 5;
 
-                Debug.Log(health);
-            }
-        }
+        //        Debug.Log(health);
+        //    }
+        //}
        
 
         //Debug.Log(health);
@@ -249,7 +252,9 @@ public class Level2ShipController : MonoBehaviour
                     Die();
                 else
                 {
-                    LevelsLivesCounter.currentLivesNumber -= 1;
+                    LevelsLivesCounter.currentLivesNumber = LevelsLivesCounter.currentLivesNumber - 1;
+
+                    Debug.Log(LevelsLivesCounter.currentLivesNumber);
 
                     SceneManager.LoadScene("Level2");
 
@@ -258,9 +263,9 @@ public class Level2ShipController : MonoBehaviour
             }
             else
             {
-                health -= 5;
+                health -= 10;
 
-                //Debug.Log(health);
+                Debug.Log(health);
             }
         }
 
