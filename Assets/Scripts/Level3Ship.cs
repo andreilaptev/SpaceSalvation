@@ -226,27 +226,12 @@ public class Level3Ship : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-
-        // Hitting End of level - redirects to next level
-        if (other.tag == "EndOfLevel1")
+        if (other.tag == "BossDropBullet")
         {
-            score += 200;
+            health -= 10;
 
-            extraLiveBonus += 200;
-
-            if (extraLiveBonus >= 1000)
-            {
-                lives += 1;
-                extraLiveBonus = 0;
-                ShowScore();
-            }
-
-            levelScore = score;
-
-            LevelsLivesCounter.currentLivesNumber = lives;
-
-            Application.LoadLevel("Level1_Post_Title");
-
+            Destroy(other.gameObject);
+            Debug.Log("health" + health);
         }
 
         if (other.gameObject.tag == "EnemyBullet")

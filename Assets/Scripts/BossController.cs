@@ -34,7 +34,7 @@ public class BossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Boss health " + health);
+        
 
         if (health <= 0)
             Die();
