@@ -328,7 +328,7 @@ public class Level2ShipController : MonoBehaviour
     void ShowScore()
     {
         scoreText.text = "Score : " + score.ToString();
-        Debug.Log("Score " +  scoreText.text);
+        //Debug.Log("Score " +  scoreText.text);
     }
 
     void ShowLives()
