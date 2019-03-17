@@ -18,10 +18,10 @@ public class Level1_Title_Delay : MonoBehaviour
     void Start()
     {
         score = ShipController.levelScore;
-        Debug.Log(score);
+        //Debug.Log(score);
 
         lives = LevelsLivesCounter.currentLivesNumber;
-        Debug.Log(lives);
+        //Debug.Log(lives);
 
         scoreText.text = "Your Current Score : " + score.ToString();
         livesText.text = "Lives Available : " + lives.ToString();
@@ -35,8 +35,7 @@ public class Level1_Title_Delay : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Pressed");
-            Application.LoadLevel(sceneToGo);
+           Application.LoadLevel(sceneToGo);
         }
 
         //Debug.Log("1 run");

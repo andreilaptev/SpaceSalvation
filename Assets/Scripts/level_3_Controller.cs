@@ -10,7 +10,7 @@ public class level_3_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Level started");
+        //Debug.Log("Level started");
     }
 
     // Update is called once per frame

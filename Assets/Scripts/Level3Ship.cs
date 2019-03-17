@@ -268,7 +268,7 @@ public class Level3Ship : MonoBehaviour
             {
                 health -= 1;
 
-                Debug.Log(health);
+                //Debug.Log(health);
             }
         }
 
@@ -328,7 +328,7 @@ public class Level3Ship : MonoBehaviour
     void ShowScore()
     {
         scoreText.text = "Score : " + score.ToString();
-        Debug.Log("Score " + scoreText.text);
+       // Debug.Log("Score " + scoreText.text);
     }
 
     void ShowLives()

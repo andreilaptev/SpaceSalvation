@@ -39,7 +39,9 @@ public class Enemy_L3 : MonoBehaviour
 
         currentScene = SceneManager.GetActiveScene().name;
 
-        Debug.Log(currentScene);
+        LevelsLivesCounter.NumberOfDeadEnemiesLevel3 = 0;
+
+        //Debug.Log(currentScene);
     }
 
     // Update is called once per frame
@@ -136,22 +138,15 @@ public class Enemy_L3 : MonoBehaviour
         Destroy(gameObject);
 
         // Incrementing number of dead enemies 
-        LevelsLivesCounter.NumberOfDeadEnemies += 1;
+        LevelsLivesCounter.NumberOfDeadEnemiesLevel3 += 1;
 
-        Debug.Log(LevelsLivesCounter.NumberOfDeadEnemies);
+        Debug.Log(LevelsLivesCounter.NumberOfDeadEnemiesLevel3);
 
-        if (LevelsLivesCounter.NumberOfDeadEnemies == 2)
-        {
-            //Debug.Log("All dead");
-            if (currentScene == "Level2")
-                SceneManager.LoadScene("Level2_Post_Title");
+        if (LevelsLivesCounter.NumberOfDeadEnemiesLevel3 == 1 && currentScene == "Level2")
+            SceneManager.LoadScene("Level2_Post_Title");
 
-            else if (currentScene == "Level3")
-                 ShowBoss();
-
-        }
-            
-
+        if (LevelsLivesCounter.NumberOfDeadEnemiesLevel3 == 2 && currentScene == "Level3")    
+                ShowBoss();
 
         // Droppung a bomb
         Rigidbody2D bombInstance;
