@@ -75,7 +75,7 @@ public class Level3Ship : MonoBehaviour
         //rBody = GetComponent<Rigidbody2D>();
         rigidBody = GetComponent<Rigidbody>();
         score = 0;
-        lives = LevelsLivesCounter.currentLivesNumber;
+        lives = LevelsLivesCounter.currentLivesNumberLevel3;
         rotateLeft = 0;
         rotateRight = 360;
 
@@ -242,7 +242,7 @@ public class Level3Ship : MonoBehaviour
                     Die();
                 else
                 {
-                    LevelsLivesCounter.currentLivesNumber -= 1;
+                    LevelsLivesCounter.currentLivesNumberLevel3 -= 1;
 
                     SceneManager.LoadScene("Level3");
 
@@ -305,7 +305,7 @@ public class Level3Ship : MonoBehaviour
     {
         Destroy(this.gameObject);
 
-        LevelsLivesCounter.currentLivesNumber = 3;
+        LevelsLivesCounter.currentLivesNumberLevel3 = 3;
 
         SceneManager.LoadScene("Die_Level3");
     }

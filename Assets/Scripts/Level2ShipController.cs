@@ -65,7 +65,7 @@ public class Level2ShipController : MonoBehaviour
         //rBody = GetComponent<Rigidbody2D>();
         rigidBody = GetComponent<Rigidbody>();
         score = 0;
-        lives = LevelsLivesCounter.currentLivesNumber;
+        lives = LevelsLivesCounter.currentLivesNumberLevel2;
 
         Debug.Log("Lives" + lives);
 
@@ -252,9 +252,9 @@ public class Level2ShipController : MonoBehaviour
                     Die();
                 else
                 {
-                    LevelsLivesCounter.currentLivesNumber = LevelsLivesCounter.currentLivesNumber - 1;
+                    LevelsLivesCounter.currentLivesNumberLevel2 = LevelsLivesCounter.currentLivesNumberLevel2 - 1;
 
-                    Debug.Log(LevelsLivesCounter.currentLivesNumber);
+                    Debug.Log(LevelsLivesCounter.currentLivesNumberLevel2);
 
                     SceneManager.LoadScene("Level2");
 
@@ -279,27 +279,6 @@ public class Level2ShipController : MonoBehaviour
         //Debug.Log(health);
 
 
-        // Hitting End of level - redirects to next level
-        if (other.tag == "EndOfLevel1")
-        {
-            score += 200;
-
-            extraLiveBonus += 200;
-
-            if (extraLiveBonus >= 1000)
-            {
-                lives += 1;
-                extraLiveBonus = 0;
-                ShowScore();
-            }
-
-            levelScore = score;
-
-            LevelsLivesCounter.currentLivesNumber = lives;
-
-            Application.LoadLevel("Level1_Post_Title");
-
-        }
 
         // Hitting a Star - ading 100 points
         if (other.tag == "Star")
