@@ -26,6 +26,7 @@ public class Level3Ship : MonoBehaviour
 
     public Text scoreText;
     public Text livesText;
+    public Text healthText;
 
     // Shooting variables
     public GameObject laserSpawnpointLeft;
@@ -98,6 +99,10 @@ public class Level3Ship : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        ShowHealth();
+    }
  
     // Update is called once per frame
     void FixedUpdate()
@@ -299,6 +304,12 @@ public class Level3Ship : MonoBehaviour
        
             Debug.Log("Entered");
         
+    }
+
+
+    private void ShowHealth()
+    {
+        healthText.text = "Health : " + health.ToString();
     }
 
     private void Die()

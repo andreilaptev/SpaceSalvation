@@ -26,6 +26,7 @@ public class Level2ShipController : MonoBehaviour
 
     public Text scoreText;
     public Text livesText;
+    public Text healthText;
 
     // Shooting variables
     public GameObject laserSpawnpointLeft;
@@ -78,6 +79,7 @@ public class Level2ShipController : MonoBehaviour
 
         ShowScore();
         ShowLives();
+        ShowHealth();
 
         atCursor = false;
 
@@ -86,7 +88,7 @@ public class Level2ShipController : MonoBehaviour
 
     void Update()
     {
-
+        ShowHealth();
     }
 
 
@@ -189,56 +191,56 @@ public class Level2ShipController : MonoBehaviour
 
 
 
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        //Debug.Log(health);
+    //void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    //Debug.Log(health);
 
-        //if (other.gameObject.tag == "EnemyBullet")
-        //{
-        //    if (health <= 0)
-        //    {
-        //        if (lives <=0 )
-        //             Die();
-        //        else
-        //        {
-        //           //lives -= 1;
+    //    //if (other.gameObject.tag == "EnemyBullet")
+    //    //{
+    //    //    if (health <= 0)
+    //    //    {
+    //    //        if (lives <=0 )
+    //    //             Die();
+    //    //        else
+    //    //        {
+    //    //           //lives -= 1;
 
-        //            SceneManager.LoadScene("Level2");
+    //    //            SceneManager.LoadScene("Level2");
 
-        //        }
+    //    //        }
 
-        //    }
-        //    else
-        //    {
-        //        health -= 5;
+    //    //    }
+    //    //    else
+    //    //    {
+    //    //        health -= 3;
 
-        //        Debug.Log(health);
-        //    }
-        //}
+    //    //        Debug.Log(health);
+    //    //    }
+    //    //}
        
 
-        //Debug.Log(health);
+    //    //Debug.Log(health);
 
-        if (other.gameObject.tag == "Star")
-        {
+    //    if (other.gameObject.tag == "Star")
+    //    {
 
-            score += 100;
-            starTrigger = other.gameObject;
-            starTrigger.GetComponent<StarController>().shown = false;
-        }
+    //        score += 100;
+    //        starTrigger = other.gameObject;
+    //        starTrigger.GetComponent<StarController>().shown = false;
+    //    }
 
-        //if (other.gameObject.tag == "Health")
-        //{
-        //    health += 10;
+    //    //if (other.gameObject.tag == "Health")
+    //    //{
+    //    //    health += 10;
 
-        //    healthTrigger = other.gameObject;
-        //    healthTrigger.GetComponent<Health>().shown = false;
+    //    //    healthTrigger = other.gameObject;
+    //    //    healthTrigger.GetComponent<Health>().shown = false;
 
-        //    Debug.Log(health);
+    //    //    Debug.Log(health);
 
-        //}
+    //    //}
 
-    }
+    //}
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -248,8 +250,8 @@ public class Level2ShipController : MonoBehaviour
         {
             if (health <= 0)
             {
-                if (lives <= 0)
-                    Die();
+                if (lives <= 0) { }
+                   //Die();
                 else
                 {
                     LevelsLivesCounter.currentLivesNumberLevel2  -= 1;
@@ -263,7 +265,7 @@ public class Level2ShipController : MonoBehaviour
             }
             else
             {
-                health -= 10;
+                health -= 3;
 
                 Debug.Log(health);
             }
@@ -273,10 +275,14 @@ public class Level2ShipController : MonoBehaviour
         {
             health += 10;
             Destroy(other.gameObject);
+
+            ShowHealth();
+
+            Debug.Log( "Added " + health);
         }
 
 
-        //Debug.Log(health);
+
 
 
 
@@ -306,6 +312,11 @@ public class Level2ShipController : MonoBehaviour
 
             starTrigger.GetComponent<StarController>().shown = false;
         }
+    }
+
+    private void ShowHealth()
+    {
+        healthText.text = "Health : " + health.ToString();
     }
 
     private void Die()
