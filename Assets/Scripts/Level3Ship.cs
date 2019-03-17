@@ -251,7 +251,7 @@ public class Level3Ship : MonoBehaviour
             }
             else
             {
-                health -= 3;
+                health -= 2;
 
                 Debug.Log(health);
             }
