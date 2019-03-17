@@ -38,6 +38,8 @@ public class Enemy_L3 : MonoBehaviour
         hits = 0;
 
         currentScene = SceneManager.GetActiveScene().name;
+
+        Debug.Log(currentScene);
     }
 
     // Update is called once per frame
@@ -141,10 +143,12 @@ public class Enemy_L3 : MonoBehaviour
         if (LevelsLivesCounter.NumberOfDeadEnemies == 2)
         {
             //Debug.Log("All dead");
+            if (currentScene == "Level2")
+                SceneManager.LoadScene("Level2_Post_Title");
 
-            
-                ShowBoss();
-            
+            else if (currentScene == "Level3")
+                 ShowBoss();
+
         }
             
 
