@@ -746,7 +746,7 @@ MonoBehaviour:
   bullet: {fileID: 1224053962202576988, guid: 8a0ea879c0190134bbd415694a087852, type: 3}
   bomb: {fileID: 5648285944174962044, guid: 18660a22164529042a9a3a64f9a6ecea, type: 3}
   boss: {fileID: 4877751172341132943, guid: 508557ca6078ef940b0e06fab16ac91a, type: 3}
-  waitTime: 1
+  waitTime: 1.5
   hitsToDie: 5
 --- !u!70 &1390580082
 CapsuleCollider2D:
@@ -1422,5 +1422,10 @@ PrefabInstance:
       propertyPath: bossPoint
       value: 
       objectReference: {fileID: 1820782253}
+    - target: {fileID: 3978153681812337837, guid: b8fa700a2fc9cb94785b61f4180269f8,
+        type: 3}
+      propertyPath: waitTime
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8fa700a2fc9cb94785b61f4180269f8, type: 3}
