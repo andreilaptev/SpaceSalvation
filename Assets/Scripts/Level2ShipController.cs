@@ -264,6 +264,12 @@ public class Level2ShipController : MonoBehaviour
             }
         }
 
+        if (other.tag == "Health")
+        {
+            health += 10;
+            Destroy(other.gameObject);
+        }
+
 
         //Debug.Log(health);
 
