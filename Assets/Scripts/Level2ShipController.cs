@@ -37,7 +37,7 @@ public class Level2ShipController : MonoBehaviour
     public Rigidbody2D bullet1;
 
     public float bulletSpeed;
-    public bool atCursor;
+    public bool atCursor;    
    
 
     private float speed;
@@ -239,7 +239,35 @@ public class Level2ShipController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-       
+
+
+        if (other.gameObject.tag == "EnemyBullet")
+        {
+            if (health <= 0)
+            {
+                if (lives <= 0)
+                    Die();
+                else
+                {
+                    LevelsLivesCounter.currentLivesNumber -= 1;
+
+                    SceneManager.LoadScene("Level2");
+
+                }
+
+            }
+            else
+            {
+                health -= 5;
+
+                //Debug.Log(health);
+            }
+        }
+
+
+        //Debug.Log(health);
+
+
         // Hitting End of level - redirects to next level
         if (other.tag == "EndOfLevel1")
         {

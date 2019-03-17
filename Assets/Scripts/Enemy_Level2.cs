@@ -59,7 +59,15 @@ public class Enemy_Level2 : MonoBehaviour
             {
                 //Die();
                 Destroy(gameObject);
-                ShowEnemy2();
+
+                LevelsLivesCounter.NumberOfDeadEnemies += 1;
+                Debug.Log("Enemy dead" + LevelsLivesCounter.NumberOfDeadEnemies);
+
+                if (LevelsLivesCounter.NumberOfDeadEnemies == 1)
+                    ShowEnemy2();
+                else
+                    if (LevelsLivesCounter.NumberOfDeadEnemies == 2)
+                    SceneManager.LoadScene("Level2_Post_Title");
 
                 //Debug.Log("Enemy dead");
 

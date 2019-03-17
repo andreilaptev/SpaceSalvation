@@ -12,7 +12,7 @@ public class Cursor : MonoBehaviour
     void Start()
     {
         CircleCollider2D cc = gameObject.AddComponent<CircleCollider2D>();
-        cc.radius = 1.0f;
+        cc.radius = 0.3f;
         cc.isTrigger = true;
 
         currentScene = SceneManager.GetActiveScene().name;

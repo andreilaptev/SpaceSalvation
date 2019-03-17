@@ -27,6 +27,7 @@ public class Enemy_L3 : MonoBehaviour
     private int hits;
 
     private int numberOfDeadEnemies = 0;
+    private string currentScene;
 
 
 
@@ -35,6 +36,8 @@ public class Enemy_L3 : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         hits = 0;
+
+        currentScene = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
@@ -139,7 +142,9 @@ public class Enemy_L3 : MonoBehaviour
         {
             //Debug.Log("All dead");
 
-            ShowBoss();
+            
+                ShowBoss();
+            
         }
             
 

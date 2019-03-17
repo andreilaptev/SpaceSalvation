@@ -1655,9 +1655,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ff77917aefee14983dc721997de109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialSpeed: 7
+  initialSpeed: 5
   rotationAngle: 5
-  health: 100
+  health: 1000
   score: 0
   lives: 5
   extraLiveBonus: 0
