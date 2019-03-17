@@ -252,7 +252,7 @@ public class Level2ShipController : MonoBehaviour
                     Die();
                 else
                 {
-                    LevelsLivesCounter.currentLivesNumberLevel2 = LevelsLivesCounter.currentLivesNumberLevel2 - 1;
+                    LevelsLivesCounter.currentLivesNumberLevel2  -= 1;
 
                     Debug.Log(LevelsLivesCounter.currentLivesNumberLevel2);
 

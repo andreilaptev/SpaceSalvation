@@ -85,7 +85,7 @@ public class Level3Ship : MonoBehaviour
 
         // health = 100;
 
-        if (lives < 1) Die();
+        //if (lives < 1) Die();
 
         ShowScore();
         ShowLives();
@@ -238,8 +238,8 @@ public class Level3Ship : MonoBehaviour
         {
             if (health <= 0)
             {
-                if (lives <= 0)
-                    Die();
+                if (lives <= 0) 
+                   Die();
                 else
                 {
                     LevelsLivesCounter.currentLivesNumberLevel3 -= 1;

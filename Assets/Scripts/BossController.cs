@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossController : MonoBehaviour
 {
@@ -58,6 +59,8 @@ public class BossController : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+
+        SceneManager.LoadScene("Level3_Post_Title");
     }
 
     void OnCollisionEnter2D(Collision2D other)
