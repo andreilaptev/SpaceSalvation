@@ -238,22 +238,22 @@ public class Level3Ship : MonoBehaviour
         {
             if (health <= 0)
             {
-                //if (lives <=0 )
-                //     Die();
-                //else
-                //{
-                //    LevelsLivesCounter.currentLivesNumber -= 1;
+                if (lives <= 0)
+                    Die();
+                else
+                {
+                    LevelsLivesCounter.currentLivesNumber -= 1;
 
-                //    SceneManager.LoadScene("Level2");
+                    SceneManager.LoadScene("Level3");
 
-                //}
+                }
 
             }
             else
             {
                 health -= 1;
 
-                //Debug.Log(health);
+                Debug.Log(health);
             }
         }
 
@@ -307,7 +307,7 @@ public class Level3Ship : MonoBehaviour
 
         LevelsLivesCounter.currentLivesNumber = 3;
 
-        SceneManager.LoadScene("Die_Level2");
+        SceneManager.LoadScene("Die_Level3");
     }
 
     void ShowScore()
