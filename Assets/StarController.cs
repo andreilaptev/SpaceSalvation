@@ -6,6 +6,7 @@ public class StarController : MonoBehaviour
 {
 
     public bool shown = true;
+    public GameObject explosion;
 
     // Update is called once per frame
     void Update()
@@ -26,6 +27,8 @@ public class StarController : MonoBehaviour
 
     public void RemoveStar()
     {
+        Instantiate(explosion, transform.position, Quaternion.identity);
+
         Destroy(this.gameObject);
     }
 }
