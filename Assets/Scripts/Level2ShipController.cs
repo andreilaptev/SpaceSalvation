@@ -65,8 +65,8 @@ public class Level2ShipController : MonoBehaviour
     {
         //rBody = GetComponent<Rigidbody2D>();
         rigidBody = GetComponent<Rigidbody>();
-        score = 0;
-        lives = LevelsLivesCounter.currentLivesNumberLevel2;
+        score = LevelsLivesCounter.currentGameScore;
+        lives = LevelsLivesCounter.currentLivesNumber;
 
         Debug.Log("Lives" + lives);
 
@@ -328,6 +328,7 @@ public class Level2ShipController : MonoBehaviour
         Destroy(this.gameObject);
 
         LevelsLivesCounter.currentLivesNumber = 3;
+        LevelsLivesCounter.currentGameScore = 0;
 
         SceneManager.LoadScene("Die_Level2");
     }

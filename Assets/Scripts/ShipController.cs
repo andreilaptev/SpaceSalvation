@@ -169,6 +169,7 @@ public class ShipController : MonoBehaviour
             levelScore = score;
 
             LevelsLivesCounter.currentLivesNumber = lives;
+            LevelsLivesCounter.currentGameScore = score;
 
             Application.LoadLevel("Level1_Post_Title");
 
@@ -178,7 +179,7 @@ public class ShipController : MonoBehaviour
         if (other.tag == "Star")
         {
             score += 50;
-            extraLiveBonus += 100;
+            extraLiveBonus += 50;
 
             if (extraLiveBonus >= 1000)
             {
@@ -203,6 +204,7 @@ public class ShipController : MonoBehaviour
         Destroy(this.gameObject);
 
         LevelsLivesCounter.currentLivesNumber = 3;
+        LevelsLivesCounter.currentGameScore = 0;
 
         Application.LoadLevel("Die");
     }
