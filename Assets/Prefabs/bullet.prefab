@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  feedback: {fileID: 8636469403514650774, guid: 11ea84e6e4f30ec4288baf97a53ca75e,
+    type: 3}
   shown: 1
 --- !u!50 &4929045791721342248
 Rigidbody2D:

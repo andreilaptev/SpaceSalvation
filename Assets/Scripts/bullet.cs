@@ -6,6 +6,7 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
     public float speed;
+    public GameObject feedback;
 
     public bool shown = true;
 
@@ -39,6 +40,8 @@ public class bullet : MonoBehaviour
 
     private void RemoveThisObject()
     {
+        Instantiate(feedback, transform.position, Quaternion.identity);
+
         Destroy(this.gameObject);
     }
 }
