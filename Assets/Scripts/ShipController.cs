@@ -20,6 +20,8 @@ public class ShipController : MonoBehaviour
     public GameObject levelInfoPanel;
     public Text infoText;
 
+    public GameObject death;
+
     public Text scoreText;
     public Text livesText;
 
@@ -59,7 +61,7 @@ public class ShipController : MonoBehaviour
     void FixedUpdate()
     {
         timer += Time.deltaTime;
-        Debug.Log(timer);
+        //Debug.Log(timer);
         if (timer > messageTime)
         {
             ShowInfo(message2);
@@ -135,9 +137,13 @@ public class ShipController : MonoBehaviour
             //Debug.Log("HIT");
             if (lives < 1)
             {
+                //Instantiate(death, transform.position, Quaternion.identity);
                 Die();
             }else
             {
+                //Instantiate(death, transform.position, Quaternion.identity);
+                this.gameObject.SetActive(false);
+
                 LevelsLivesCounter.currentLivesNumber -= 1;
                
                 Application.LoadLevel("Level1");
@@ -192,7 +198,8 @@ public class ShipController : MonoBehaviour
     }
 
     private void Die()
-    {
+    {        
+
         Destroy(this.gameObject);
 
         LevelsLivesCounter.currentLivesNumber = 3;
