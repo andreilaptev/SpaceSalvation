@@ -9,6 +9,9 @@ public class Enemy_Level2 : MonoBehaviour
     public GameObject player;
     public GameObject bulletSpawnpointLeft;
     public GameObject bulletSpawnpointRight;
+
+    public GameObject enemy_destroy;
+
     public float bulletSpeed;
 
     public Rigidbody2D bullet;
@@ -140,6 +143,7 @@ public class Enemy_Level2 : MonoBehaviour
 
     private void Die()
     {
+        Instantiate(enemy_destroy, transform.position, Quaternion.identity);
         
         Destroy(gameObject);        
     }

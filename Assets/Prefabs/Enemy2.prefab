@@ -285,7 +285,7 @@ MonoBehaviour:
   bomb: {fileID: 5648285944174962044, guid: 18660a22164529042a9a3a64f9a6ecea, type: 3}
   boss: {fileID: 4877751172341132943, guid: 508557ca6078ef940b0e06fab16ac91a, type: 3}
   waitTime: 1.5
-  hitsToDie: 5
+  hitsToDie: 10
 --- !u!1 &3978153682272958681
 GameObject:
   m_ObjectHideFlags: 0
