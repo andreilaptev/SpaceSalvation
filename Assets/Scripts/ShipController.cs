@@ -27,8 +27,8 @@ public class ShipController : MonoBehaviour
 
     private float speed;
 
-    private float messageTime = 3.0f;
-    private float waitTime = 7.0f;
+    private float messageTime = 4.0f;
+    private float waitTime = 8.0f;
     private float timer = 0.0f;  
 
     private string message1 = "Avoid collisions with asteroids!";
