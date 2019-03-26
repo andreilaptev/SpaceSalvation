@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public float speed;
+    public GameObject hit;
 
     public bool shown = true;
 
@@ -33,11 +34,26 @@ public class EnemyBullet : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player")
+        {
+           // Debug.Log("Collision");
             RemoveThisObject();
+        }
+            
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            //Debug.Log("trigger");
+            RemoveThisObject();
+        }
+            
     }
 
         private void RemoveThisObject()
     {
+        Instantiate(hit, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 }

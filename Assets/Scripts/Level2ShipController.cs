@@ -108,7 +108,7 @@ public class Level2ShipController : MonoBehaviour
         ShowHealth();
 
         timer += Time.deltaTime;
-        Debug.Log(timer);
+        //Debug.Log(timer);
         if (timer > message1Time && timer < message2Time)
         {
             ShowInfo(message2);

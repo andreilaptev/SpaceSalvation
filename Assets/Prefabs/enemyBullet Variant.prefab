@@ -29,6 +29,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  hit: {fileID: 8216074629114049176, guid: 3e6f1d0067b45f64fae40f67c17e3101, type: 3}
   shown: 1
 --- !u!1001 &6096690407218953588
 PrefabInstance:
