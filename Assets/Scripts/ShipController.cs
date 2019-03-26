@@ -24,10 +24,14 @@ public class ShipController : MonoBehaviour
     public Text livesText;
 
     private float speed;
-    private float waitTime = 4.0f;
+    private float messageTime = 3.0f;
+    private float waitTime = 7.0f;
     private float timer = 0.0f;
 
     private GameObject starTrigger;
+
+    private string message1 = "Avoid collisions with asteroids!";
+    private string message2 = "And collect COINS to get bonus life for each 10";
 
     Collider2D coll = new Collider2D();
 
@@ -45,7 +49,7 @@ public class ShipController : MonoBehaviour
         ShowScore();
         ShowLives();       
 
-        ShowInfo();
+        ShowInfo(message1);
        // Debug.Log(LevelsLivesCounter.currentLivesNumber);
 
     }
@@ -56,7 +60,11 @@ public class ShipController : MonoBehaviour
     {
         timer += Time.deltaTime;
         Debug.Log(timer);
-        if (timer > waitTime)
+        if (timer > messageTime)
+        {
+            ShowInfo(message2);
+        }
+        else if (timer > waitTime)
         {
             levelInfoPanel.SetActive(false);
         }
@@ -203,11 +211,11 @@ public class ShipController : MonoBehaviour
         livesText.text = "Lives : " + lives.ToString();
     }
 
-    private void ShowInfo()
+    private void ShowInfo(string message)
     {
-        
 
-        infoText.text = "Avoid collisions with asteroids!";
+
+        infoText.text = message;
         if (timer > waitTime)
             levelInfoPanel.SetActive(false);
     }
