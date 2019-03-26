@@ -147,7 +147,7 @@ public class ShipController : MonoBehaviour
         // Hitting a Star - ading 100 points
         if (other.tag == "Star")
         {
-            score += 100;
+            score += 50;
             extraLiveBonus += 100;
 
             if (extraLiveBonus >= 1000)
