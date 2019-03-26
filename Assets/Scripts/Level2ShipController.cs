@@ -24,6 +24,10 @@ public class Level2ShipController : MonoBehaviour
     public int lives;
     public int extraLiveBonus = 0;
 
+    
+    public GameObject InfoPanel;
+    public Text panelText;
+
     public Text scoreText;
     public Text livesText;
     public Text healthText;
@@ -49,6 +53,15 @@ public class Level2ShipController : MonoBehaviour
     private float clockwise = 1000.0f;
     private float counterClockwise = -5.0f;
 
+    private float message1Time = 2.0f;
+    private float message2Time = 4.0f;
+    private float waitTime1 = 7.0f;
+    private float timer = 0.0f;
+
+    private string message1 = "Use MOUSE to navigate around the scene and SPACE to shoot!";
+    private string message2 = "Collect 10 COINS to get bonus life";
+    private string message3 = "Pick HEALTH KIT to get bonus 10% of Health";
+
 
     // used to rotate ship to the right over z-axis
 
@@ -68,7 +81,7 @@ public class Level2ShipController : MonoBehaviour
         score = LevelsLivesCounter.currentGameScore;
         lives = LevelsLivesCounter.currentLivesNumber;
 
-        Debug.Log("Lives" + lives);
+        Debug.Log("Lives" + lives);       
 
         rotateLeft = 0;
         rotateRight = 360;
@@ -81,7 +94,7 @@ public class Level2ShipController : MonoBehaviour
         ShowLives();
         ShowHealth();
 
-        ShowInfo();
+        ShowInfo(message1);
 
         atCursor = false;
 
@@ -93,6 +106,21 @@ public class Level2ShipController : MonoBehaviour
     void Update()
     {
         ShowHealth();
+
+        timer += Time.deltaTime;
+        Debug.Log(timer);
+        if (timer > message1Time && timer < message2Time)
+        {
+            ShowInfo(message2);
+        }
+        else if (timer > message2Time && timer < waitTime1)
+        {
+            ShowInfo(message3);
+        }
+        else if (timer > waitTime1)
+        {
+            InfoPanel.SetActive(false);
+        }
     }
 
 
@@ -400,9 +428,11 @@ public class Level2ShipController : MonoBehaviour
 
     }
 
-    private void ShowInfo()
+    private void ShowInfo(string message)
     {
-        //infoTex
+        panelText.text = message;
+        //if (timer > waitTime)
+        //    InfoPanel.SetActive(false);
     }
 
 }

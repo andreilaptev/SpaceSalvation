@@ -28,6 +28,9 @@ public class Level3Ship : MonoBehaviour
     public Text livesText;
     public Text healthText;
 
+    public GameObject levelInfoPanel;
+    public Text infoText;
+
     // Shooting variables
     public GameObject laserSpawnpointLeft;
     // public GameObject laserSpawnpointRight;
@@ -53,7 +56,14 @@ public class Level3Ship : MonoBehaviour
     private float counterClockwise = -5.0f;
 
     private int nuclearWeapons;
-    
+
+    private float messageTime = 3.0f;
+    private float waitTime1 = 7.0f;
+    private float timer = 0.0f;
+
+    private string message1 = "Avoid collisions with asteroids!";
+    private string message2 = "And collect COINS to get bonus life for each 10";
+
 
 
     // used to rotate ship to the right over z-axis
@@ -91,6 +101,8 @@ public class Level3Ship : MonoBehaviour
         ShowScore();
         ShowLives();
 
+        ShowInfo(message1);
+
         atCursor = false;
        
 
@@ -102,6 +114,17 @@ public class Level3Ship : MonoBehaviour
     void Update()
     {
         ShowHealth();
+
+        timer += Time.deltaTime;
+        //Debug.Log(timer);
+        if (timer > messageTime)
+        {
+            ShowInfo(message2);
+        }
+        else if (timer > waitTime)
+        {
+            levelInfoPanel.SetActive(false);
+        }
     }
  
     // Update is called once per frame
@@ -369,5 +392,12 @@ public class Level3Ship : MonoBehaviour
         bombInstance = Instantiate(bomb, laserSpawnpointLeft.transform.position, Quaternion.identity) as Rigidbody2D;
 
         bombInstance.AddForce(laserSpawnpointLeft.transform.up * bombSpeed);
+    }
+
+    private void ShowInfo(string message)
+    {
+        infoText.text = message;
+        if (timer > waitTime)
+            levelInfoPanel.SetActive(false);
     }
 }

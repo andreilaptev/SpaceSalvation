@@ -26,14 +26,15 @@ public class ShipController : MonoBehaviour
     public Text livesText;
 
     private float speed;
+
     private float messageTime = 3.0f;
     private float waitTime = 7.0f;
-    private float timer = 0.0f;
-
-    private GameObject starTrigger;
+    private float timer = 0.0f;  
 
     private string message1 = "Avoid collisions with asteroids!";
     private string message2 = "And collect COINS to get bonus life for each 10";
+
+    private GameObject starTrigger;
 
     Collider2D coll = new Collider2D();
 
@@ -56,7 +57,12 @@ public class ShipController : MonoBehaviour
 
     }
 
- 
+ void Update()
+    {
+
+    }
+
+
     // Update is called once per frame
     void FixedUpdate()
     {
