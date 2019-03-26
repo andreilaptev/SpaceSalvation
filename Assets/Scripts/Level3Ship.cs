@@ -62,7 +62,7 @@ public class Level3Ship : MonoBehaviour
 
     private float message1Time = 2.0f;
     private float message2Time = 4.0f;
-    private float waitTime1 = 7.0f;
+    private float waitTime1 = 4.0f;
     private float timer = 0.0f;
 
     private string message1 = "Use MOUSE to navigate around the scene and SPACE to shoot!";
@@ -121,14 +121,15 @@ public class Level3Ship : MonoBehaviour
         ShowHealth();
 
         timer += Time.deltaTime;
-        //Debug.Log(timer);
+        Debug.Log(timer);
         if (timer > message1Time)
         {
+            InfoPanel.SetActive(false);
             //ShowInfo(message2);
         }
-        else if (timer > waitTime)
+        else if (timer > waitTime1)
         {
-            levelInfoPanel.SetActive(false);
+            InfoPanel.SetActive(false);
         }
     }
  
@@ -286,7 +287,7 @@ public class Level3Ship : MonoBehaviour
             {
                 health -= 2;
 
-                Debug.Log(health);
+               // Debug.Log(health);
             }
         }
 
@@ -403,6 +404,6 @@ public class Level3Ship : MonoBehaviour
     {
         panelText.text = message;
         if (timer > waitTime)
-            levelInfoPanel.SetActive(false);
+            InfoPanel.SetActive(false);
     }
 }
