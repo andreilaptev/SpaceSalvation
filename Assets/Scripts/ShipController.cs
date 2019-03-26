@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ShipController : MonoBehaviour
@@ -15,6 +16,9 @@ public class ShipController : MonoBehaviour
     public int score;
     public int lives;
     public int extraLiveBonus = 0;
+
+    public GameObject levelInfoPanel;
+    public Text infoText;
 
     public Text scoreText;
     public Text livesText;
@@ -39,10 +43,12 @@ public class ShipController : MonoBehaviour
         ShowScore();
         ShowLives();
 
+        ShowInfo();
        // Debug.Log(LevelsLivesCounter.currentLivesNumber);
 
-    }   
+    }
 
+ 
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -186,6 +192,12 @@ public class ShipController : MonoBehaviour
     {
         livesText.text = "Lives : " + lives.ToString();
     }
+
+    private void ShowInfo()
+    {
+        infoText.text = "Avoid collisions with asteroids!";
+    }
+
 
     void RotateRight(float horiz)
     {

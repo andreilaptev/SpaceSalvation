@@ -81,10 +81,14 @@ public class Level2ShipController : MonoBehaviour
         ShowLives();
         ShowHealth();
 
+        ShowInfo();
+
         atCursor = false;
 
         //Debug.Log(LevelsLivesCounter.currentLivesNumber);
     }
+
+ 
 
     void Update()
     {
@@ -395,5 +399,9 @@ public class Level2ShipController : MonoBehaviour
 
     }
 
+    private void ShowInfo()
+    {
+        //infoTex
+    }
 
 }
