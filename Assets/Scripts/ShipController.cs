@@ -12,9 +12,10 @@ public class ShipController : MonoBehaviour
     public static int levelScore;
     public static int totalLives;
 
+    
 
     public int score;
-    public int lives;
+    
     public int extraLiveBonus = 0;
 
     public GameObject levelInfoPanel;
@@ -36,6 +37,9 @@ public class ShipController : MonoBehaviour
 
     private GameObject starTrigger;
 
+    private int collisions;
+    private int lives = LevelsLivesCounter.currentLivesNumber;
+
     Collider2D coll = new Collider2D();
 
 
@@ -43,17 +47,17 @@ public class ShipController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(lives);
+
+        LevelsLivesCounter.beginOfGame = false;
+
         rBody = GetComponent<Rigidbody2D>();
         score = 0;
-        lives = LevelsLivesCounter.currentLivesNumber;
 
-        if (lives < 1) Die();
-
-        ShowScore();
-        ShowLives();       
+        ShowScore();          
 
         ShowInfo(message1);
-       // Debug.Log(LevelsLivesCounter.currentLivesNumber);
+
 
     }
 
@@ -77,7 +81,8 @@ public class ShipController : MonoBehaviour
             levelInfoPanel.SetActive(false);
         }
 
-        
+
+        ShowLives(lives);
 
         ////////////////////////////////
         /// Ship's Movement
@@ -139,25 +144,32 @@ public class ShipController : MonoBehaviour
     {
         // Hitting an Asteroid - death
         if (other.tag == "Asteroid")
-        {
-            //Debug.Log("HIT");
-            if (lives < 1)
+        {         
+            //Debug.Log(lives);
+            if (lives < 2)
             {
+                Debug.Log(lives);
                 //Instantiate(death, transform.position, Quaternion.identity);
                 Die();
-            }else
+            }
+            else
             {
+                LevelsLivesCounter.currentLivesNumber -= 1;
+
+                Debug.Log("Life " + lives);
+
                 //Instantiate(death, transform.position, Quaternion.identity);
                 this.gameObject.SetActive(false);
 
-                LevelsLivesCounter.currentLivesNumber -= 1;
-               
+                //LevelsLivesCounter.currentLivesNumber -= 1;
+
+
                 Application.LoadLevel("Level1");
-              
+
             }
-            
+
         }
-        
+
         // Hitting End of level - redirects to next level
         if (other.tag == "EndOfLevel1")
         {
@@ -191,7 +203,7 @@ public class ShipController : MonoBehaviour
             {
                 lives += 1;
                 extraLiveBonus = 0;
-                ShowLives();
+                ShowLives(lives);
             }
 
 
@@ -221,9 +233,9 @@ public class ShipController : MonoBehaviour
         Debug.Log(scoreText.text);
     }
 
-     void ShowLives()
+     void ShowLives(int number)
     {
-        livesText.text = "Lives : " + lives.ToString();
+        livesText.text = "Lives : " + number.ToString();
     }
 
     private void ShowInfo(string message)

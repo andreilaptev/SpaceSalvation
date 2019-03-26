@@ -233,7 +233,7 @@ PrefabInstance:
     - target: {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
       propertyPath: hitsToDie
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
@@ -1991,7 +1991,6 @@ MonoBehaviour:
   rotationAngle: 5
   health: 100
   score: 0
-  lives: 5
   extraLiveBonus: 0
   InfoPanel: {fileID: 188322431}
   panelText: {fileID: 1550159270}

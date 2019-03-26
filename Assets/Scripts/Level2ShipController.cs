@@ -21,7 +21,6 @@ public class Level2ShipController : MonoBehaviour
 
 
     public int score;
-    public int lives;
     public int extraLiveBonus = 0;
 
     
@@ -69,6 +68,10 @@ public class Level2ShipController : MonoBehaviour
     private GameObject starTrigger;
     private GameObject healthTrigger;
 
+    private int lives = LevelsLivesCounter.currentLivesNumber;
+
+    // private int currentSessionLives = 3;
+
     Collider2D coll = new Collider2D();
 
 
@@ -79,7 +82,7 @@ public class Level2ShipController : MonoBehaviour
         //rBody = GetComponent<Rigidbody2D>();
         rigidBody = GetComponent<Rigidbody>();
         score = LevelsLivesCounter.currentGameScore;
-        lives = LevelsLivesCounter.currentLivesNumber;
+       
 
         Debug.Log("Lives" + lives);       
 
@@ -282,13 +285,19 @@ public class Level2ShipController : MonoBehaviour
         {
             if (health <= 0)
             {
-                if (lives <= 0) { }
-                   //Die();
+                if (lives <= 0)
+                {
+                    Die();
+                }
+                   
                 else
                 {
-                    LevelsLivesCounter.currentLivesNumberLevel2  -= 1;
 
-                    Debug.Log(LevelsLivesCounter.currentLivesNumberLevel2);
+                    //lives -= 1;
+
+                    LevelsLivesCounter.currentLivesNumber  -= 1;
+
+                    Debug.Log("lives" + lives);
 
                     SceneManager.LoadScene("Level2");
 
@@ -355,7 +364,7 @@ public class Level2ShipController : MonoBehaviour
     {
         Destroy(this.gameObject);
 
-        LevelsLivesCounter.currentLivesNumber = 3;
+        LevelsLivesCounter.currentLivesNumber = 0;
         LevelsLivesCounter.currentGameScore = 0;
 
         SceneManager.LoadScene("Die_Level2");

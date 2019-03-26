@@ -21,7 +21,6 @@ public class Level3Ship : MonoBehaviour
 
 
     public int score;
-    public int lives;
     public int extraLiveBonus = 0;
 
     public Text scoreText;
@@ -66,7 +65,7 @@ public class Level3Ship : MonoBehaviour
     private string message2 = "Collect 10 COINS to get bonus life";
     private string message3 = "Pick HEALTH KIT to get bonus 10% of Health";
 
-
+    private int lives = LevelsLivesCounter.currentLivesNumber;
 
     // used to rotate ship to the right over z-axis
 
@@ -74,7 +73,7 @@ public class Level3Ship : MonoBehaviour
     private GameObject starTrigger;
     private GameObject healthTrigger;
 
-    
+    private int currentSessionLives = 3;
 
     Collider2D coll = new Collider2D();
     private object CircleCollider2D;
@@ -88,7 +87,9 @@ public class Level3Ship : MonoBehaviour
         //rBody = GetComponent<Rigidbody2D>();
         rigidBody = GetComponent<Rigidbody>();
         score = LevelsLivesCounter.currentGameScore;
-        lives = LevelsLivesCounter.currentLivesNumberLevel3;
+        lives = LevelsLivesCounter.currentLivesNumber;
+
+        //currentSessionLives = lives;
         rotateLeft = 0;
         rotateRight = 360;
 
@@ -272,8 +273,8 @@ public class Level3Ship : MonoBehaviour
                 if (lives <= 0) 
                    Die();
                 else
-                {
-                    LevelsLivesCounter.currentLivesNumberLevel3 -= 1;
+                {           
+                   LevelsLivesCounter.currentLivesNumber -= 1;
 
                     SceneManager.LoadScene("Level3");
 
@@ -328,7 +329,7 @@ public class Level3Ship : MonoBehaviour
     void OnTriggerEnter (Collider other)
     {
        
-            Debug.Log("Entered");
+            //Debug.Log("Entered");
         
     }
 
@@ -356,7 +357,7 @@ public class Level3Ship : MonoBehaviour
 
     void ShowLives()
     {
-        livesText.text = "Lives : " + lives.ToString();
+        livesText.text = "Lives : " + currentSessionLives.ToString();
     }
 
 
