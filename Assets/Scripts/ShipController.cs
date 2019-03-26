@@ -24,6 +24,8 @@ public class ShipController : MonoBehaviour
     public Text livesText;
 
     private float speed;
+    private float waitTime = 4.0f;
+    private float timer = 0.0f;
 
     private GameObject starTrigger;
 
@@ -41,7 +43,7 @@ public class ShipController : MonoBehaviour
         if (lives < 1) Die();
 
         ShowScore();
-        ShowLives();
+        ShowLives();       
 
         ShowInfo();
        // Debug.Log(LevelsLivesCounter.currentLivesNumber);
@@ -52,7 +54,15 @@ public class ShipController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-     
+        timer += Time.deltaTime;
+        Debug.Log(timer);
+        if (timer > waitTime)
+        {
+            levelInfoPanel.SetActive(false);
+        }
+
+        
+
         ////////////////////////////////
         /// Ship's Movement
         float horiz = Input.GetAxis("Horizontal");
@@ -195,7 +205,11 @@ public class ShipController : MonoBehaviour
 
     private void ShowInfo()
     {
+        
+
         infoText.text = "Avoid collisions with asteroids!";
+        if (timer > waitTime)
+            levelInfoPanel.SetActive(false);
     }
 
 
