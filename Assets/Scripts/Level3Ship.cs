@@ -31,6 +31,9 @@ public class Level3Ship : MonoBehaviour
     public GameObject levelInfoPanel;
     public Text infoText;
 
+    public GameObject InfoPanel;
+    public Text panelText;
+
     // Shooting variables
     public GameObject laserSpawnpointLeft;
     // public GameObject laserSpawnpointRight;
@@ -57,12 +60,14 @@ public class Level3Ship : MonoBehaviour
 
     private int nuclearWeapons;
 
-    private float messageTime = 3.0f;
+    private float message1Time = 2.0f;
+    private float message2Time = 4.0f;
     private float waitTime1 = 7.0f;
     private float timer = 0.0f;
 
-    private string message1 = "Avoid collisions with asteroids!";
-    private string message2 = "And collect COINS to get bonus life for each 10";
+    private string message1 = "Use MOUSE to navigate around the scene and SPACE to shoot!";
+    private string message2 = "Collect 10 COINS to get bonus life";
+    private string message3 = "Pick HEALTH KIT to get bonus 10% of Health";
 
 
 
@@ -117,9 +122,9 @@ public class Level3Ship : MonoBehaviour
 
         timer += Time.deltaTime;
         //Debug.Log(timer);
-        if (timer > messageTime)
+        if (timer > message1Time)
         {
-            ShowInfo(message2);
+            //ShowInfo(message2);
         }
         else if (timer > waitTime)
         {
@@ -396,7 +401,7 @@ public class Level3Ship : MonoBehaviour
 
     private void ShowInfo(string message)
     {
-        infoText.text = message;
+        panelText.text = message;
         if (timer > waitTime)
             levelInfoPanel.SetActive(false);
     }
