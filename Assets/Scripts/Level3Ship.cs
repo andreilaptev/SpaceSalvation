@@ -28,9 +28,6 @@ public class Level3Ship : MonoBehaviour
     public Text livesText;
     public Text healthText;
 
-    public GameObject levelInfoPanel;
-    public Text infoText;
-
     public GameObject InfoPanel;
     public Text panelText;
 
@@ -121,7 +118,7 @@ public class Level3Ship : MonoBehaviour
         ShowHealth();
 
         timer += Time.deltaTime;
-        Debug.Log(timer);
+       // Debug.Log(timer);
         if (timer > message1Time)
         {
             InfoPanel.SetActive(false);
