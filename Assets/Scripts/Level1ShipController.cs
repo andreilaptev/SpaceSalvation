@@ -180,14 +180,14 @@ public class Level1ShipController : MonoBehaviour
 
                     //Debug.Log("lives" + lives);
 
-                    SceneManager.LoadScene("Level2");
+                    SceneManager.LoadScene("Level1");
 
                 }
 
             }
             else
             {
-                health -= 3;
+                health -= 20;
 
                 //Debug.Log(health);
             }

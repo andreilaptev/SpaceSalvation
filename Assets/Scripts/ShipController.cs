@@ -32,7 +32,7 @@ public class ShipController : MonoBehaviour
     private float waitTime = 8.0f;
     private float timer = 0.0f;  
 
-    private string message1 = "Use LEFT and RIGHT AROOWS to avoid collision with asteroid!";
+    private string message1 = "Use LEFT and RIGHT ARROWS to avoid collision with asteroid!";
     private string message2 = "And collect COINS to get bonus life for each 10";
 
     private GameObject starTrigger;
