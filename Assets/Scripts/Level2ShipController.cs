@@ -317,7 +317,7 @@ public class Level2ShipController : MonoBehaviour
             }
             else
             {
-                health -= 3;
+                health -= 20;
 
                 //Debug.Log(health);
             }
