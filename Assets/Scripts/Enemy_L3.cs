@@ -142,6 +142,7 @@ public class Enemy_L3 : MonoBehaviour
 
         //Debug.Log(LevelsLivesCounter.NumberOfDeadEnemiesLevel3);
 
+
         if (LevelsLivesCounter.NumberOfDeadEnemiesLevel3 == 1 && currentScene == "Level2")
             SceneManager.LoadScene("Level2_Post_Title");
 

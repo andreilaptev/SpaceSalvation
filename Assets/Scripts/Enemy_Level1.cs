@@ -24,6 +24,9 @@ public class Enemy_Level1 : MonoBehaviour
     private int hits;
 
 
+    private Level1End end;
+    private GameObject sCont;
+
 
     // Start is called before the first frame update
     void Start()
@@ -59,11 +62,20 @@ public class Enemy_Level1 : MonoBehaviour
             {
                 //Die();
                 Destroy(gameObject);
+          
 
-     
+                //end.endLevel1();
+
+                //LevelsLivesCounter.currentGameScore += sCont.GetComponent<Level2ShipController>().score;
+
+                //Debug.Log(sCont.score);
+
+                SceneManager.LoadScene("Level1_Post_Title");
+
+
                 //Debug.Log("Enemy dead" + LevelsLivesCounter.NumberOfDeadEnemiesLevel2);
 
-                //SceneManager.LoadScene("Level2_Post_Title");
+                //SceneManager.LoadScene("Level1_Post_Title");
 
                 //Debug.Log("Enemy dead");
 

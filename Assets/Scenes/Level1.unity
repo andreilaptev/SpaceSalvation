@@ -416,6 +416,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 215.638
       objectReference: {fileID: 0}
+    - target: {fileID: 4080743431115369053, guid: 7b012b4b61790e847932636c84885c11,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4080743431115369052, guid: 7b012b4b61790e847932636c84885c11, type: 3}
     - {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11, type: 3}
@@ -1907,11 +1912,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1174592447}
   - component: {fileID: 1174592446}
-  - component: {fileID: 1174592448}
   - component: {fileID: 1174592449}
   - component: {fileID: 1174592451}
+  - component: {fileID: 1174592450}
+  - component: {fileID: 1174592452}
   m_Layer: 8
-  m_Name: Level2-ship
+  m_Name: Level1-ship
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1981,35 +1987,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1174592448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1174592445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ff77917aefee14983dc721997de109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialSpeed: 9
-  rotationAngle: 5
-  health: 100
-  score: 0
-  extraLiveBonus: 0
-  InfoPanel: {fileID: 188322431}
-  panelText: {fileID: 1550159270}
-  scoreText: {fileID: 1141193611}
-  livesText: {fileID: 1082562420}
-  healthText: {fileID: 2048312383}
-  laserSpawnpointLeft: {fileID: 1169809787}
-  waitTime: 0
-  beam: {fileID: 0}
-  bullet: {fileID: 3682821583961555494, guid: cfeec135cb391b54ead1815ce9652805, type: 3}
-  bullet1: {fileID: 4929045791721342248, guid: cfeec135cb391b54ead1815ce9652805, type: 3}
-  bulletSpeed: 200
-  atCursor: 0
 --- !u!50 &1174592449
 Rigidbody2D:
   serializedVersion: 4
@@ -2031,6 +2008,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1174592450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174592445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b02ef4a7263cba44b3f1a3c5f9bef6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!70 &1174592451
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2047,6 +2036,35 @@ CapsuleCollider2D:
   m_Offset: {x: -0.03314005, y: 0}
   m_Size: {x: 6.180167, y: 9.949391}
   m_Direction: 0
+--- !u!114 &1174592452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174592445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf0d72bd1197394c95d7c28d0f7769e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialSpeed: 6
+  rotationAngle: 5
+  health: 100
+  score: 0
+  extraLiveBonus: 0
+  InfoPanel: {fileID: 188322431}
+  panelText: {fileID: 1550159270}
+  scoreText: {fileID: 1141193611}
+  livesText: {fileID: 1082562420}
+  healthText: {fileID: 2048312383}
+  laserSpawnpointLeft: {fileID: 1169809787}
+  waitTime: 0
+  beam: {fileID: 0}
+  bullet: {fileID: 3682821583961555494, guid: cfeec135cb391b54ead1815ce9652805, type: 3}
+  bullet1: {fileID: 4929045791721342248, guid: cfeec135cb391b54ead1815ce9652805, type: 3}
+  bulletSpeed: 200
+  atCursor: 0
 --- !u!1001 &1207673683
 PrefabInstance:
   m_ObjectHideFlags: 0
