@@ -192,7 +192,7 @@ public class Level2ShipController : MonoBehaviour
         /// 
 
         /// Ship's rotation
-        
+
 
         //if (Input.GetKey(KeyCode.UpArrow))
         //{
@@ -211,6 +211,17 @@ public class Level2ShipController : MonoBehaviour
         // }
         //    /// END OF Ship's rotation
         /// 
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("pressed");
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            Debug.Log("released");
+        }
+
 
         //Shooting
 
@@ -297,7 +308,7 @@ public class Level2ShipController : MonoBehaviour
 
                     LevelsLivesCounter.currentLivesNumber  -= 1;
 
-                    Debug.Log("lives" + lives);
+                    //Debug.Log("lives" + lives);
 
                     SceneManager.LoadScene("Level2");
 
@@ -308,7 +319,7 @@ public class Level2ShipController : MonoBehaviour
             {
                 health -= 3;
 
-                Debug.Log(health);
+                //Debug.Log(health);
             }
         }
 
