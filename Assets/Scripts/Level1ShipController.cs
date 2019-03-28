@@ -296,4 +296,14 @@ public class Level1ShipController : MonoBehaviour
         //    InfoPanel.SetActive(false);
     }
 
+
+    public void EndLevel()
+    {
+        LevelsLivesCounter.currentGameScore += score;
+
+        Debug.Log(LevelsLivesCounter.currentGameScore);
+
+        SceneManager.LoadScene("Level1_Post_Title");
+
+    }
 }
