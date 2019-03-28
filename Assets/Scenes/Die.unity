@@ -668,7 +668,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Go!
+  m_Text: Try Again
 --- !u!222 &1498639264
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -747,7 +747,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "SORRY, YOU ARE DEAD! \n\nKuiper Belt is a really dangerous place...."
+  m_Text: 'YOUR SHIP HAS BEEN DESTROYED!
+
+
+    Kuiper Belt is a really dangerous place....'
 --- !u!222 &1641778634
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -681,7 +681,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Go!
+  m_Text: Try Again
 --- !u!222 &1498639264
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -760,7 +760,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "SORRY, YOU ARE DEAD! \n\nYou failed to do this..."
+  m_Text: 'YOUR SHIP HAS BEEN DESTROYED!
+
+
+    Nick has the most powerful ship in the Universe but you can do it!'
 --- !u!222 &1641778634
 CanvasRenderer:
   m_ObjectHideFlags: 0
