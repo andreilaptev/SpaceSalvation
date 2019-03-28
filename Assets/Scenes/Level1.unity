@@ -251,6 +251,11 @@ PrefabInstance:
       propertyPath: enemy_destroy
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4080743431835709149, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -413,6 +418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4080743431115369052, guid: 7b012b4b61790e847932636c84885c11, type: 3}
+    - {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b012b4b61790e847932636c84885c11, type: 3}
 --- !u!1001 &49331648
 PrefabInstance:
@@ -3066,6 +3072,26 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 10477463}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1800855664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800855663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 433bbdfcd8bee284f9742a13eca9eb7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  bulletSpawnpointLeft: {fileID: 1737005142}
+  bulletSpawnpointRight: {fileID: 2102749664}
+  enemy_destroy: {fileID: 0}
+  bulletSpeed: 100
+  bullet: {fileID: 1224053962202576988, guid: 8a0ea879c0190134bbd415694a087852, type: 3}
+  waitTime: 3
+  hitsToDie: 5
 --- !u!70 &1800855665
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
