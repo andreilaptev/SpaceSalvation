@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelsLivesCounter : MonoBehaviour
+public static class LevelsLivesCounter 
 {
     public static int initialLives = 3;
 
@@ -13,15 +13,23 @@ public class LevelsLivesCounter : MonoBehaviour
     public static bool beginOfGame = true;
 
 
-    public static int currentGameScore;
+    public static int currentGameScore
+    {
+        get
+        {
+            return currentLivesNumber;
+        }
+        set
+        {
+            currentLivesNumber = value;
+        }
+    }
 
     public static int NumberOfDeadEnemiesLevel3;
     public static int NumberOfDeadEnemiesLevel2;
 
-    void Start()
-    {
-        NumberOfDeadEnemiesLevel3 = 0;
-        NumberOfDeadEnemiesLevel2 = 0;
-    }
+    
+
+    
 
 }

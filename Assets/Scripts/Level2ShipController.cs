@@ -84,7 +84,7 @@ public class Level2ShipController : MonoBehaviour
         score = LevelsLivesCounter.currentGameScore;
        
 
-        Debug.Log("Lives" + lives);       
+        Debug.Log("score " + score);       
 
         rotateLeft = 0;
         rotateRight = 360;
