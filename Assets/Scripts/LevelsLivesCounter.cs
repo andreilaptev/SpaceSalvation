@@ -17,11 +17,11 @@ public static class LevelsLivesCounter
     {
         get
         {
-            return currentLivesNumber;
+            return currentGameScore;
         }
         set
         {
-            currentLivesNumber = value;
+            currentGameScore = value;
         }
     }
 
