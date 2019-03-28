@@ -17,7 +17,7 @@ public class Level1_Title_Delay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        score = ShipController.levelScore;
+        score = Level1ShipController.score + Level2ShipController.score + Level3Ship.score;
         //Debug.Log(score);
 
         lives = LevelsLivesCounter.currentLivesNumber;

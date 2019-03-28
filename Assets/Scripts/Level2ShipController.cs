@@ -20,7 +20,7 @@ public class Level2ShipController : MonoBehaviour
     public int health = 100;
 
 
-    public int score;
+    public static int score;
     public int extraLiveBonus = 0;
 
     
