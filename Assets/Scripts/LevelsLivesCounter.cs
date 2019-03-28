@@ -11,14 +11,30 @@ public class LevelsLivesCounter : MonoBehaviour
     public static int currentLivesNumberLevel3 = 3;
 
     public static bool beginOfGame = true;
-    
-    public static int currentGameScore { get; set; }
-  
+
+    public  int currentGameScore1;
+
+    public static int currentGameScore;
+
+
     public static int NumberOfDeadEnemiesLevel3;
     public static int NumberOfDeadEnemiesLevel2;
 
-    
+    public static LevelsLivesCounter Instance;
 
-    
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
 
 }

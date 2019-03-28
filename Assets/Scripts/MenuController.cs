@@ -17,7 +17,7 @@ public class MenuController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log(LevelsLivesCounter.currentLivesNumber);
+           // Debug.Log(LevelsLivesCounter.currentLivesNumber);
  
             Application.LoadLevel(nextPage);
  

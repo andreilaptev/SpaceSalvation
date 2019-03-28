@@ -38,7 +38,7 @@ public class ShipController : MonoBehaviour
     private GameObject starTrigger;
 
     private int collisions;
-    private int lives = LevelsLivesCounter.currentLivesNumber;
+    private int lives = 3; //LevelsLivesCounter.currentLivesNumber;
 
     Collider2D coll = new Collider2D();
 
@@ -47,7 +47,7 @@ public class ShipController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(lives);
+       
 
         LevelsLivesCounter.beginOfGame = false;
 
@@ -82,7 +82,7 @@ public class ShipController : MonoBehaviour
         }
 
 
-        ShowLives(lives);
+        //ShowLives(lives);
 
         ////////////////////////////////
         /// Ship's Movement
@@ -148,7 +148,7 @@ public class ShipController : MonoBehaviour
             //Debug.Log(lives);
             if (lives < 2)
             {
-                Debug.Log(lives);
+               // Debug.Log(lives);
                 //Instantiate(death, transform.position, Quaternion.identity);
                 Die();
             }
@@ -156,7 +156,7 @@ public class ShipController : MonoBehaviour
             {
                 LevelsLivesCounter.currentLivesNumber -= 1;
 
-                Debug.Log("Life " + lives);
+               // Debug.Log("Life " + lives);
 
                 //Instantiate(death, transform.position, Quaternion.identity);
                 this.gameObject.SetActive(false);
@@ -186,8 +186,8 @@ public class ShipController : MonoBehaviour
 
             levelScore = score;
 
-            LevelsLivesCounter.currentLivesNumber = lives;
-            LevelsLivesCounter.currentGameScore = score;
+           // LevelsLivesCounter.currentLivesNumber = lives;
+           // LevelsLivesCounter.currentGameScore = score;
 
             Application.LoadLevel("Level1_Post_Title");
 
@@ -221,8 +221,8 @@ public class ShipController : MonoBehaviour
 
         Destroy(this.gameObject);
 
-        LevelsLivesCounter.currentLivesNumber = 3;
-        LevelsLivesCounter.currentGameScore = 0;
+       // LevelsLivesCounter.currentLivesNumber = 3;
+       // LevelsLivesCounter.currentGameScore = 0;
 
         Application.LoadLevel("Die");
     }

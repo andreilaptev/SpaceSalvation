@@ -68,7 +68,7 @@ public class Level1ShipController : MonoBehaviour
     private GameObject starTrigger;
     private GameObject healthTrigger;
 
-    private int lives = LevelsLivesCounter.currentLivesNumber;
+    private int lives; 
 
     // private int currentSessionLives = 3;
 
@@ -79,6 +79,7 @@ public class Level1ShipController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lives = LevelsLivesCounter.currentLivesNumber;
         //rBody = GetComponent<Rigidbody2D>();
         rigidBody = GetComponent<Rigidbody>();
         score = LevelsLivesCounter.currentGameScore;
@@ -199,7 +200,7 @@ public class Level1ShipController : MonoBehaviour
 
             ShowHealth();
 
-            Debug.Log("Added " + health);
+           // Debug.Log("Added " + health);
         }
 
 
@@ -299,7 +300,7 @@ public class Level1ShipController : MonoBehaviour
 
     public void EndLevel()
     {
-        LevelsLivesCounter.currentGameScore += score;
+        LevelsLivesCounter.currentGameScore = score;
 
         Debug.Log(LevelsLivesCounter.currentGameScore);
 

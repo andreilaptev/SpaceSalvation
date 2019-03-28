@@ -9,9 +9,9 @@ public class Level1End : MonoBehaviour
 
     public void endLevel1()
     {
-        LevelsLivesCounter.currentGameScore += sCont.score;
+        //LevelsLivesCounter.currentGameScore += sCont.score;
 
-        Debug.Log(LevelsLivesCounter.currentGameScore);
+        //Debug.Log(LevelsLivesCounter.currentGameScore);
 
         SceneManager.LoadScene("Level1_Post_Title");
 
