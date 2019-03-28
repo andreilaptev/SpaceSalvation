@@ -3088,7 +3088,7 @@ MonoBehaviour:
   bulletSpawnpointLeft: {fileID: 1737005142}
   bulletSpawnpointRight: {fileID: 2102749664}
   enemy_destroy: {fileID: 0}
-  bulletSpeed: 100
+  bulletSpeed: 50
   bullet: {fileID: 1224053962202576988, guid: 8a0ea879c0190134bbd415694a087852, type: 3}
   waitTime: 3
   hitsToDie: 5
@@ -3108,7 +3108,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 3.4300015, y: 3.8300023}
   m_Direction: 0
---- !u!111 &1800855669
+--- !u!111 &1800855666
 Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3117,9 +3117,9 @@ Animation:
   m_GameObject: {fileID: 1800855663}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 16d02dff57c449f489ed15a4666859df, type: 2}
+  m_Animation: {fileID: 0}
   m_Animations:
-  - {fileID: 7400000, guid: 16d02dff57c449f489ed15a4666859df, type: 2}
+  - {fileID: 7400000, guid: d086c00a7d587374b9127a716441e42a, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
