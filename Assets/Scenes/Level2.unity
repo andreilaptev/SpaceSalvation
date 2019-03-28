@@ -812,6 +812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7056926e3de4174b91b3b5ea5ef95cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentGameScore1: 0
 --- !u!4 &334844585
 Transform:
   m_ObjectHideFlags: 0
@@ -2033,7 +2034,6 @@ MonoBehaviour:
   initialSpeed: 9
   rotationAngle: 5
   health: 100
-  score: 0
   extraLiveBonus: 0
   InfoPanel: {fileID: 188322431}
   panelText: {fileID: 1550159270}

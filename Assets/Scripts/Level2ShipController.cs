@@ -347,7 +347,7 @@ public class Level2ShipController : MonoBehaviour
 
             score += 100;
             extraLiveBonus += 100;
-            Debug.Log("Score " + score);
+            //Debug.Log("Score " + score);
 
             if (extraLiveBonus >= 1000)
             {
@@ -377,6 +377,7 @@ public class Level2ShipController : MonoBehaviour
 
         LevelsLivesCounter.currentLivesNumber = 0;
         LevelsLivesCounter.currentGameScore = 0;
+        LevelsLivesCounter.currentLivesNumberLevel2 = 0;
 
         SceneManager.LoadScene("Die_Level2");
     }

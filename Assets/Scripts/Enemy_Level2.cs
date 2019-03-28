@@ -33,6 +33,7 @@ public class Enemy_Level2 : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         hits = 0;
+        LevelsLivesCounter.NumberOfDeadEnemiesLevel2 = 0;
     }
 
     // Update is called once per frame
