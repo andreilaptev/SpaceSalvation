@@ -46,7 +46,12 @@ public class Cursor : MonoBehaviour
             {
                 ship.GetComponent<Level1ShipController>().atCursor = true;
             }
-           
+
+            if (currentScene == "Level3")
+            {
+                ship.GetComponent<Level3Ship>().atCursor = true;
+            }
+
 
             //if (currentScene == "Level2")     
             //    ship.GetComponent<Level2ShipController>().atCursor = true;            
@@ -66,8 +71,12 @@ public class Cursor : MonoBehaviour
 
             if (currentScene == "Level2") 
                 ship.GetComponent<Level2ShipController>().atCursor = false;
+
             if (currentScene == "Level1")
                 ship.GetComponent<Level1ShipController>().atCursor = false;
+
+            if (currentScene == "Level3")
+                ship.GetComponent<Level3Ship>().atCursor = false;
 
             //if (currentScene == "Level2")
             //    ship.GetComponent<Level2ShipController>().atCursor = false;
