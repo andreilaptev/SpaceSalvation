@@ -13,17 +13,8 @@ public static class LevelsLivesCounter
     public static bool beginOfGame = true;
 
 
-    public static int currentGameScore
-    {
-        get
-        {
-            return currentGameScore;
-        }
-        set
-        {
-            currentGameScore = value;
-        }
-    }
+    public static int currentGameScore;
+    
 
     public static int NumberOfDeadEnemiesLevel3;
     public static int NumberOfDeadEnemiesLevel2;
