@@ -223,7 +223,7 @@ PrefabInstance:
     - target: {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
       propertyPath: waitTime
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
@@ -233,7 +233,7 @@ PrefabInstance:
     - target: {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
       propertyPath: hitsToDie
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4080743431115368992, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
