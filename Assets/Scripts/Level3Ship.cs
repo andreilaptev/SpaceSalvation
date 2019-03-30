@@ -182,6 +182,7 @@ public class Level3Ship : MonoBehaviour
         {
             //Debug.Log("shoot");
             ShootLeft();
+            SoundManagerScript.PlaySound("fire");
         }
 
         if (Input.GetKeyDown(KeyCode.V)) // shooting with V button        

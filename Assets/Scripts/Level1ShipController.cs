@@ -151,6 +151,7 @@ public class Level1ShipController : MonoBehaviour
         {
             //Debug.Log("shoot");
             ShootLeft();
+            SoundManagerScript.PlaySound("fire");
         }
 
     }
