@@ -48,8 +48,10 @@ public class Enemy_L3 : MonoBehaviour
     void Update()
     {
         if (player != null)
-            targetPlayer();     
-            
+            targetPlayer();
+
+       
+
     }
 
 
@@ -106,6 +108,8 @@ public class Enemy_L3 : MonoBehaviour
         // SHOOTING DELAY
         if (currentTime == 0)
             Shoot();
+        
+        
 
         if (shot && currentTime < waitTime)
             currentTime += 1 * Time.deltaTime;
