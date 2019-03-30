@@ -22,7 +22,7 @@ public class Enemy_L3 : MonoBehaviour
     public float waitTime;
     public int hitsToDie;
 
-    private float currentTime,initialDelay, timer;
+    private float currentTime, initialDelay, timer;
     private bool shootinEnabled = false;
     private bool shot;
     private int hits;
@@ -50,12 +50,6 @@ public class Enemy_L3 : MonoBehaviour
     void Update()
     {
         if (player != null)
-<<<<<<< HEAD
-            targetPlayer();
-
-       
-
-=======
             targetPlayer();
 
 
@@ -67,13 +61,12 @@ public class Enemy_L3 : MonoBehaviour
             shootinEnabled = true;
         }
 
->>>>>>> master
     }
 
 
     void OnCollisionEnter2D(Collision2D other)
     {
-    
+
 
         if (other.gameObject.tag == "PlayerBullet")
         {
@@ -81,7 +74,7 @@ public class Enemy_L3 : MonoBehaviour
             {
                 hits += 1;
 
-                
+
             }
 
             else
@@ -97,7 +90,7 @@ public class Enemy_L3 : MonoBehaviour
 
     }
 
-  
+
 
     private void targetPlayer()
     {
@@ -124,8 +117,6 @@ public class Enemy_L3 : MonoBehaviour
         // SHOOTING DELAY
         if (currentTime == 0)
             Shoot();
-        
-        
 
         if (shot && currentTime < waitTime)
             currentTime += 1 * Time.deltaTime;
@@ -171,8 +162,8 @@ public class Enemy_L3 : MonoBehaviour
         if (LevelsLivesCounter.NumberOfDeadEnemiesLevel3 == 1 && currentScene == "Level2")
             SceneManager.LoadScene("Level2_Post_Title");
 
-        if (LevelsLivesCounter.NumberOfDeadEnemiesLevel3 == 2 && currentScene == "Level3")    
-                ShowBoss();
+        if (LevelsLivesCounter.NumberOfDeadEnemiesLevel3 == 2 && currentScene == "Level3")
+            ShowBoss();
 
         // Droppung a bomb
         Rigidbody2D bombInstance;
