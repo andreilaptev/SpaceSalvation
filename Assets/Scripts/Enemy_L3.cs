@@ -22,7 +22,8 @@ public class Enemy_L3 : MonoBehaviour
     public float waitTime;
     public int hitsToDie;
 
-    private float currentTime;
+    private float currentTime,initialDelay, timer;
+    private bool shootinEnabled = false;
     private bool shot;
     private int hits;
 
@@ -41,6 +42,7 @@ public class Enemy_L3 : MonoBehaviour
 
         LevelsLivesCounter.NumberOfDeadEnemiesLevel3 = 0;
 
+        initialDelay = 3.0f;
         //Debug.Log(currentScene);
     }
 
@@ -48,10 +50,24 @@ public class Enemy_L3 : MonoBehaviour
     void Update()
     {
         if (player != null)
+<<<<<<< HEAD
             targetPlayer();
 
        
 
+=======
+            targetPlayer();
+
+
+        // Initial shooting delay
+        timer += Time.deltaTime;
+        //Debug.Log(timer);
+        if (timer > initialDelay)
+        {
+            shootinEnabled = true;
+        }
+
+>>>>>>> master
     }
 
 
@@ -124,13 +140,18 @@ public class Enemy_L3 : MonoBehaviour
 
         Rigidbody2D bulletInstance;
 
-        bulletInstance = Instantiate(bullet, bulletSpawnpointLeft.transform.position, Quaternion.identity) as Rigidbody2D;
+        if (shootinEnabled)
+        {
 
-        bulletInstance.AddForce(bulletSpawnpointLeft.transform.up * bulletSpeed);
+            bulletInstance = Instantiate(bullet, bulletSpawnpointLeft.transform.position, Quaternion.identity) as Rigidbody2D;
 
-        bulletInstance = Instantiate(bullet, bulletSpawnpointRight.transform.position, Quaternion.identity) as Rigidbody2D;
+            bulletInstance.AddForce(bulletSpawnpointLeft.transform.up * bulletSpeed);
 
-        bulletInstance.AddForce(bulletSpawnpointRight.transform.up * bulletSpeed);
+            bulletInstance = Instantiate(bullet, bulletSpawnpointRight.transform.position, Quaternion.identity) as Rigidbody2D;
+
+            bulletInstance.AddForce(bulletSpawnpointRight.transform.up * bulletSpeed);
+        }
+
 
         //Debug.Log("shot");
 

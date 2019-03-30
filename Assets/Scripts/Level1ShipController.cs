@@ -241,7 +241,7 @@ public class Level1ShipController : MonoBehaviour
     {
         Destroy(this.gameObject);
 
-        LevelsLivesCounter.currentLivesNumber = 0;
+        LevelsLivesCounter.currentLivesNumber = 3;
         LevelsLivesCounter.currentGameScore = 0;
 
         SceneManager.LoadScene("Die_Level2");
