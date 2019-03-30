@@ -290,10 +290,12 @@ public class Level3Ship : MonoBehaviour
             }
         }
 
-        // Hitting a Star - ading 100 points
+        // Hitting a Star - attain 100 points
         if (other.tag == "Star")
         {
             //Debug.Log("star");
+
+            SoundManagerScript.PlaySound("collectCoin");
 
             score += 100;
             extraLiveBonus += 100;
@@ -323,6 +325,8 @@ public class Level3Ship : MonoBehaviour
             nuclearWeapons += 1;
 
             Destroy(other.gameObject);
+
+            SoundManagerScript.PlaySound("explosion");
         }
         
     }

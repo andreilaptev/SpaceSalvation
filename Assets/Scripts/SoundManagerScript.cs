@@ -10,13 +10,13 @@ public class SoundManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fireSound = Resources.Load<AudioClip> ("laser1");
-        enemyFireSound = Resources.Load<AudioClip> ("");
+        fireSound = Resources.Load<AudioClip> ("laser-sfx");
+        enemyFireSound = Resources.Load<AudioClip> ("laser-02");
         playerDeathSound = Resources.Load<AudioClip> ("");
         enemyDeathSound = Resources.Load<AudioClip> ("");
         explosionSound = Resources.Load<AudioClip> ("");
-        collectCoinSound = Resources.Load<AudioClip> ("retro-collect-item-sfx");
-        collectHealthSound = Resources.Load<AudioClip>("");
+        collectCoinSound = Resources.Load<AudioClip> ("coin-get");
+        collectHealthSound = Resources.Load<AudioClip>("health-1");
 
         audioSrc = GetComponent<AudioSource>();
     }
