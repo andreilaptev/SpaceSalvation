@@ -271,7 +271,7 @@ public class Level3Ship : MonoBehaviour
         {
             if (health <= 0)
             {
-                if (lives <= 0) 
+                if (lives < 1) 
                    Die();
                 else
                 {           
@@ -362,7 +362,8 @@ public class Level3Ship : MonoBehaviour
 
     void ShowLives()
     {
-        livesText.text = "Lives : " + currentSessionLives.ToString();
+        //livesText.text = "Lives : " + currentSessionLives.ToString();
+        livesText.text = "Lives : " + LevelsLivesCounter.currentLivesNumber.ToString();
     }
 
 

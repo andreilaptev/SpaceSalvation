@@ -8,6 +8,6 @@ public class GoTo3Level : MonoBehaviour
     public void GoToLevel3()
     {
         Debug.Log("go to 3");
-        SceneManager.LoadScene("Level3");
+        SceneManager.LoadScene("Menu");
     }
 }
