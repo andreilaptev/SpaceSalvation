@@ -45,6 +45,7 @@ public class Level1ShipController : MonoBehaviour
 
 
     private float speed;
+    private float boost = 1f;
     private float verticalDirection; // doesn't allow to fly back
     private int rotateLeft; // used to rotate ship to the left over z-axis
     private int rotateRight;
@@ -139,7 +140,7 @@ public class Level1ShipController : MonoBehaviour
         faceMouse();
 
         if (!atCursor)
-            transform.Translate(0, speed * Time.deltaTime, 0); // Temporarely
+            transform.Translate(0, speed * Time.deltaTime * boost, 0); // Temporarely
 
 
 
@@ -152,6 +153,15 @@ public class Level1ShipController : MonoBehaviour
             ShootLeft();
             SoundManagerScript.PlaySound("fire");
         }
+
+        // Speed boost
+        if (Input.GetKey(KeyCode.B))
+            //print("pressed");
+            boost = 2f;
+        else
+            // print("released");
+            boost = 1f;
+ 
 
     }
 
