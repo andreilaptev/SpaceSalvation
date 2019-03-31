@@ -151,6 +151,7 @@ public class Level1ShipController : MonoBehaviour
         {
             //Debug.Log("shoot");
             ShootLeft();
+            SoundManagerScript.PlaySound("fire");
         }
 
     }
@@ -198,18 +199,22 @@ public class Level1ShipController : MonoBehaviour
             health += 10;
             Destroy(other.gameObject);
 
+            SoundManagerScript.PlaySound("collectHealth");
+
             ShowHealth();
 
            // Debug.Log("Added " + health);
         }
 
 
-        // Hitting a Star - ading 100 points
+        // Hitting a Star - attain 100 points
         if (other.tag == "Star")
         {
             //Debug.Log("star");
 
             Destroy(other.gameObject);
+
+            SoundManagerScript.PlaySound("collectCoin");
 
             score += 100;
             extraLiveBonus += 100;

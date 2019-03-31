@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Level1_Title_Delay : MonoBehaviour
 {
@@ -35,7 +36,8 @@ public class Level1_Title_Delay : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-           Application.LoadLevel(sceneToGo);
+            //Application.LoadLevel(sceneToGo);
+            SceneManager.LoadScene(sceneToGo);
         }
 
         //Debug.Log("1 run");

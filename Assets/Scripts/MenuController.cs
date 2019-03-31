@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
@@ -17,11 +18,10 @@ public class MenuController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-           // Debug.Log(LevelsLivesCounter.currentLivesNumber);
- 
-            Application.LoadLevel(nextPage);
- 
+            // Debug.Log(LevelsLivesCounter.currentLivesNumber);
 
+            //Application.LoadLevel(nextPage);
+            SceneManager.LoadScene(nextPage);
         }
     }
 }

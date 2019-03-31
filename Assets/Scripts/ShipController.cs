@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShipController : MonoBehaviour
 {
@@ -164,7 +165,8 @@ public class ShipController : MonoBehaviour
                 //LevelsLivesCounter.currentLivesNumber -= 1;
 
 
-                Application.LoadLevel("Level1");
+                //Application.LoadLevel("Level1");
+                SceneManager.LoadScene("Level1");
 
             }
 
@@ -186,11 +188,11 @@ public class ShipController : MonoBehaviour
 
             levelScore = score;
 
-           // LevelsLivesCounter.currentLivesNumber = lives;
-           // LevelsLivesCounter.currentGameScore = score;
+            // LevelsLivesCounter.currentLivesNumber = lives;
+            // LevelsLivesCounter.currentGameScore = score;
 
-            Application.LoadLevel("Level1_Post_Title");
-
+            //Application.LoadLevel("Level1_Post_Title");
+            SceneManager.LoadScene("Level1_Post_Title");
         }
 
         // Hitting a Star - ading 100 points
@@ -221,10 +223,11 @@ public class ShipController : MonoBehaviour
 
         Destroy(this.gameObject);
 
-       // LevelsLivesCounter.currentLivesNumber = 3;
-       // LevelsLivesCounter.currentGameScore = 0;
+        // LevelsLivesCounter.currentLivesNumber = 3;
+        // LevelsLivesCounter.currentGameScore = 0;
 
-        Application.LoadLevel("Die");
+        //Application.LoadLevel("Die");
+        SceneManager.LoadScene("Die");
     }
 
     void ShowScore()
