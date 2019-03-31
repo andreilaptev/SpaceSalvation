@@ -183,20 +183,21 @@ public class Level3Ship : MonoBehaviour
         //Shooting
 
         //if (Input.GetMouseButtonDown(0)) // shooting with left mouse button
-        if (Input.GetKeyDown(KeyCode.Space)) // shooting with space button
-        //if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) // shooting with Spacebar or LeftClick button
         {
             //Debug.Log("shoot");
             ShootLeft();
             SoundManagerScript.PlaySound("fire");
         }
 
-        if (Input.GetKeyDown(KeyCode.V)) // shooting with V button        
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetMouseButtonDown(1)) // shooting with LeftShift or RightClick button       
         {           
             if (nuclearWeapons > 0)
             {
                 CastBomb();
                 nuclearWeapons -= 1;
+
+                SoundManagerScript.PlaySound("explosion");
             }
                 
            
@@ -332,7 +333,7 @@ public class Level3Ship : MonoBehaviour
 
             Destroy(other.gameObject);
 
-            SoundManagerScript.PlaySound("explosion");
+            SoundManagerScript.PlaySound("powerUp");
         }
         
     }

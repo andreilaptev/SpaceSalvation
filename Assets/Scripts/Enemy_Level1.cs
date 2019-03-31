@@ -65,7 +65,6 @@ public class Enemy_Level1 : MonoBehaviour
             {
                 hits += 1;
 
-
             }
 
             else
@@ -147,8 +146,6 @@ public class Enemy_Level1 : MonoBehaviour
             bulletInstance = Instantiate(bullet, bulletSpawnpointRight.transform.position, Quaternion.identity) as Rigidbody2D;
 
             bulletInstance.AddForce(bulletSpawnpointRight.transform.up * bulletSpeed);
-
-            SoundManagerScript.PlaySound("enemyFire");
         }
         
 

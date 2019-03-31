@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManagerScript : MonoBehaviour
 {
-    public static AudioClip fireSound, enemyFireSound, playerDeathSound, enemyDeathSound, explosionSound, damageSound, collectCoinSound, collectHealthSound;
+    public static AudioClip fireSound, enemyFireSound, playerDeathSound, enemyDeathSound, bombSound, explosionSound, damageSound, powerUpSound, collectCoinSound, collectHealthSound;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -14,8 +14,10 @@ public class SoundManagerScript : MonoBehaviour
         enemyFireSound = Resources.Load<AudioClip> ("laser-02");
         playerDeathSound = Resources.Load<AudioClip> ("");
         enemyDeathSound = Resources.Load<AudioClip> ("");
-        explosionSound = Resources.Load<AudioClip> ("big-explosion");
-        damageSound = Resources.Load<AudioClip>("");
+        bombSound = Resources.Load<AudioClip>("bomb");
+        explosionSound = Resources.Load<AudioClip> ("explosionbombblastambient2");
+        damageSound = Resources.Load<AudioClip>("damage-sound-effect");
+        powerUpSound = Resources.Load<AudioClip>("8bit-powerup");
         collectCoinSound = Resources.Load<AudioClip> ("coin-get");
         collectHealthSound = Resources.Load<AudioClip>("health-1");
 
@@ -44,11 +46,17 @@ public class SoundManagerScript : MonoBehaviour
             case "enemyDeath":
                 audioSrc.PlayOneShot(enemyDeathSound);
                 break;
+            case "bomb":
+                audioSrc.PlayOneShot(bombSound);
+                break;
             case "explosion":
                 audioSrc.PlayOneShot(explosionSound);
                 break;
             case "damage":
                 audioSrc.PlayOneShot(damageSound);
+                break;
+            case "powerUp":
+                audioSrc.PlayOneShot(powerUpSound);
                 break;
             case "collectCoin":
                 audioSrc.PlayOneShot(collectCoinSound);
