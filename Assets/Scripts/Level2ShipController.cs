@@ -81,8 +81,10 @@ public class Level2ShipController : MonoBehaviour
     {
         //rBody = GetComponent<Rigidbody2D>();
         rigidBody = GetComponent<Rigidbody>();
-        score = LevelsLivesCounter.currentGameScore;
-       
+        //score = LevelsLivesCounter.currentGameScore;
+
+        score = Level1ShipController.score;
+
 
         Debug.Log("score " + score);       
 

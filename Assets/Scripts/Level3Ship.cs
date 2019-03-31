@@ -86,7 +86,10 @@ public class Level3Ship : MonoBehaviour
     {
         //rBody = GetComponent<Rigidbody2D>();
         rigidBody = GetComponent<Rigidbody>();
-        score = LevelsLivesCounter.currentGameScore;
+        //score = LevelsLivesCounter.currentGameScore;
+
+        score = Level2ShipController.score;
+
         lives = LevelsLivesCounter.currentLivesNumber;
 
         if (lives == 0)
