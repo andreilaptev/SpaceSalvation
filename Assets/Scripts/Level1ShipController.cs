@@ -53,12 +53,12 @@ public class Level1ShipController : MonoBehaviour
     private float clockwise = 1000.0f;
     private float counterClockwise = -5.0f;
 
-    private float message1Time = 2.0f;
-    private float message2Time = 4.0f;
-    private float waitTime1 = 7.0f;
+    private float message1Time = 3.5f;
+    private float message2Time = 6.0f;
+    private float waitTime1 = 8.0f;
     private float timer = 0.0f;
 
-    private string message1 = "Use MOUSE to navigate around the scene and SPACE to shoot!";
+    private string message1 = "Use MOUSE to navigate around the scene, SPACE to shoot and B to boost!";
     private string message2 = "Collect 10 COINS to get bonus life";
     private string message3 = "Pick HEALTH KIT to get bonus 10% of Health";
 

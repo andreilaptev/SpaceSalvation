@@ -57,13 +57,13 @@ public class Level3Ship : MonoBehaviour
 
     private int nuclearWeapons;
 
-    private float message1Time = 2.0f;
-    private float message2Time = 4.0f;
-    private float waitTime1 = 4.0f;
+    private float message1Time = 3.5f;
+    private float message2Time = 6.0f;
+    private float waitTime1 = 8.0f;
     private float timer = 0.0f;
 
-    private string message1 = "Use MOUSE to navigate around the scene and SPACE to shoot!";
-    private string message2 = "Collect 10 COINS to get bonus life";
+    private string message1 = "Use MOUSE to navigate around the scene, SPACE to shoot and B to boost!";
+    private string message2 = "Collect NUCLEAR drops and hit V to shoot the BOSS";
     private string message3 = "Pick HEALTH KIT to get bonus 10% of Health";
 
     private int lives = LevelsLivesCounter.currentLivesNumber;
@@ -129,9 +129,14 @@ public class Level3Ship : MonoBehaviour
        // Debug.Log(timer);
         if (timer > message1Time)
         {
-            InfoPanel.SetActive(false);
-            //ShowInfo(message2);
+            //print("second");
+            //InfoPanel.SetActive(false);
+            ShowInfo(message2);
         }
+        //else if (timer > message2Time && timer < waitTime1)
+        //{
+        //    ShowInfo(message2);
+        //}
         else if (timer > waitTime1)
         {
             InfoPanel.SetActive(false);
@@ -423,7 +428,7 @@ public class Level3Ship : MonoBehaviour
     private void ShowInfo(string message)
     {
         panelText.text = message;
-        if (timer > waitTime)
+        if (timer > waitTime1)
             InfoPanel.SetActive(false);
     }
 }

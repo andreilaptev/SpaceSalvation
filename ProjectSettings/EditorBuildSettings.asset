@@ -65,4 +65,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level3_Post_Title.unity
     guid: a94c1f648a8538942b094778a7a73300
+  - enabled: 1
+    path: Assets/Scenes/PracticeLevel.unity
+    guid: 830cc3b073f2af84fa8f4e0f70ae78a2
   m_configObjects: {}
