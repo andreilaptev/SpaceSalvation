@@ -142,7 +142,6 @@ public class Enemy_L3 : MonoBehaviour
 
             bulletInstance.AddForce(bulletSpawnpointRight.transform.up * bulletSpeed);
 
-            SoundManagerScript.PlaySound("enemyFire");
         }
 
 
