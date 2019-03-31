@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManagerScript : MonoBehaviour
 {
-    public static AudioClip fireSound, enemyFireSound, playerDeathSound, enemyDeathSound, explosionSound, collectCoinSound, collectHealthSound;
+    public static AudioClip fireSound, enemyFireSound, playerDeathSound, enemyDeathSound, explosionSound, damageSound, collectCoinSound, collectHealthSound;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -14,7 +14,8 @@ public class SoundManagerScript : MonoBehaviour
         enemyFireSound = Resources.Load<AudioClip> ("laser-02");
         playerDeathSound = Resources.Load<AudioClip> ("");
         enemyDeathSound = Resources.Load<AudioClip> ("");
-        explosionSound = Resources.Load<AudioClip> ("");
+        explosionSound = Resources.Load<AudioClip> ("big-explosion");
+        damageSound = Resources.Load<AudioClip>("");
         collectCoinSound = Resources.Load<AudioClip> ("coin-get");
         collectHealthSound = Resources.Load<AudioClip>("health-1");
 
@@ -45,6 +46,9 @@ public class SoundManagerScript : MonoBehaviour
                 break;
             case "explosion":
                 audioSrc.PlayOneShot(explosionSound);
+                break;
+            case "damage":
+                audioSrc.PlayOneShot(damageSound);
                 break;
             case "collectCoin":
                 audioSrc.PlayOneShot(collectCoinSound);

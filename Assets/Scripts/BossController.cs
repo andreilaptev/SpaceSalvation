@@ -69,6 +69,8 @@ public class BossController : MonoBehaviour
         {
             health -= 25;
             Destroy(other.gameObject);
+
+            SoundManagerScript.PlaySound("explosion");
         }
 
         if (other.gameObject.tag == "PlayerBullet")
