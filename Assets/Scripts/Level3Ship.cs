@@ -73,7 +73,7 @@ public class Level3Ship : MonoBehaviour
     private GameObject starTrigger;
     private GameObject healthTrigger;
 
-    private int currentSessionLives = 3;
+    private int currentSessionLives;
 
     Collider2D coll = new Collider2D();
     private object CircleCollider2D;
@@ -88,6 +88,9 @@ public class Level3Ship : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
         score = LevelsLivesCounter.currentGameScore;
         lives = LevelsLivesCounter.currentLivesNumber;
+
+        if (lives == 0)
+            Die();
 
         //currentSessionLives = lives;
         rotateLeft = 0;
