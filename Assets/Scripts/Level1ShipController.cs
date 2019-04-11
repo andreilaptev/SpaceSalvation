@@ -58,7 +58,7 @@ public class Level1ShipController : MonoBehaviour
     private float waitTime1 = 8.0f;
     private float timer = 0.0f;
 
-    private string message1 = "Use MOUSE to navigate around the scene, SPACE to shoot and B to boost!";
+    private string message1 = "Use MOUSE to navigate around the scene, SPACE to shoot and LEFT SHIFT to boost!";
     private string message2 = "Collect 10 COINS to get bonus life";
     private string message3 = "Pick HEALTH KIT to get bonus 10% of Health";
 
@@ -140,7 +140,7 @@ public class Level1ShipController : MonoBehaviour
         faceMouse();
 
         if (!atCursor)
-            transform.Translate(0, speed * Time.deltaTime * boost, 0); // Temporarely
+            transform.Translate(0, speed * Time.deltaTime * boost, 0); // Temporarily
 
 
 
@@ -155,11 +155,14 @@ public class Level1ShipController : MonoBehaviour
         }
 
         // Speed boost
-        if (Input.GetKey(KeyCode.B))
+        if (Input.GetKey(KeyCode.LeftShift)) // use boost with LeftShift button
+        {
             //print("pressed");
             boost = 2f;
+            SoundManagerScript.PlaySound("boost");
+        }
         else
-            // print("released");
+            //print("released");
             boost = 1f;
  
 

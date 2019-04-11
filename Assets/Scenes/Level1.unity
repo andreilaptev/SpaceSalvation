@@ -79,7 +79,7 @@ LightmapSettings:
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVRFilteringMode: 1
+    m_PVRFilteringMode: 2
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -128,6 +128,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080743431115369053, guid: 7b012b4b61790e847932636c84885c11,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4080743431115369052, guid: 7b012b4b61790e847932636c84885c11,
         type: 3}
@@ -415,11 +420,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 215.638
-      objectReference: {fileID: 0}
-    - target: {fileID: 4080743431115369053, guid: 7b012b4b61790e847932636c84885c11,
-        type: 3}
-      propertyPath: m_Mass
-      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4080743431115369052, guid: 7b012b4b61790e847932636c84885c11, type: 3}
@@ -1070,7 +1070,8 @@ AudioSource:
   m_GameObject: {fileID: 645279240}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243635393987530798, guid: d80c51606c48bc74c821c6b2b7d50960,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 728692b81907e43478f92c5868feea1d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -3357,7 +3358,7 @@ MonoBehaviour:
   enemy_destroy: {fileID: 0}
   bulletSpeed: 50
   bullet: {fileID: 1224053962202576988, guid: 8a0ea879c0190134bbd415694a087852, type: 3}
-  waitTime: 3
+  waitTime: 1
   hitsToDie: 5
 --- !u!70 &1800855665
 CapsuleCollider2D:

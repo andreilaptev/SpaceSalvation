@@ -42,7 +42,7 @@ public class Enemy_L3 : MonoBehaviour
 
         LevelsLivesCounter.NumberOfDeadEnemiesLevel3 = 0;
 
-        initialDelay = 3.0f;
+        initialDelay = waitTime;
         //Debug.Log(currentScene);
     }
 

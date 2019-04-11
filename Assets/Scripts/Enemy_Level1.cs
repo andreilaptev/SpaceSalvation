@@ -34,7 +34,7 @@ public class Enemy_Level1 : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         hits = 0;
-        initialDelay = 6.0f;
+        initialDelay = waitTime;
     }
 
     // Update is called once per frame

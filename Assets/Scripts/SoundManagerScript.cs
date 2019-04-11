@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManagerScript : MonoBehaviour
 {
-    public static AudioClip fireSound, enemyFireSound, playerDeathSound, enemyDeathSound, bombSound, explosionSound, damageSound, powerUpSound, collectCoinSound, collectHealthSound;
+    public static AudioClip fireSound, enemyFireSound, playerDeathSound, enemyDeathSound, bombSound, explosionSound, damageSound, powerUpSound, boostSound, collectCoinSound, collectHealthSound;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -18,6 +18,7 @@ public class SoundManagerScript : MonoBehaviour
         explosionSound = Resources.Load<AudioClip> ("explosionbombblastambient2");
         damageSound = Resources.Load<AudioClip>("damage-sound-effect");
         powerUpSound = Resources.Load<AudioClip>("8bit-powerup");
+        boostSound = Resources.Load<AudioClip>("rocket-boost-engine-loop");
         collectCoinSound = Resources.Load<AudioClip> ("coin-get");
         collectHealthSound = Resources.Load<AudioClip>("health-1");
 
@@ -57,6 +58,9 @@ public class SoundManagerScript : MonoBehaviour
                 break;
             case "powerUp":
                 audioSrc.PlayOneShot(powerUpSound);
+                break;
+            case "boost":
+                audioSrc.PlayOneShot(boostSound);
                 break;
             case "collectCoin":
                 audioSrc.PlayOneShot(collectCoinSound);
