@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class Level2ShipController : MonoBehaviour
 {
@@ -75,6 +76,9 @@ public class Level2ShipController : MonoBehaviour
 
     Collider2D coll = new Collider2D();
 
+    [Header("Audio")]
+    public AudioMixerSnapshot paused;
+    public AudioMixerSnapshot unpaused;
 
     // METHODS
     // Start is called before the first frame update
@@ -111,6 +115,22 @@ public class Level2ShipController : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P)) // Pause or unpause
+        {
+            // Set my audio snapshot to the pause or unpause snapshot
+            // Pause my game.
+            Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+
+            if (Time.timeScale == 0) // Paused
+            {
+                paused.TransitionTo(0.01f);
+            }
+            else // Unpaused
+            {
+                unpaused.TransitionTo(0.01f);
+            }
+        }
+
         ShowHealth();
 
         timer += Time.deltaTime;

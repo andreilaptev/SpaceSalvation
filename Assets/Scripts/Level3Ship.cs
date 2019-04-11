@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System;
+using UnityEngine.Audio;
 
 public class Level3Ship : MonoBehaviour
 {
@@ -79,6 +80,9 @@ public class Level3Ship : MonoBehaviour
     Collider2D coll = new Collider2D();
     private object CircleCollider2D;
 
+    [Header("Audio")]
+    public AudioMixerSnapshot paused;
+    public AudioMixerSnapshot unpaused;
 
 
     // METHODS
@@ -123,6 +127,22 @@ public class Level3Ship : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P)) // Pause or unpause
+        {
+            // Set my audio snapshot to the pause or unpause snapshot
+            // Pause my game.
+            Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+
+            if (Time.timeScale == 0) // Paused
+            {
+                paused.TransitionTo(0.01f);
+            }
+            else // Unpaused
+            {
+                unpaused.TransitionTo(0.01f);
+            }
+        }
+
         ShowHealth();
 
         timer += Time.deltaTime;
