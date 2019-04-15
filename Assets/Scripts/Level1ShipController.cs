@@ -267,6 +267,22 @@ public class Level1ShipController : MonoBehaviour
 
             starTrigger.GetComponent<StarController>().shown = false;
         }
+        if (other.tag == "Asteroid")
+        {           
+                             
+                    //lives -= 1;
+
+                    LevelsLivesCounter.currentLivesNumber -= 1;
+
+                    //Debug.Log("lives" + lives);
+
+                    SceneManager.LoadScene("Level1");
+                    if (lives <= 0)
+                    {
+                        Die();
+                    }
+                         
+        }
     }
 
     private void ShowHealth()
